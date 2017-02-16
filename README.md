@@ -40,9 +40,9 @@ If a team member's workload becomes too much, others on the team will need to pi
 If time is an issue, we will pull back on the scope of the project (fewer stats or simpler visualizations.)
 
 ## Requirements
-* As a user want to see Reddit data so I can analyze Reddit use
+* As a user I want to see Reddit data so I can analyze Reddit use
   * Story points: 20 ID: 1
-* As a user want a URL so I can access the Foundit website
+* As a user I want a URL so I can access the Foundit website
   * Story points: 3 ID: 2
 * As a user I want to know who gets the most karma on a thread so I can learn what Reddit users like
   * Story points: 5 ID: 3
