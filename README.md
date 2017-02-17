@@ -4,7 +4,7 @@ Introduction to Foundit, a CU CSCI 3308 Team Project.
 ## Who
 Name | Github ID
 --- | ---
-Eugene Ho | 	 	
+Eugene Ho |	 hoeugene
 Ryan Davis |	 LogicianJones
 Kenneth Ford |	 kefo7771
 Luke Hao Nguyen | lung9198
