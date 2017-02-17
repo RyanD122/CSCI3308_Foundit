@@ -27,7 +27,7 @@ We love data and Reddit. Part of being a good Reddit user is knowing what is tre
 Format of the data and its contents are unknown.
 We do not know how we will pull the data.
 Some team members will be working with new languages.
-No one on the team knows HTM.L
+No one on the team knows HTML.
 Team members are working on other projects which might lead to issues with workload.
 Time estimates may be way off and we may be committing to too much.
 
