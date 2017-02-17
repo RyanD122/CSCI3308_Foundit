@@ -63,4 +63,4 @@ Trello
 https://trello.com/b/2721YJ2D
 
 ## Project plan
-![](../images/ProjectPlan.png "Project Plan")
+![](https://github.com/RobinsonK/CSCI3308_Foundit/blob/master/images/ProjectPlan.png "Project Plan")
