@@ -63,3 +63,4 @@ Trello
 https://trello.com/b/2721YJ2D
 
 ## Project plan
+![](../images/ProjectPlan.png "Project Plan")
