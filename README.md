@@ -8,7 +8,6 @@ Eugene Ho |	 hoeugene
 Ryan Davis |	 LogicianJones
 Kenneth Ford |	 kefo7771
 Luke Hao Nguyen | lung9198
-Kristin Robinson | RobinsonK
 
 ## Title
 Foundit
