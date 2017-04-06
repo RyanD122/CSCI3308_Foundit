@@ -60,5 +60,5 @@ def results(request):
   graphString = graph.renderGraph(dataSet)
 
   t = loader.get_template('foundit/results.html')
-  c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordList' : topWordList, 'Graph' : graphString })
+  c = ({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordList' : topWordList, 'Graph' : graphString })
   return HttpResponse(t.render(c))
