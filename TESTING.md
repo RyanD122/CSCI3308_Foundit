@@ -15,11 +15,15 @@ We tested which possible inputs for our site would be valid enough to pass throu
 Such tests included different numerical values including negative ints, inputs that started with a 0, and very large values.
 Our website prohibits the passing of non-int values for all of our numerical inputs, but we have a string input in which any charcter is currently valid. Inputting special characters in this field would result in errors. Inputting strings of subreddits that did not exist or were restricted would result in error.
 
-Leaving anny field blank would result in error.
+Leaving any field blank would result in error.
 
 We believed that because of the single dyno we only have access to (Django) that large values would result in a timeout error, however with an input of 1 million, the application continued to run. The results may not finish in a timely manner, but they will eventually finish given proper inputs of any size.
 
+![alt tag](https://raw.githubusercontent.com/LogicianJones/CSCI3308_Foundit/master/Screenshot_2017-04-06_06-39-53.png)
+![alt tag](https://github.com/LogicianJones/CSCI3308_Foundit/blob/master/Screenshot_2017-04-06_06-40-42.png)
+
 User Acceptance Test Plans:
+
 1.
 Use case name
 	Enter a subreddit to analyze
@@ -40,7 +44,7 @@ Status (Pass/Fail)
 	Pass
 Notes
 	User must input all fields validly
-
+	
 2.
 Use case name
 	Enter numerical paramters for analysis
