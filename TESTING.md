@@ -19,6 +19,9 @@ Leaving any field blank would result in error.
 
 We believed that because of the single dyno we only have access to (Django) that large values would result in a timeout error, however with an input of 1 million, the application continued to run. The results may not finish in a timely manner, but they will eventually finish given proper inputs of any size.
 
+Tool used: Python Unit Test
+link to tool: https://docs.python.org/2/library/unittest.html
+
 ![alt tag](https://raw.githubusercontent.com/LogicianJones/CSCI3308_Foundit/master/Screenshot_2017-04-06_06-39-53.png)
 ![alt tag](https://github.com/LogicianJones/CSCI3308_Foundit/blob/master/Screenshot_2017-04-06_06-40-42.png)
 
