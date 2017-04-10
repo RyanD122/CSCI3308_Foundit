@@ -1,0 +1,6 @@
+<form action="{% url results %}" method="post">
+{% csrf_token %}
+Subreddit:<br>
+<input type="text" name="subreddit">
+<input type="submit" value="Run" />
+</form>
