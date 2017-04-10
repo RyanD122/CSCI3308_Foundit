@@ -1,6 +1,7 @@
 import praw
 import nltk
 nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 from nltk import word_tokenize
 from datetime import datetime, timedelta
 import os
@@ -30,8 +31,6 @@ def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnap
 
   #begin analysis
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
-
-    print("Searching: " + submission.title)
     
     #adjust oldest post list
     if(len(oldestPost) < oldestPostLimit):
@@ -99,22 +98,11 @@ def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnap
         pass
     index += 1
 
-  #display top comms        
-  print("-Top Comments-")
-  for element in topCom:
-    print("-" + str(element[0].score) + " : " + element[0].body)
-    print("Post title: " + element[1].title)
-  print()
+  #topComs
 
-  #display oh snap comments
-  print("-Oh Snap comments-")
-  print(len(ohSnap))
-  for com, parent, scoreDif in ohSnap:
-    print("Original Comment with score (" + parent.score + "): " + parent.body)
-    print("Reply with score (" + com.score + "): " + com.body)
-  print()
+  #ohSnap (not working)
     
-  #calc and display top words
+  #calc top words
   topWords = []
   for key, value in nounDict.items():
     ignoreFlag = False
@@ -130,12 +118,9 @@ def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnap
           if valueTop < value:
             topWords.pop(len(topWords)-1)
             topWords.append((key, value))
-  print("-Top Words-")
-  for key, value in topWords:
-    print(str(value) + ": " + key)
-  print()
+  #topWords
 
-  #calc and display top users
+  #calc top users
   topUsers = []
   for key, value in userDict.items():
     ignoreFlag = False
@@ -151,13 +136,9 @@ def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnap
           if valueTop < value:
             topUsers.pop(len(topUsers)-1)
             topUsers.append((key, value))
-  print("-Top Users-")
-  for key, value in topUsers:
-    print(str(value) + ": " + str(key))
-  print()
+  #topUsers
 
-  #display average comment length
-  print("Average comment length: " + str(totalLengthAll / commentsAnalyzed) + " words")
+  #totalLengthAll / commentsAnalyzed = averageCommentLengthAll
 
   #calc and display average top comment length
   if(topComLimit):
@@ -165,18 +146,8 @@ def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnap
     for com, post in topCom:
       tokens = nltk.word_tokenize(com.body)
       totalLengthTop += len(tokens)
-    print("Average Top comment length: " + str(totalLengthTop / topComLimit) + " words")
+    #totalLengthTop / topComLimit = averageTopCommmentLength
 
-  print("--- IN FOUNDIT BEFORE OLDEST POST")
-
-  #display oldest posts
-  print()
-  print("-Oldest Posts-")
-  for post, ind in oldestPost:
-    print(str(ind) + " posts down: " + post.title)
-    print(getSubmissionAge(post))
-
-  print("--- IN FOUNDIT SEARCH")
-
+  #oldestPosts (use getSubmissionAge(post))
   return (topCom, topWords)
 

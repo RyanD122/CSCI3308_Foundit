@@ -1,15 +1,29 @@
 import praw
 import nltk
-nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
-from nltk import word_tokenize
 from datetime import datetime, timedelta
 import os
 
 def getSubmissionAge(submission):
   return datetime.utcnow() - datetime.utcfromtimestamp(submission.created_utc)
 
-def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnapLimit, oldestPostLimit):
+def adjust(l, limit, indexToCompare, thingToAdd):
+    #fill list to limit
+    if(len(l) < limit):
+      l.append(thingToAdd)
+      if(len(l) == limit - 1):
+        l.sort(key=lambda x: x[indexToCompare], reverse=True)
+    #replace lowest value of indexToCompare with thingToAdd
+    else:
+      for item in l:
+        if(thingToAdd[indexToCompare] < item[indexToCompare]):
+          l.pop(len(l) - 1)
+          l.append(thingToAdd)
+          l.sort(key=lambda x: x[indexToCompare], reverse=True)
+          break
+    return l
+
+def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWordLimit=0, topUserLimit=0, oldestPostLimit=0, activePostLimit=0):
 
   #open reddit instance
   reddit = praw.Reddit(client_id='8cEoUXP_vP3Gpg',
@@ -22,132 +36,103 @@ def search(subreddit, postLimit, topComLimit, topWordLimit, topUserLimit, ohSnap
   userDict = {}
   userIgnoreList= ['None']
   topCom = []
+  topReply = []
   oldestPost = []
-  ohSnap = []
+  activePost = []
 
-  index = 0
+  postsAnalyzed = 0
   totalLengthAll = 0
   commentsAnalyzed = 0
 
   #begin analysis
+
+  #loop through submissions
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
-    
+
+    print("Searching: " + submission.title)
+
+    #get all comments including replies
+    submission.comments.replace_more(limit=0)
+    all_comments = submission.comments.list()
+    comCount = len(all_comments)
+
+    #adjust active post list
+    activePost = adjust(activePost, activePostLimit, 2, (submission, postsAnalyzed, comCount))
+
     #adjust oldest post list
-    if(len(oldestPost) < oldestPostLimit):
-      oldestPost.append((submission, index))
-    else:
-      for post, ind in oldestPost:
-        if(getSubmissionAge(post) < getSubmissionAge(submission)):
-          oldestPost.pop(len(oldestPost) - 1)
-          oldestPost.append((submission, index))
-          oldestPost.sort(key=lambda x: getSubmissionAge(x[0]), reverse=True)
-          break
-    
-    for comment in submission.comments:
+    age = getSubmissionAge(submission)
+    oldestPost = adjust(oldestPost, oldestPostLimit, 2, (submission, postsAnalyzed, age, comCount))
+
+    #loop through all comments
+    for comment in all_comments:
       try:
-        #find oh snap
+
+        #adjust top comments
+        score = comment.score
+        topCom = adjust(topCom, topComLimit, 1, (comment, score, submission))
+        
+        #adjust top replies
         parent = comment.parent()
         if(parent != submission):
           scoreDif = comment.score - parent.score
           if(scoreDif > 0):
-            if(len(ohSnap) < ohSnapLimit):
-              ohSnap.append((comment, parent, scoreDif))
-            else:
-              for ohcom, ohparent, ohscoreDif in ohSnap:
-                if(ohscoreDif < scoreDif):
-                  ohSnap.pop(len(ohSnap) - 1)
-                  ohSnap.append((comment, parent, scoreDif))
-                  ohSnap.sort(key=lambda x: x[3], reverse=True)
-                  break
-                      
-        #add nouns to dict
-        tokens = nltk.word_tokenize(comment.body)
-        tagged = nltk.pos_tag(tokens)
-        for word, tag in tagged:
-          wordLower = word.lower()
-          if(tag == 'NNP' or tag == 'NN'):
-            if(wordLower in nounDict):
-              nounDict[wordLower] += 1
-            else:
-              nounDict[wordLower] = 1
-        
+            topReply = adjust(topReply, topReplyLimit, 2, (comment, parent, scoreDif, submission))
+
         #add poster to dict
         author = comment.author
         if(author in userDict):
           userDict[author] += 1
         else:
           userDict[author] = 1
-        
-        #add to average word count
+
+        #add nouns to dict
+        tokens = nltk.word_tokenize(comment.body)
+        tagged = nltk.pos_tag(tokens)
+        for word, tag in tagged:
+          word = word.lower()
+          if(tag == 'NNP' or tag == 'NN'):
+            if(word in nounDict):
+              nounDict[word] += 1
+            else:
+              nounDict[word] = 1
+
+        #add to total word count
         totalLengthAll += len(tokens)
         commentsAnalyzed += 1
-        
-        #adjust top comment list
-        if(len(topCom) < topComLimit):
-          topCom.append((comment, submission))
-        else:  
-            for com, post in topCom:
-              if(com.score < comment.score):
-                topCom.pop(len(topCom) - 1)
-                topCom.append((comment, submission))
-                topCom.sort(key=lambda x: x[0].score, reverse=True)
-                break
-          
-      #ignore "moreComments" types
+
+        #ignore "moreComments" type
       except AttributeError:
         pass
-    index += 1
 
-  #topComs
+    postsAnalyzed += 1
 
-  #ohSnap (not working)
-    
-  #calc top words
+  #analysis finished
+
+  #adjust top words
   topWords = []
-  for key, value in nounDict.items():
-    ignoreFlag = False
-    for ignore in nounIgnoreList:
-      if(key == ignore):
-        ignoreFlag = True
-    if(not ignoreFlag and len(key) > 1):
-      if len(topWords) < topWordLimit:
-        topWords.append((key, value))
-      else:
-        topWords.sort(key=lambda x: x[1], reverse=True)
-        for keyTop, valueTop in topWords:
-          if valueTop < value:
-            topWords.pop(len(topWords)-1)
-            topWords.append((key, value))
-  #topWords
+  for word, freq in nounDict.items():
+    if not word in nounIgnoreList and len(word) > 1:
+        topWords = adjust(topWords, topWordLimit, 1, (word, freq))
 
-  #calc top users
+  #adjust top users
   topUsers = []
-  for key, value in userDict.items():
-    ignoreFlag = False
-    for ignore in userIgnoreList:
-      if(str(key) == ignore):
-        ignoreFlag = True
-    if(not ignoreFlag):
-      if len(topUsers) < topUserLimit:
-        topUsers.append((key, value))
-      else:
-        topUsers.sort(key=lambda x: x[1], reverse=True)
-        for keyTop, valueTop in topUsers:
-          if valueTop < value:
-            topUsers.pop(len(topUsers)-1)
-            topUsers.append((key, value))
-  #topUsers
+  for user, freq in userDict.items():
+    if not user in userIgnoreList:
+      topUsers = adjust(topUsers, topUserLimit, 1, (user, freq))
 
-  #totalLengthAll / commentsAnalyzed = averageCommentLengthAll
-
-  #calc and display average top comment length
+  #calc top comment length
+  averageLengthTop = 0
   if(topComLimit):
     totalLengthTop = 0
-    for com, post in topCom:
+    for com, sc, sub in topCom:
       tokens = nltk.word_tokenize(com.body)
       totalLengthTop += len(tokens)
-    #totalLengthTop / topComLimit = averageTopCommmentLength
+    averageLengthTop = totalLengthTop / topComLimit
 
-  #oldestPosts (use getSubmissionAge(post))
-  return (topCom, topWords)
+  #calc all comment length
+  averageLengthAll = 0
+  if(postLimit):
+    averageLengthAll = totalLengthAll / commentsAnalyzed
+
+  return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost)
 
