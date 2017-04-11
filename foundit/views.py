@@ -47,8 +47,17 @@ def results(request):
 
   allList = foundit.search(str(subreddit), int(postLimit), int(topComs), int(topReplies), int(topWords), int(topUsers), int(oldestPosts), int(activePosts))
 
+topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost
+
   topComList = allList[0]
-  topWordList = allList[1]
+  topRepliesList = allList[1]
+  topWordList = allList[2]
+  avgLengthTop = allList[3]
+  avgLengthAll = allList[4]
+  topUserList = allList[5]
+  oldestPostList = allList[6]
+  activePostList = allList[7]
+  
 
   topWordCounts = []
   topWords = []
