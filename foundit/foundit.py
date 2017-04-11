@@ -50,8 +50,6 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   #loop through submissions
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
 
-    print("Searching: " + submission.title)
-
     #get all comments including replies
     submission.comments.replace_more(limit=0)
     all_comments = submission.comments.list()
