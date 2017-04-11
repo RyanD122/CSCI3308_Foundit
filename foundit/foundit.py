@@ -1,6 +1,7 @@
 import praw
 import nltk
 nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
 from datetime import datetime, timedelta
 import os
 
