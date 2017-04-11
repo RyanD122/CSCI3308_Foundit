@@ -17,7 +17,7 @@ def adjust(l, limit, indexToCompare, thingToAdd):
     #replace lowest value of indexToCompare with thingToAdd
     else:
       for item in l:
-        if(thingToAdd[indexToCompare] < item[indexToCompare]):
+        if(thingToAdd[indexToCompare] > item[indexToCompare]):
           l.pop(len(l) - 1)
           l.append(thingToAdd)
           l.sort(key=lambda x: x[indexToCompare], reverse=True)
