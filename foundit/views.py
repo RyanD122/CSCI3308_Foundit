@@ -39,12 +39,13 @@ def results(request):
   subreddit = request.GET['subreddit']
   postLimit = request.GET['postLimit']
   topComs = request.GET['topComs']
+  topReplies = request.GET['topReplies']
   topWords = request.GET['topWords']
   topUsers = request.GET['topUsers']
-  OhSnap = request.GET['ohSnap']
-  OldestPosts = request.GET['oldestPosts']
+  oldestPosts = request.GET['oldestPosts']
+  activePosts = request.GET['activePosts']
 
-  allList = foundit.search(str(subreddit), int(postLimit), int(topComs), int(topWords), int(topUsers), int(OhSnap), int(OldestPosts))
+  allList = foundit.search(str(subreddit), int(postLimit), int(topComs), int(topReplies), int(topWords), int(topUsers), int(oldestPosts), int(activePosts))
 
   topComList = allList[0]
   topWordList = allList[1]
