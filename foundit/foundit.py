@@ -68,7 +68,7 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
 
         #adjust top comments
         print("topComLimit: " + str(topComLimit))
-        print("current length: " + len(topCom))
+        print("current length: " + str(len(topCom)))
         print("Before: " + str(topCom))
         score = comment.score
         topCom = adjust(topCom, topComLimit, 1, (comment, score, submission))
