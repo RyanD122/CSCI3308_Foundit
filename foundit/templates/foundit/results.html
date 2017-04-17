@@ -30,9 +30,9 @@
     <div class="row">
         <div class="col-xs-2 col-md-2"></div>
         <div class="col-xs-8 col-sm-2 col-md-8"><h1>Results for r/{{ subreddit }}</h1><br>
-        {% for com, sub in topComList %}
+        {% for com, score, sub in topComList %}
         <table class="table table-bordered">
-        <h2>Post Title{{ sub.title }}</h2>
+        <h2>Post Title {{ sub.title }}</h2>
         <tr>
             <th class="col-md-2">Upvotes</th>
             <th class="col-md-8">Top Comment</th>
