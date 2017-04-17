@@ -1,8 +1,71 @@
-Results for: {{ subreddit }}<br>
--Top Comments-<br>
-<ul> 
-{% for com, score, sub in topComList %}
-  <li>-{{ score }} : {{ com.body }}<br>Post Title: {{ sub.title }}</li>
-{% endfor %}
-</ul>  
-{{Graph|safe}}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Foundit</title>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <link href="/css/default.css" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Foundit</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Page 1</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="row">
+        <div class="col-xs-2 col-md-2"></div>
+        <div class="col-xs-8 col-sm-2 col-md-8"><h1>Results for r/{{ subreddit }}</h1><br>
+        {% for com, sub in topComList %}
+        <table class="table table-bordered">
+        <h2>Post Title{{ sub.title }}</h2>
+        <tr>
+            <th class="col-md-2">Upvotes</th>
+            <th class="col-md-8">Top Comment</th>
+        </tr>
+        <tr>
+            <th class="col-md-2">{{ com.score }}</th>  
+            <th class="col-md-8">{{ com.body }}</th>
+        </tr>
+        </table>
+        {% endfor %}
+        </div>
+        <div class="col-xs-2 col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="thumbnail">
+                        {{Graph|safe}}
+                        <div class="caption">
+                            <p>caption?</p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+<!--
+    <ul> 
+    {% for com, sub in topComList %}
+      <li>-{{ com.score }} : {{ com.body }}<br>Post Title: {{ sub.title }}</li>
+    {% endfor %}
+    </ul>  
+-->
+  </body>
+</html>
