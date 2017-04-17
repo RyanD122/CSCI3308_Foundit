@@ -1,9 +1,0 @@
-
-Results for: {{ subreddit }}<br>
--Top Comments-<br>
-<ul> 
-{% for com, sub in topComList %}
-  <li>-{{ com.score }} : {{ com.body }}<br>Post Title: {{ sub.title }}</li>
-{% endfor %}
-</ul>  
-{{Graph|safe}}
