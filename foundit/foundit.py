@@ -106,17 +106,23 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
 
   #analysis finished
 
+  print("analysis finished")
+
   #build top words
   topWords = []
   for word, freq in nounDict.items():
     if not word in nounIgnoreList and len(word) > 1:
         topWords = adjust(topWords, topWordLimit, 1, (word, freq))
 
+  print("topword build finished")
+
   #build top users
   topUsers = []
   for user, freq in userDict.items():
     if not user in userIgnoreList:
       topUsers = adjust(topUsers, topUserLimit, 1, (user.fullname, freq))
+
+  print("topusers build finished")
 
   #calc top comment length
   averageLengthTop = 0
