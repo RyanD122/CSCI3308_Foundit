@@ -41,7 +41,6 @@ def results(request):
   #compile graph for topUsers
   topUserCounts = [x[1] for x in topUserList]
   topUsers = [x[0].name for x in topUserList]
-aasdfsdfads
   topUsersData = (topUserCounts, "Top Users", "Activity", topUsers)
   topUsersGraph = graph.renderGraph(topUsersData)
 
