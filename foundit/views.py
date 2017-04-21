@@ -38,6 +38,12 @@ def results(request):
   topWordsData = (topWordCounts, "Top Words", "Occurances", topWords)
   topWordsGraph = graph.renderGraph(topWordsData)
 
+  #compile graph for topUsers
+  topUserCounts = [x[1] for x in topUserList]
+  topUsers = [x[0] for x in topUserList]
+  topUsersData = (topUserCount, "Top Users", "Activity", topUsers)
+  topUsersGraph = graph.renderGraph(topUsersData)
+
   t = loader.get_template('foundit/results.html')
-  c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, })
+  c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, 'topUsersGraph' : topUsersGraph})
   return HttpResponse(t.render(c))
