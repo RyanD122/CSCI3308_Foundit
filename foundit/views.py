@@ -33,8 +33,8 @@ def results(request):
   activePostList = allList[7]
   
   #compile graph for topWords
-  topWordCounts = [x[0] for x in topWordList]
-  topWords = [x[1] for x in topWordList]
+  topWordCounts = [x[1] for x in topWordList]
+  topWords = [x[0] for x in topWordList]
   topWordsData = (topWordCounts, "Top Words", "Occurances", topWords)
   topWordsGraph = graph.renderGraph(topWordsData)
 
