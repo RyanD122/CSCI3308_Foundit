@@ -41,7 +41,7 @@ def results(request):
   #compile graph for topUsers
   topUserCounts = [x[1] for x in topUserList]
   topUsers = [x[0] for x in topUserList]
-  topUsersData = (topUserCount, "Top Users", "Activity", topUsers)
+  topUsersData = (topUserCounts, "Top Users", "Activity", topUsers)
   topUsersGraph = graph.renderGraph(topUsersData)
 
   t = loader.get_template('foundit/results.html')
