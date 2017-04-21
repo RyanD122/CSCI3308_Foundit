@@ -34,7 +34,6 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   nounDict = {}
   nounIgnoreList = ['http', 'https']
   userDict = {}
-  userIgnoreList= ['None']
   topCom = []
   topReply = []
   oldestPost = []
@@ -106,8 +105,6 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
 
   #analysis finished
 
-  print("analysis finished")
-
   #build top words
   topWords = []
   for word, freq in nounDict.items():
@@ -117,8 +114,9 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   #build top users
   topUsers = []
   for user, freq in userDict.items():
-    if not user in userIgnoreList:
-      topUsers = adjust(topUsers, topUserLimit, 1, (str(user), freq))
+    userStr = str(user)
+    if userStr != "None":
+      topUsers = adjust(topUsers, topUserLimit, 1, (userStr, freq))
 
   #calc top comment length
   averageLengthTop = 0
