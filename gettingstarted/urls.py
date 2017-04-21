@@ -8,5 +8,5 @@ admin.autodiscover()
 # url(r'^blog/', include('blog.urls')),
 
 urlpatterns = [
-    url(r'^foundit/', include('foundit.urls')),
+    url(r'^', include('foundit.urls')),
 ]
