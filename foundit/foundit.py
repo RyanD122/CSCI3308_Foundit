@@ -116,7 +116,7 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   topUsers = []
   for user, freq in userDict.items():
     if not user in userIgnoreList:
-      topUsers = adjust(topUsers, topUserLimit, 1, (user, freq))
+      topUsers = adjust(topUsers, topUserLimit, 1, (user.name, freq))
 
   #calc top comment length
   averageLengthTop = 0
