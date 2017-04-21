@@ -119,9 +119,9 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   #build top users
   topUsers = []
   for user, freq in userDict.items():
-    print(user)
+    print(str(user))
     if not user in userIgnoreList:
-      topUsers = adjust(topUsers, topUserLimit, 1, (user, freq))
+      topUsers = adjust(topUsers, topUserLimit, 1, (str(user), freq))
 
   print("topusers build finished")
 
