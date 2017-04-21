@@ -9,5 +9,4 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^foundit/', include('foundit.urls')),
-    url(r'^admin/', include(admin.site.urls)),
 ]
