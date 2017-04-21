@@ -36,7 +36,7 @@ def results(request):
   topWordCounts = [x[0] for x in topWordList]
   topWords = [x[1] for x in topWordList]
   topWordsData = (topWordCounts, "Top Words", "Occurances", topWords)
-  topWordsGraph = graph.renderGraph(dataSet)
+  topWordsGraph = graph.renderGraph(topWordsData)
 
   t = loader.get_template('foundit/results.html')
   c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, })
