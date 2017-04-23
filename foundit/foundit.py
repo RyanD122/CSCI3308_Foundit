@@ -23,8 +23,8 @@ def adjust(l, limit, indexToCompare, thingToAdd):
           break
     return l
 
-def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWordLimit=0, topUserLimit=0, oldestPostLimit=0, activePostLimit=0):
-
+def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
+  topicWordLimit = topWordLimit
   #open reddit instance
   reddit = praw.Reddit(client_id='8cEoUXP_vP3Gpg',
                        client_secret='IuhFngwlEbGdZtAxm5NdvesMa4U',
@@ -32,7 +32,11 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
 
   #initialize some variables
   nounDict = {}
-  nounIgnoreList = ['http', 'https']
+  titleWords = {}
+  userIgnoreList= ['automoderator']
+  nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
+  userDict = {}
+  userIgnoreList= ['automoderator']
   userDict = {}
   topCom = []
   topReply = []
@@ -44,11 +48,21 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   commentsAnalyzed = 0
 
   #begin analysis
-
   #loop through submissions
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
-
+    
     #get all comments including replies
+    tokens = nltk.word_tokenize(submission.title)
+    tagged = nltk.pos_tag(tokens)
+    for word, tag in tagged:
+#    print(word)
+      tword = word.lower()
+      if(tag == 'NNP' or tag == 'NN'):
+        if tword in titleWords:
+          titleWords[tword] += 1
+        else:
+          titleWords[tword] = 1
+          
     submission.comments.replace_more(limit=0)
     all_comments = submission.comments.list()
     comCount = len(all_comments)
@@ -76,11 +90,12 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
             topReply = adjust(topReply, topReplyLimit, 2, (comment, parent, scoreDif, submission))
 
         #add poster to dict
-        author = comment.author
-        if(author in userDict):
-          userDict[author] += 1
-        else:
-          userDict[author] = 1
+        if (comment.author != 'automoderator'):
+          author = comment.author
+          if(author in userDict):
+            userDict[author] += 1
+          else:
+            userDict[author] = 1
 
         #add nouns to dict
         tokens = nltk.word_tokenize(comment.body)
@@ -96,12 +111,14 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
         #add to total word count
         totalLengthAll += len(tokens)
         commentsAnalyzed += 1
+        print ("Number of Comments: "+str(commentsAnalyzed))
 
         #ignore "moreComments" type
       except AttributeError:
         pass
 
     postsAnalyzed += 1
+    print ("Number of Posts: "+str(postsAnalyzed))
 
   #analysis finished
 
@@ -132,5 +149,107 @@ def search(subreddit="all", postLimit=0, topComLimit=0, topReplyLimit=0, topWord
   if(postLimit):
     averageLengthAll = totalLengthAll / commentsAnalyzed
 
-  return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost)
+#LUKES CODE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  toptwords = []
+  for word, freq in titleWords.items():
+    if not word in nounIgnoreList and len(word) > 1:
+      toptwords = adjust(toptwords, topWordLimit, 1, (word, freq))    
+#    ignoreFlag = False
+#    for ignore in nounIgnoreList:
+#      if(key == ignore):
+#        ignoreFlag = True
+#    if(not ignoreFlag and len(key) > 1):
+#      if len(toptwords) < topicWordLimit:
+#        toptwords.append((key, value))
+#      else:
+#        toptwords.sort(key=lambda x: x[1], reverse=True)
+#        for keyTop, valueTop in toptwords:
+#          if valueTop < value:
+#            toptwords.pop(len(toptwords)-1)
+#            toptwords.append((key, value))
+            
+  topicDict = {}
+  #reserach posts only with topic words to find words accociated with topic
+  tindex=0
+  sindex=0
+  tc=0
+
+  #RELOOP THROUGH SUBMISSIONS TO LOOK AT SUBMISSIONS WITH ONLY TOPIC WORDS
+  #Initializing dictionary before loop
+  for topicword,value in toptwords:
+    topicDict[topicword] = {}
+    
+  tc=0  
+  for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
+    submission.comments.replace_more(limit=0)
+    all_comments = submission.comments.list()
+    
+    tokens = nltk.word_tokenize(submission.title)
+    tagged = nltk.pos_tag(tokens)
+    tempdic = {}
+    
+    for topicword,value in toptwords:
+      #topicDict[topicword] = {}
+      for word, tag in tagged:
+        tword = word.lower()
+        #print("TOPIC WORD: "+topicword)
+        #print("TITLE WORD: "+tword)
+        #print()
+        if tword == topicword:#Topic Word match
+          #print('match')
+          for comment in all_comments:
+            tc+=0
+            try:
+              if (comment.author != 'automoderator'):
+                ctokens = nltk.word_tokenize(comment.body)
+                ctagged = nltk.pos_tag(ctokens)
+                for cword, ctag in ctagged:
+                  lword = cword.lower()
+                  #print(lword)
+                  if (lword != topicword):
+                    if(ctag == 'NNP' or ctag == 'NN' or ctag == 'NNS' or ctag == 'NN'):
+                      if(lword in topicDict[topicword]):
+                        topicDict[topicword][lword][0] += 1
+                        if (lword not in tempdic):
+                          topicDict[topicword][lword][1] += 1
+                          tempdic[lword]=1
+                        #print(topicDict[topicword][lword])
+                      else:
+                        topicDict[topicword][lword] = [1,1]
+                        tempdic[lword]=1
+                        #print(lword)
+            except AttributeError:
+              pass
+            sindex += 1            
+    print(str(tindex)+": "+topicword+"---"+str(sindex/topicWordLimit)+"---TOTAL: ")
+    tindex+=1
+    sindex=0         
+    
+  print
+
+  #ORDERS SUPPORTING WORDS RELATIVE TO ITS TOPIC WORD
+  corwords = {}            
+  for word,dic in topicDict.items():
+    print(word)
+    temp = []
+    for key,value in dic.items():
+      ignoreFlag = False
+      for ignore in nounIgnoreList:
+        if(key == ignore):
+          ignoreFlag = True
+      if(not ignoreFlag and len(key) > 1):
+        if len(temp) < topicWordLimit:
+          temp.append((key, value))
+        else:
+          temp.sort(key=lambda x: x[1], reverse=True)
+          for keyTop, valueTop in temp:
+            if valueTop < value:
+              temp.pop(len(temp)-1)
+              temp.append((key, value))
+    corwords[word]=temp    
+    
+  print (str(tc/topicWordLimit))#total number of checked comments in second loop
+  print ("Number of Comments: "+str(commentsAnalyzed))
+  
+  return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost,toptwords, corwords)
 

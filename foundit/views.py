@@ -20,7 +20,14 @@ def results(request):
   topUsers = request.GET['topUsers']
   oldestPosts = request.GET['oldestPosts']
   activePosts = request.GET['activePosts']
-
+  if(int(postLimit)<10):
+    postLimit=10
+  if(int(topComs)>15):
+    topComs=15
+  if(int(topWords)>15):
+    topWords=15
+  if(int(topUsers)>15):
+    topUsers=15
   allList = foundit.search(str(subreddit), int(postLimit), int(topComs), int(topReplies), int(topWords), int(topUsers), int(oldestPosts), int(activePosts))
 
   topComList = allList[0]
@@ -31,6 +38,9 @@ def results(request):
   topUserList = allList[5]
   oldestPostList = allList[6]
   activePostList = allList[7]
+  
+  topicWordList = allList[8]
+  supportWordList = allList[9]
   
   #compile graph for topWords
   topWordCounts = [x[1] for x in topWordList]
@@ -43,7 +53,19 @@ def results(request):
   topUsers = [x[0] for x in topUserList]
   topUsersData = (topUserCounts, "Top Users", "Activity", topUsers)
   topUsersGraph = graph.renderGraph(topUsersData)
+  
+  #LUKES TEST GRAPHS
+  
+  #Topic Words Graph
+  topicWordCounts = [x[1] for x in topicWordList]
+  topicWords = [x[0] for x in topicWordList]
+  topicWordsData = (topicWordCounts, "Topic Words", "Occurances", topicWords)
+  topicWordsGraph = graph.renderGraph(topicWordsData)  
+  
+  data=(topicWordList, supportWordList)
+  supportWordsGraph = graph.urenderGraph(data)
+  
 
   t = loader.get_template('foundit/results.html')
-  c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, 'topUsersGraph' : topUsersGraph})
+  c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, 'topUsersGraph' : topUsersGraph, 'topicWordsGraph' : topicWordsGraph, 'supportWordsGraph' : supportWordsGraph})
   return HttpResponse(t.render(c))
