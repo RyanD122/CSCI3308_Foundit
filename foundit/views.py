@@ -21,10 +21,6 @@ def loading(request):
   job = q.enqueue(utils.printHello, 'http://heroku.com') #not sure what the heroku.com does
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
-
-  while(1):
-    print(job.result)  
-
   return HttpResponse(t.render(c))
 
 def checkJob(request):
