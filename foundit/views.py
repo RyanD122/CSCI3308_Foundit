@@ -21,7 +21,7 @@ def index(request):
 def loading(request):
 
   subreddit = "all"
-  postLimit = 30
+  postLimit = 1
   topComs = 5
   topReplies = 5
   topWords = 5

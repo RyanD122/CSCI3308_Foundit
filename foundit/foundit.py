@@ -55,7 +55,6 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     tokens = nltk.word_tokenize(submission.title)
     tagged = nltk.pos_tag(tokens)
     for word, tag in tagged:
-#    print(word)
       tword = word.lower()
       if(tag == 'NNP' or tag == 'NN'):
         if tword in titleWords:
@@ -111,14 +110,12 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
         #add to total word count
         totalLengthAll += len(tokens)
         commentsAnalyzed += 1
-        #print ("Number of Comments: "+str(commentsAnalyzed))
 
         #ignore "moreComments" type
       except AttributeError:
         pass
 
     postsAnalyzed += 1
-    #print ("Number of Posts: "+str(postsAnalyzed))
 
   #analysis finished
 
