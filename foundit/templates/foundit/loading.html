@@ -16,13 +16,12 @@ Loading with job id {{jobid}}
       success: function(content){
         if(content != "None"){
           console.log(content);
-          window.location.href = '/testResults';
+          window.location.href = "/results/"+"?jobid="+content;
         }
         else {
           var i = 0;
-          while(i < 1000){i++}
+          while(i < 2000000000){i++}
           console.log("not done");
-          console.log(content);
           check_status();
         }
       }
