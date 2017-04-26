@@ -25,7 +25,7 @@ def adjust(l, limit, indexToCompare, thingToAdd):
 
 def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
 
-  print("search called")
+  print("SEARCH CALLED")
 
   topicWordLimit = topWordLimit
   #open reddit instance

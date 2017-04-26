@@ -29,7 +29,11 @@ def loading(request):
   oldestPosts = 5
   activePosts = 5
 
+  print("engueued job")
+
   job = q.enqueue(foundit.search, str(subreddit), int(postLimit), int(topComs), int(topReplies), int(topWords), int(topUsers), int(oldestPosts), int(activePosts))
+
+  print("done engueueing job")
 
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
