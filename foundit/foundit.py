@@ -24,6 +24,9 @@ def adjust(l, limit, indexToCompare, thingToAdd):
     return l
 
 def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
+
+  print("search called")
+
   topicWordLimit = topWordLimit
   #open reddit instance
   reddit = praw.Reddit(client_id='8cEoUXP_vP3Gpg',
