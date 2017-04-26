@@ -1,0 +1,33 @@
+{% block content %}
+
+Loading with job id {{jobid}}
+
+{% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script>
+  function check_status(){
+    $.ajax({
+      type: "GET",
+      url: "checkJob",
+      data: "jobid="+"{{jobid}}",
+      dataType: "text",
+      success: function(content){
+        if(content != "None"){
+          console.log(content);
+          window.location.href = '/testResults';
+        }
+        else {
+          var i = 0;
+          while(i < 1000){i++}
+          console.log("not done");
+          console.log(content);
+          check_status();
+        }
+      }
+    });
+  }
+
+  check_status();
+</script>

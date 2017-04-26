@@ -5,11 +5,30 @@ from django.template import Context
 
 from .models import Queuery
 
+from rq import Queue
+from worker import conn
+from . import utils
+
 from . import foundit
 from . import graph
 
+q = Queue(connection=conn)
+
 def index(request):
   return render(request, 'foundit/index.html')
+
+def loading(request):
+  job = q.enqueue(utils.printHello, 'http://heroku.com') #not sure what the heroku.com does
+  t = loader.get_template('foundit/loading.html')
+  c = Context({ 'jobid': job.id })
+  return HttpResponse(t.render(c))
+
+def checkJob(request):
+  job = q.fetch_job(request.GET['jobid'])
+  return HttpResponse(job.result)
+
+def testResults(request):
+  return HttpResponse("results!")
 
 def results(request):
   subreddit = request.GET['subreddit']
