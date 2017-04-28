@@ -54,6 +54,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   #loop through submissions
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     
+    print(submission.title)
     #get all comments including replies
     tokens = nltk.word_tokenize(submission.title)
     tagged = nltk.pos_tag(tokens)
