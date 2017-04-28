@@ -66,6 +66,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
         else:
           titleWords[tword] = 1
           
+    submission.comments.replace_more(limit=10)
     all_comments = submission.comments.list()
     comCount = len(all_comments)
 
