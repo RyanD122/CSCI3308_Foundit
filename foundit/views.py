@@ -20,20 +20,16 @@ def index(request):
 
 def loading(request):
 
-  subreddit = "all"
-  postLimit = 1
-  topComs = 5
-  topReplies = 5
-  topWords = 5
-  topUsers = 5
-  oldestPosts = 5
-  activePosts = 5
-
-  print("engueued job")
+  subreddit = request.GET["subreddit"]
+  postLimit = request.GET["postLimit"]
+  topComs = request.GET["topComs"]
+  topReplies = request.GET["topReplies"]
+  topWords = request.GET["topWords"]
+  topUsers = request.GET["topUsers"]
+  oldestPosts = request.GET["oldestPosts"]
+  activePosts = request.GET["activePosts"]
 
   job = q.enqueue(foundit.search, str(subreddit), int(postLimit), int(topComs), int(topReplies), int(topWords), int(topUsers), int(oldestPosts), int(activePosts))
-
-  print("done engueueing job")
 
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
