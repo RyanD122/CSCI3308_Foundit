@@ -121,7 +121,15 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
   #analysis finished
 
-  print("fuck shit bitch cunt")
+  print("analysis done")
+
+  #build top title words
+  toptwords = []
+  for word, freq in titleWords.items():
+    if not word in nounIgnoreList and len(word) > 1:
+      toptwords = adjust(toptwords, topWordLimit, 1, (word, freq))    
+
+  print("top title words done")
 
   #build top words
   topWords = []
@@ -129,12 +137,16 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     if not word in nounIgnoreList and len(word) > 1:
         topWords = adjust(topWords, topWordLimit, 1, (word, freq))
 
+  print("topwords done")
+
   #build top users
   topUsers = []
   for user, freq in userDict.items():
     userStr = str(user)
     if userStr != "None":
       topUsers = adjust(topUsers, topUserLimit, 1, (userStr, freq))
+
+  print("top users done")
 
   #calc top comment length
   averageLengthTop = 0
@@ -145,16 +157,14 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
       totalLengthTop += len(tokens)
     averageLengthTop = totalLengthTop / topComLimit
 
+  print("top comment done")
+
   #calc all comment length
   averageLengthAll = 0
   if(postLimit):
     averageLengthAll = totalLengthAll / commentsAnalyzed
 
-#LUKES CODE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  toptwords = []
-  for word, freq in titleWords.items():
-    if not word in nounIgnoreList and len(word) > 1:
-      toptwords = adjust(toptwords, topWordLimit, 1, (word, freq))    
+  print("all comment done")
 
   return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost,toptwords)
 
