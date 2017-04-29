@@ -121,6 +121,8 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
   #analysis finished
 
+  print("fuck shit bitch cunt")
+
   #build top words
   topWords = []
   for word, freq in nounDict.items():
