@@ -169,7 +169,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   #refine lists
   refTopCom = []
   for comment, score, submission in topCom:
-    refTopCom.append((comment.body, score, and submission.title))
+    refTopCom.append((comment.body, score, submission.title))
 
   refTopReply = []
   for comment, parent, scoreDif, submission in topReply:
