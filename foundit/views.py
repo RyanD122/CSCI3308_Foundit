@@ -51,7 +51,6 @@ def results(request):
   
   jobid = request.GET['jobid']
   results = q.fetch_job(jobid).result
-  q = Queue(connection=conn)
 
   topComList = results[0]
   topRepliesList = results[1]
