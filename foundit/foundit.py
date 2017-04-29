@@ -153,8 +153,6 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   for word, freq in titleWords.items():
     if not word in nounIgnoreList and len(word) > 1:
       toptwords = adjust(toptwords, topWordLimit, 1, (word, freq))    
-  
-  return ([],[],[],0,0,[],[],[],[])
 
   return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost,toptwords)
 
