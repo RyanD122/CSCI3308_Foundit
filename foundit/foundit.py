@@ -113,7 +113,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
       #      nounDict[word] = 1
 
       #add to total word count
-      totalLengthAll += len(tokens)
+      #totalLengthAll += len(tokens)
       commentsAnalyzed += 1
 
 
