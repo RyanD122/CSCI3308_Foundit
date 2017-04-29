@@ -166,7 +166,5 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
   print("all comment done")
 
-  return ([],[],[],0,0,[],[],[],[])
-
   return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost,toptwords)
 
