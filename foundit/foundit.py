@@ -164,7 +164,24 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   if(postLimit):
     averageLengthAll = totalLengthAll / commentsAnalyzed
 
-  print("all comment done")
+  print("all comment done") 
 
-  return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost,toptwords)
+  #refine lists
+  refTopCom = []
+  for comment, score, submission in topCom:
+    refTopCom.append((comment.body, score, and submission.title))
+
+  refTopReply = []
+  for comment, parent, scoreDif, submission in topReply:
+    refTopReply.append((comment.body, parent.body, scoreDif, submission.title))
+
+  refOldestPost = []
+  for submission, postsAnalyzed, age, comCount in oldestPost:
+    refOldestPost.append((submission.title, postsAnalyzed, age, comCount))
+
+  refActivePost = []
+  for submission, postsAnalyzed, comCount in activePost:
+    refActivePost.append((submission.title, postsAnalyzed, comCount))
+
+  return (refTopCom, refTopReply, topWords, averageLengthTop, averageLengthAll, topUsers, refOldestPost, refActivePost,toptwords)
 
