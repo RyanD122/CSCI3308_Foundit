@@ -34,7 +34,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
                        user_agent='pc:foundit:v1.0 (by r/foundit_bot')
 
   #initialize some variables
-  nounDict = {}
+  #nounDict = {}
   titleWords = {}
   userIgnoreList= ['automoderator']
   nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
@@ -101,15 +101,15 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
             userDict[author] = 1
 
         #add nouns to dict
-        tokens = nltk.word_tokenize(comment.body)
-        tagged = nltk.pos_tag(tokens)
-        for word, tag in tagged:
-          word = word.lower()
-          if(tag == 'NNP' or tag == 'NN'):
-            if(word in nounDict):
-              nounDict[word] += 1
-            else:
-              nounDict[word] = 1
+        #tokens = nltk.word_tokenize(comment.body)
+        #tagged = nltk.pos_tag(tokens)
+        #for word, tag in tagged:
+        #  word = word.lower()
+        #  if(tag == 'NNP' or tag == 'NN'):
+        #    if(word in nounDict):
+        #      nounDict[word] += 1
+        #    else:
+        #      nounDict[word] = 1
 
         #add to total word count
         totalLengthAll += len(tokens)
@@ -125,9 +125,9 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
   #build top words
   topWords = []
-  for word, freq in nounDict.items():
-    if not word in nounIgnoreList and len(word) > 1:
-        topWords = adjust(topWords, topWordLimit, 1, (word, freq))
+  #for word, freq in nounDict.items():
+  #  if not word in nounIgnoreList and len(word) > 1:
+  #      topWords = adjust(topWords, topWordLimit, 1, (word, freq))
 
   #build top users
   topUsers = []
