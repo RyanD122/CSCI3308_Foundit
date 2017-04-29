@@ -34,7 +34,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
                        user_agent='pc:foundit:v1.0 (by r/foundit_bot')
 
   #initialize some variables
-  #nounDict = {}
+  nounDict = {}
   titleWords = {}
   userIgnoreList= ['automoderator']
   nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
