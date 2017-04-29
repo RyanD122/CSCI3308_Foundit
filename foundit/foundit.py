@@ -54,18 +54,18 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   #loop through submissions
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     
-    print(submission.title)
+  print("searching post: " + postsAnalyzed)
 
     #add nouns to dictionary
-    #tokens = nltk.word_tokenize(submission.title)
-    #tagged = nltk.pos_tag(tokens)
-    #for word, tag in tagged:
-    #  tword = word.lower()
-    #  if(tag == 'NNP' or tag == 'NN'):
-    #    if tword in titleWords:
-    #      titleWords[tword] += 1
-    #    else:
-    #      titleWords[tword] = 1
+    tokens = nltk.word_tokenize(submission.title)
+    tagged = nltk.pos_tag(tokens)
+    for word, tag in tagged:
+      tword = word.lower()
+      if(tag == 'NNP' or tag == 'NN'):
+        if tword in titleWords:
+          titleWords[tword] += 1
+        else:
+          titleWords[tword] = 1
      
     #get all comments including replies     
     submission.comments.replace_more(limit=0)
@@ -94,26 +94,26 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           topReply = adjust(topReply, topReplyLimit, 2, (comment, parent, scoreDif, submission))
 
       #add poster to dict
-      #if (comment.author != 'automoderator'):
-      #  author = comment.author
-      #  if(author in userDict):
-      #    userDict[author] += 1
-      #  else:
-      #    userDict[author] = 1
+      if (comment.author != 'automoderator'):
+        author = comment.author
+        if(author in userDict):
+          userDict[author] += 1
+        else:
+          userDict[author] = 1
 
       #add nouns to dict
-      #tokens = nltk.word_tokenize(comment.body)
-      #tagged = nltk.pos_tag(tokens)
-      #for word, tag in tagged:
-      #  word = word.lower()
-      #  if(tag == 'NNP' or tag == 'NN'):
-      #    if(word in nounDict):
-      #      nounDict[word] += 1
-      #    else:
-      #      nounDict[word] = 1
+      tokens = nltk.word_tokenize(comment.body)
+      tagged = nltk.pos_tag(tokens)
+      for word, tag in tagged:
+        word = word.lower()
+        if(tag == 'NNP' or tag == 'NN'):
+          if(word in nounDict):
+            nounDict[word] += 1
+          else:
+            nounDict[word] = 1
 
       #add to total word count
-      #totalLengthAll += len(tokens)
+      totalLengthAll += len(tokens)
       commentsAnalyzed += 1
 
 
