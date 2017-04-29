@@ -54,7 +54,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   #loop through submissions
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     
-  print("searching post: " + postsAnalyzed)
+    print("searching post: " + postsAnalyzed)
 
     #add nouns to dictionary
     tokens = nltk.word_tokenize(submission.title)
