@@ -55,18 +55,20 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     
     print(submission.title)
-    #get all comments including replies
-    tokens = nltk.word_tokenize(submission.title)
-    tagged = nltk.pos_tag(tokens)
-    for word, tag in tagged:
-      tword = word.lower()
-      if(tag == 'NNP' or tag == 'NN'):
-        if tword in titleWords:
-          titleWords[tword] += 1
-        else:
-          titleWords[tword] = 1
-          
-    submission.comments.replace_more(limit=10)
+
+    #add nouns to dictionary
+    #tokens = nltk.word_tokenize(submission.title)
+    #tagged = nltk.pos_tag(tokens)
+    #for word, tag in tagged:
+    #  tword = word.lower()
+    #  if(tag == 'NNP' or tag == 'NN'):
+    #    if tword in titleWords:
+    #      titleWords[tword] += 1
+    #    else:
+    #      titleWords[tword] = 1
+     
+    #get all comments including replies     
+    submission.comments.replace_more(limit=0)
     all_comments = submission.comments.list()
     comCount = len(all_comments)
 
@@ -79,45 +81,41 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
     #loop through all comments
     for comment in all_comments:
-      try:
 
-        #adjust top comments
-        score = comment.score
-        topCom = adjust(topCom, topComLimit, 1, (comment, score, submission))
-        
-        #adjust top replies
-        parent = comment.parent()
-        if(parent != submission):
-          scoreDif = comment.score - parent.score
-          if(scoreDif > 0):
-            topReply = adjust(topReply, topReplyLimit, 2, (comment, parent, scoreDif, submission))
+      #adjust top comments
+      score = comment.score
+      topCom = adjust(topCom, topComLimit, 1, (comment, score, submission))
+      
+      #adjust top replies
+      parent = comment.parent()
+      if(parent != submission):
+        scoreDif = comment.score - parent.score
+        if(scoreDif > 0):
+          topReply = adjust(topReply, topReplyLimit, 2, (comment, parent, scoreDif, submission))
 
-        #add poster to dict
-        if (comment.author != 'automoderator'):
-          author = comment.author
-          if(author in userDict):
-            userDict[author] += 1
-          else:
-            userDict[author] = 1
+      #add poster to dict
+      #if (comment.author != 'automoderator'):
+      #  author = comment.author
+      #  if(author in userDict):
+      #    userDict[author] += 1
+      #  else:
+      #    userDict[author] = 1
 
-        #add nouns to dict
-        #tokens = nltk.word_tokenize(comment.body)
-        #tagged = nltk.pos_tag(tokens)
-        #for word, tag in tagged:
-        #  word = word.lower()
-        #  if(tag == 'NNP' or tag == 'NN'):
-        #    if(word in nounDict):
-        #      nounDict[word] += 1
-        #    else:
-        #      nounDict[word] = 1
+      #add nouns to dict
+      #tokens = nltk.word_tokenize(comment.body)
+      #tagged = nltk.pos_tag(tokens)
+      #for word, tag in tagged:
+      #  word = word.lower()
+      #  if(tag == 'NNP' or tag == 'NN'):
+      #    if(word in nounDict):
+      #      nounDict[word] += 1
+      #    else:
+      #      nounDict[word] = 1
 
-        #add to total word count
-        totalLengthAll += len(tokens)
-        commentsAnalyzed += 1
+      #add to total word count
+      totalLengthAll += len(tokens)
+      commentsAnalyzed += 1
 
-        #ignore "moreComments" type
-      except AttributeError:
-        pass
 
     postsAnalyzed += 1
 
@@ -125,9 +123,9 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
   #build top words
   topWords = []
-  #for word, freq in nounDict.items():
-  #  if not word in nounIgnoreList and len(word) > 1:
-  #      topWords = adjust(topWords, topWordLimit, 1, (word, freq))
+  for word, freq in nounDict.items():
+    if not word in nounIgnoreList and len(word) > 1:
+        topWords = adjust(topWords, topWordLimit, 1, (word, freq))
 
   #build top users
   topUsers = []
@@ -156,5 +154,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     if not word in nounIgnoreList and len(word) > 1:
       toptwords = adjust(toptwords, topWordLimit, 1, (word, freq))    
   
+  return ([],[],[],0,0,[],[],[],[])
+
   return (topCom, topReply, topWords, averageLengthTop, averageLengthAll, topUsers, oldestPost, activePost,toptwords)
 
