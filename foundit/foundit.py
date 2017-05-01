@@ -11,8 +11,11 @@ from worker import conn
 from . import utils
 from django.http import JsonResponse
 
+q = Queue(connection=conn)
 
-def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,q):
+workercount=5#totalworkercount =workdercount+1, need one to schedule
+
+def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
  
   jobq=[]
