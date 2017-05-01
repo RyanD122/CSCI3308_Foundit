@@ -21,6 +21,7 @@ workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 
 def index(request):
+  print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@")
   return render(request, 'foundit/index.html')
 
 def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
