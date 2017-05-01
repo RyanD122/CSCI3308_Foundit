@@ -51,9 +51,9 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
       startpos=0
       endpos=int(index)
     jobq[qindex]=q.enqueue(foundit.search, str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),int(startpos),int(endpos))
-    index=index-splits
+    index=(index-splits)
     qindex+=1
-    if(qindex==(workercount-1):
+    if(qindex==(workercount-1)):
       index=0
   check=0
   qindex=0
