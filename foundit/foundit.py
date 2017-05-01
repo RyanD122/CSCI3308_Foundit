@@ -11,7 +11,7 @@ from worker import conn
 from . import utils
 from django.http import JsonResponse
 
-q = Queue(connection=conn, async=False)
+q = Queue(connection=conn)
 
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
@@ -29,7 +29,8 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     if(qindex==(workercount-1)):
       startpos=0
       endpos=int(index)
-    jobq[qindex]=q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=500)
+    print(str(qindex))
+    jobq[qindex]=q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=30)
     index=(index-splits)
     print(str(index))
     qindex+=1

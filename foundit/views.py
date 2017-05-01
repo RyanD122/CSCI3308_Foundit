@@ -16,7 +16,7 @@ from . import graph
 from collections import Counter
 
 #subreddit=""
-q = Queue(connection=conn, async=False)
+q = Queue(connection=conn)
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 
