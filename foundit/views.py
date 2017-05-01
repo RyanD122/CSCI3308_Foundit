@@ -24,59 +24,6 @@ def index(request):
   print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@")
   return render(request, 'foundit/index.html')
 
-def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
-  print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
-  nounDict = {}
-  titleWords = {}
-  #userIgnoreList= ['automoderator']
- # nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
-  userDict = {}
-  userIgnoreList= ['automoderator']
-  topCom = []
-  topReply = []
-  oldestPost = []
-  activePost = []
-
-  postsAnalyzed = 0
-  totalLengthAll = 0
-  commentsAnalyzed = 0
-
-  jobq=[]
-  splits=int(postLimit)/workercount
-  index=int(postLimit)
-  qindex=0
-  while (index>0):
-    startpos=int(index-splits)
-    endpos=int(index)
-    if(qindex==(workercount-1)):
-      startpos=0
-      endpos=int(index)
-    jobq[qindex]=q.enqueue(foundit.search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=500)
-    index=(index-splits)
-    qindex+=1
-    if(qindex==(workercount-1)):
-      index=0
-  check=0
-  qindex=0
-  while (check!=workercount):
-    check=0
-    while(qindex!=(workercount)):
-      if(q.fetch_job(jobq[qindex].id).result):
-        check+=1
-        qindex+=1
-        print("WORKER SEARCH #"+str(qindex)+(" DONE!!!"))
-    if(check!=workercount):
-      check=0
-  #COMBINE ALL DATA ONCE CHECK PASSES
-  #ORDER OF RETURN FOR WORKERS
-  #0titleWords, 1nounDict, 2userDict, 3topCom, 4topReply, 5oldestPost, 6activePost, 7postsAnalyzed, 8totalLengthAll, 9commentsAnalyzed)
-  print("#########################ALL WORKERS DONE@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-  results=[]
-  qindex=0
-  while(qindex!=(workercount)):
-    results[qindex]=q.fetch_job(jobq[qindex].id).result
-    qindex+=1
-  return(int(1))
 
 
 def loading(request):
@@ -91,7 +38,7 @@ def loading(request):
   activePosts = request.GET["activePosts"]
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
   print(str(subreddit))
-  job = q.enqueue(schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),timeout=500)
+  job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),timeout=500)
   print("###########OSJDOIASJDOSIAJDOASIJDOASIJDOSAJDOSAJDOISAJO#@(#@!#(@&!(")
 
   t = loader.get_template('foundit/loading.html')
