@@ -11,7 +11,7 @@ from worker import conn
 from . import utils
 from django.http import JsonResponse
 
-q = Queue(connection=conn)
+q = Queue(connection=conn, async=False)
 
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
