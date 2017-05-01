@@ -15,7 +15,7 @@ from . import graph
 
 from collections import Counter
 
-subreddit=""
+#subreddit=""
 q = Queue(connection=conn)
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
@@ -90,6 +90,7 @@ def loading(request):
   oldestPosts = request.GET["oldestPosts"]
   activePosts = request.GET["activePosts"]
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
+  print(str(subreddit))
   job = q.enqueue(schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),timeout=500)
   print("###########OSJDOIASJDOSIAJDOASIJDOASIJDOSAJDOSAJDOISAJO#@(#@!#(@&!(")
 
