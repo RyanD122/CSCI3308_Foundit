@@ -4,9 +4,15 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 from datetime import datetime, timedelta
 import os
+from collections import Counter
+
+from rq import Queue
+from worker import conn
+from . import utils
+from django.http import JsonResponse
 
 
-def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
+def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,q):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
  
   jobq=[]
@@ -19,7 +25,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     if(qindex==(workercount-1)):
       startpos=0
       endpos=int(index)
-    jobq[qindex]=q.enqueue(foundit.search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=500)
+    jobq[qindex]=q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=500)
     index=(index-splits)
     qindex+=1
     if(qindex==(workercount-1)):

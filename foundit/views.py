@@ -25,7 +25,6 @@ def index(request):
   return render(request, 'foundit/index.html')
 
 
-
 def loading(request):
 
   subreddit = request.GET["subreddit"]
@@ -38,7 +37,7 @@ def loading(request):
   activePosts = request.GET["activePosts"]
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
   print(str(subreddit))
-  job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),timeout=500)
+  job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts), q, timeout=500)
   print("###########OSJDOIASJDOSIAJDOASIJDOASIJDOSAJDOSAJDOISAJO#@(#@!#(@&!(")
 
   t = loader.get_template('foundit/loading.html')
