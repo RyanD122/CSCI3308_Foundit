@@ -51,7 +51,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     if(qindex==(workercount-1)):
       startpos=0
       endpos=int(index)
-    jobq[qindex]=q.enqueue(foundit.search, str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),int(startpos),int(endpos))
+    jobq[qindex]=q.enqueue(foundit.search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=500)
     index=(index-splits)
     qindex+=1
     if(qindex==(workercount-1)):
@@ -90,7 +90,7 @@ def loading(request):
   oldestPosts = request.GET["oldestPosts"]
   activePosts = request.GET["activePosts"]
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
-  job = q.enqueue(schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts))
+  job = q.enqueue(schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),timeout=500)
 
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
