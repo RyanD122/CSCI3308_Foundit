@@ -91,6 +91,7 @@ def loading(request):
   activePosts = request.GET["activePosts"]
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
   job = q.enqueue(schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts),timeout=500)
+  print("###########OSJDOIASJDOSIAJDOASIJDOASIJDOSAJDOSAJDOISAJO#@(#@!#(@&!(")
 
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
