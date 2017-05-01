@@ -76,7 +76,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   while(qindex!=(workercount)):
     results[qindex]=q.fetch_job(jobq[qindex].id).result
     qindex+=1
-  
+  return(int(1))
 
 
 def loading(request):
