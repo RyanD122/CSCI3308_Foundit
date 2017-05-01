@@ -28,8 +28,8 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
   nounDict = {}
   titleWords = {}
-  userIgnoreList= ['automoderator']
-  nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
+  #userIgnoreList= ['automoderator']
+ # nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
   userDict = {}
   userIgnoreList= ['automoderator']
   topCom = []
@@ -90,7 +90,7 @@ def loading(request):
   oldestPosts = request.GET["oldestPosts"]
   activePosts = request.GET["activePosts"]
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
-  job = q.enqueue(schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts))
+  job = q.enqueue(self.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts))
 
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
