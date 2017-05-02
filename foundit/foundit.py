@@ -3,6 +3,7 @@ import nltk
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 from datetime import datetime, timedelta
+import time
 import os
 from collections import Counter
 
@@ -30,7 +31,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
       startpos=0
     print("START: "+str(startpos)+"  END: "+str(endpos))
     print("QINDEX: "+str(qindex))
-    jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=100))
+    jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=300))
     index=(index-splits)
     print("INDEX: "+str(index))
     qindex+=1
@@ -79,7 +80,7 @@ def adjust(l, limit, indexToCompare, thingToAdd):
     return l
 
 def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,startpos,endpos):
-
+  starttime = time.time()
   print("SEARCHING FROM: "+str(startpos)+" - "+str(endpos))
 
   topicWordLimit = topWordLimit
@@ -177,6 +178,9 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     index+=1
   #analysis finished
   #LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+  endttime=time.time()
+  ttime=starttime-endttime
+  print(str(ttime))
   print("analysis done")
   return(titleWords, nounDict, userDict, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
 
