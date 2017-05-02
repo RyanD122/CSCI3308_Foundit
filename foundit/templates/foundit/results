@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Foundit</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!--
+    {% load staticfiles %}
+    <link href="{% static "default.css" %}" rel="stylesheet">
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="default.css" rel="stylesheet">
+    <style>
+        .logo{
+            width: 3em;
+            height: 3em;
+            
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 25%;
+            transform: translate(-75%, -50%);
+        }
+        #logo_text{
+            display: inline;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            line-height: 1em;
+            font-weight: bolder;
+            
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+        }
+        #logo_container{
+            width: 14em;
+            height: 3em;
+/*            border: 2px dashed #f69c55;*/
+            margin: 40px;
+        }
+        #reddit_logo{
+            width: 400;
+            height: 400px;
+        }
+        .body{
+            background-color: orangered!;
+        }
+        #intro_box{
+            margin-top: 100px;
+        }
+        #content{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11" id="logo_container">
+            <a href="index.html"><img src="foundit_logo.svg" class="logo" alt="logo"></a>
+            <a href="index.html" id="logo_text">Foundit</a>
+        </div>
+    </div>
+    
+    <div class="row" id="content">
+        <div class="col-md-1"></div>
+        <div class="col-md-5"><img src="reddit.svg" id="reddit_logo" alt="reddit logo"></div>
+        <div class="col-md-6" id="intro_box"><h1>Foundit</h1><br><p>Foundit is a reddit analytics search engine<br>Try r/all</p><br>
+        <form action="/loading/" class="form" method="get">
+            <div class="form-group" id="search_bar">
+            <label for="subreddit" id="r">r/</label>
+            <input name="subreddit" placeholder="subreddit" type="text">
+            <span class="form-group-addon"><button id="search_icon" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+               <div class="btn-group">
+                    <button aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" id="search_cog"><span class="glyphicon glyphicon-cog"></span></button>
+                    <div class="dropdown-menu">
+                      Posts to search: <input name="postLimit" type="number" value="20"><br>
+                      Top Comments to display: <input name="topComs" type="number" value="5"><br>
+                      Top Words to display: <input name="topWords" type="number" value="10"><br>
+                      Top Users to display: <input name="topUsers" type="number" value="5"><br>
+                      Top Replies to display: <input name="topReplies" type="number" value="5"><br>
+                      Oldest Posts to display: <input name="oldestPosts" type="number" value="5"><br>
+                      Active Posts to display: <input name="activePosts"  type="number" value="5"><br>
+                    </div>
+              </div>
+          </div>
+        </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">box1</div>
+        <div class="col-md-4">box2</div>
+        <div class="col-md-4">box3</div>
+    </div>
+</body>
+</html>

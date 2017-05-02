@@ -21,7 +21,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   jobq=[]
   splits=int(postLimit)/workercount
   index=int(postLimit)
-  print"Partitions= "+(str(splits))
+  # print"Partitions= "+(str(splits))
   qindex=0
   while(index>=0):
     startpos=int(index-splits)
