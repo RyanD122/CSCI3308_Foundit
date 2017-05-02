@@ -13,7 +13,7 @@ from django.http import JsonResponse
 
 q = Queue(connection=conn)
 
-workercount=5#totalworkercount =workdercount+1, need one to schedule
+workercount=3#totalworkercount =workdercount+1, need one to schedule
 
 def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
@@ -23,7 +23,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   index=int(postLimit)
   print"Partitions= "+(str(splits))
   qindex=0
-  while(index>0):
+  while(index>=0):
     startpos=int(index-splits)
     endpos=int(index)
     print("START: "+str(startpos)+"  END: "+str(endpos))
