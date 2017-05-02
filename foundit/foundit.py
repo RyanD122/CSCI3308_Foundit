@@ -13,7 +13,7 @@ from django.http import JsonResponse
 
 q = Queue(connection=conn)
 
-workercount=3#totalworkercount =workdercount+1, need one to schedule
+workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
@@ -34,6 +34,8 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     index=(index-splits)
     print("INDEX: "+str(index))
     qindex+=1
+    if(startpos==0):
+      index=-1
   check=0
   qindex=0
   while (check!=workercount):
@@ -53,8 +55,11 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   qindex=0
   while(qindex!=(workercount)):
     results[qindex]=q.fetch_job(jobq[qindex].id).result
+    print(str(results[qindex][9]))
     qindex+=1
   return(int(1))
+  
+  
 def getSubmissionAge(submission):
   return datetime.utcnow() - datetime.utcfromtimestamp(submission.created_utc)
 
@@ -104,7 +109,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   index=0
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     if (index>=startpos and index<endpos):      
-      print("searching post: " + str(postsAnalyzed))
+      print("searching post: " + str(index))
 
       #add nouns to dictionary
       tokens = nltk.word_tokenize(submission.title)
@@ -134,14 +139,14 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
         #adjust top comments
         score = comment.score
-        topCom = adjust(topCom, topComLimit, 1, (comment, score, submission))
+        topCom = adjust(topCom, topComLimit, 1, (comment.body, score, submission.title))
         
         #adjust top replies
         parent = comment.parent()
         if(parent != submission):
           scoreDif = comment.score - parent.score
           if(scoreDif > 0):
-            topReply = adjust(topReply, topReplyLimit, 2, (comment, parent, scoreDif, submission))
+            topReply = adjust(topReply, topReplyLimit, 2, (comment.body, parent.body, scoreDif, submission.title))
 
         #add poster to dict
         if (comment.author != 'automoderator'):
@@ -152,15 +157,16 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
             userDict[author] = 1
 
         #add nouns to dict
-        tokens = nltk.word_tokenize(comment.body)
-        tagged = nltk.pos_tag(tokens)
-        for word, tag in tagged:
-          word = word.lower()
-          if(tag == 'NNP' or tag == 'NN'):
-            if(word in nounDict):
-              nounDict[word] += 1
-            else:
-              nounDict[word] = 1
+        if (comment.author != 'automoderator'):
+          tokens = nltk.word_tokenize(comment.body)
+          tagged = nltk.pos_tag(tokens)
+          for word, tag in tagged:
+            word = word.lower()
+            if(tag == 'NNP' or tag == 'NN'):
+              if(word in nounDict):
+                nounDict[word] += 1
+              else:
+                nounDict[word] = 1
 
         #add to total word count
         totalLengthAll += len(tokens)
