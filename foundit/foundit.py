@@ -29,14 +29,11 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     print("START: "+str(startpos)+"  END: "+str(endpos))
     if(qindex==(workercount-1)):
       startpos=0
-      endpos=int(index)
     print("QINDEX: "+str(qindex))
     jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=30))
     index=(index-splits)
     print("INDEX: "+str(index))
     qindex+=1
-    if(qindex==(workercount-1)):
-      index=0
   check=0
   qindex=0
   while (check!=workercount):
