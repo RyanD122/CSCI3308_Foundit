@@ -80,7 +80,7 @@ def adjust(l, limit, indexToCompare, thingToAdd):
     return l
 
 def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,startpos,endpos):
-  starttime = time.time
+  starttime = time.time()
   print("SEARCHING FROM: "+str(startpos)+" - "+str(endpos))
 
   topicWordLimit = topWordLimit
