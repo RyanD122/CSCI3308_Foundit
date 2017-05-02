@@ -14,7 +14,7 @@ from django.http import JsonResponse
 
 q = Queue(connection=conn)
 
-workercount=5#totalworkercount =workdercount+1, need one to schedule
+workercount=1#totalworkercount =workdercount+1, need one to schedule
 
 def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
@@ -95,7 +95,6 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   userIgnoreList= ['automoderator']
   nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
   userDict = {}
-  userIgnoreList= ['automoderator']
   topCom = []
   topReply = []
   oldestPost = []
@@ -179,7 +178,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   #analysis finished
   #LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
   endttime=time.time()
-  ttime=starttime-endttime
+  ttime=endttime-starttime
   print(str(ttime))
   print("analysis done")
   return(titleWords, nounDict, userDict, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
