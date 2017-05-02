@@ -54,7 +54,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   results=[]
   qindex=0
   while(qindex!=(workercount)):
-    results[qindex]=q.fetch_job(jobq[qindex].id).result
+    results.append(q.fetch_job(jobq[qindex].id).result)
     print(str(results[qindex][9]))
     qindex+=1
   return(int(1))
