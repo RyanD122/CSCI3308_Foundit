@@ -12,8 +12,6 @@ import time
 import os
 from collections import Counter
 
-from . import utils
-from django.http import JsonResponse
 
 
 listen = ['high', 'default', 'low']
