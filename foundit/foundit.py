@@ -30,7 +30,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
       startpos=0
     print("START: "+str(startpos)+"  END: "+str(endpos))
     print("QINDEX: "+str(qindex))
-    jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=30))
+    jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=100))
     index=(index-splits)
     print("INDEX: "+str(index))
     qindex+=1
@@ -55,7 +55,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   qindex=0
   while(qindex!=(workercount)):
     results.append(q.fetch_job(jobq[qindex].id).result)
-    print(str(results[qindex][9]))
+    print("RESULTS----------------------------"+str(results[qindex][9]))
     qindex+=1
   return(int(1))
   
