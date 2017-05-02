@@ -57,7 +57,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     results.append(q.fetch_job(jobq[qindex].id).result)
     print("RESULTS----------------------------"+str(results[qindex][9]))
     qindex+=1
-  return(int(1))
+#  return(int(1))
   
   
 def getSubmissionAge(submission):
