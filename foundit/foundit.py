@@ -179,7 +179,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   #analysis finished
   #LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
   endttime=time.time()
-  ttime=starttime-endtime
+  ttime=starttime-endttime
   print(str(ttime))
   print("analysis done")
   return(titleWords, nounDict, userDict, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
