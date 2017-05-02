@@ -26,7 +26,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   while(index>0):
     startpos=int(index-splits)
     endpos=int(index)
-    print("START: "+str(startpos)+"END: "str(endpos))
+    print("START: "+str(startpos)+"END: "+str(endpos))
     if(qindex==(workercount-1)):
       startpos=0
       endpos=int(index)
