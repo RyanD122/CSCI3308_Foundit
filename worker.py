@@ -12,7 +12,6 @@ import time
 import os
 from collections import Counter
 
-from worker import conn
 from . import utils
 from django.http import JsonResponse
 
