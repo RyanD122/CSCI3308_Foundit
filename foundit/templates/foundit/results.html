@@ -1,122 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>Foundit</title>
-      <meta charset="utf-8">
-      <meta content="width=device-width, initial-scale=1" name="viewport">
-      {% load staticfiles %}
-      <link href="{% static "default.css" %}" rel="stylesheet">
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    </head>
-    <body>
-        <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Foundit</a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active">
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Page 1</a>
-        </li>
-      </ul>
+<head>
+    <title>Foundit</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    {% load staticfiles %}
+    <link href="{% static "default.css" %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<!--    <link href="default.css" rel="stylesheet">-->
+    <style>
+        .logo{
+            width: 3em;
+            height: 3em;
+            
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 25%;
+            transform: translate(-75%, -50%);
+        }
+        #logo_text{
+            display: inline;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            line-height: 1em;
+            font-weight: bolder;
+            
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+        }
+        #logo_container{
+            width: 14em;
+            height: 3em;
+/*            border: 2px dashed #f69c55;*/
+            margin: 40px;
+        }
+        #reddit_logo{
+            width: 400;
+            height: 400px;
+        }
+        .body{
+            background-color: orangered!;
+        }
+        #comment_section_top{
+            margin-bottom: 0px;
+        }
+        #graphs{
+        
+        }
+        .glyphicon-arrow-up{
+            color: orangered;
+        }
+        .underline_blue{
+            text-decoration: none;
+            border-bottom: 5px solid blue !important;
+        }
+        .underline_red{
+            text-decoration: none;
+            border-bottom: 5px solid orangered !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11" id="logo_container">
+            <a href="index.html"><img src="foundit_logo.svg" class="logo" alt="logo"></a>
+            <a href="index.html" id="logo_text">Foundit</a>
+        </div>
     </div>
-  </nav>
+    
     <div class="row">
         <div class="col-xs-2 col-md-2"></div>
-        <div class="col-xs-8 col-sm-2 col-md-8"><h1>Results for r/{{ subreddit }}</h1><br>
+        <div class="col-xs-8 col-sm-8 col-md-8"><h1>Search Results for r/{{ subreddit }}</h1></div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-2 col-md-2"></div>
+        <div class="col-xs-8 col-sm-8 col-md-8" id="graphs">
+            <h3><u class="underline_blue">Top Occurences</u></h3>
+            <div class="col-xs-2 col-md-4 center-block">{{topWordsGraph|safe}}</div>
+            <div class="col-xs-2 col-md-4 center-block">{{topUsersGraph|safe}}</div>    
+            <div class="col-xs-2 col-md-4 center-block">{{topicWordsGraph|safe}}</div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-2 col-md-2"></div>
+        <div class="col-xs-8 col-sm-8 col-md-8" id="graphs">
+            <div class="col-xs-2 col-md-4 center-block">{{supportWordsGraph|safe}}</div>
+            <div class="col-xs-2 col-md-4 center-block">Graph Placeholder</div>    
+            <div class="col-xs-2 col-md-4 center-block">Graph Placeholder</div>
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-xs-2 col-md-2"></div>
+        <div class="col-xs-8 col-sm-2 col-md-8">
+        <h3><u class="underline_red">Top Comments</u></h3>
         {% for com, score, sub in topComList %}
+        <table class="table table-bordered" id="comment_section_top"><tr><th>{{ sub.title }}</th></tr></table>
         <table class="table table-bordered">
-        <h2>{{ sub.title }}</h2>
-        <tr>
-            <th class="col-md-2">Upvotes</th>
-            <th class="col-md-8">Top Comment</th>
-        </tr>
-        <tr>
-            <th class="col-md-2">{{ com.score }}</th>  
-            <th class="col-md-8">{{ com.body }}</th>
-        </tr>
+            <tr>
+                <th class="col-md-2">{{ com.score }} <span class="glyphicon glyphicon-arrow-up"></span></th>  
+                <th class="col-md-8">{{ com.body }}</th>
+            </tr>
         </table>
         {% endfor %}
         </div>
         <div class="col-xs-2 col-md-2"></div>
     </div>
-    <div class="row">
-            <div class="col-xs-2 col-md-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="thumbnail">
-                        {{topWordsGraph|safe}}
-                        <div class="caption">
-                            <p>caption?</p>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-                <div class="col-xs-2 col-md-2"></div>
-    </div>
-    <div class="row">
-                    <div class="col-xs-2 col-md-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="thumbnail">
-                        {{topUsersGraph|safe}}
-                        <div class="caption">
-                            <p>caption?</p>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-                        <div class="col-xs-2 col-md-2"></div>
-    </div>
-        <div class="row">
-                        <div class="col-xs-2 col-md-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="thumbnail">
-                        {{topicWordsGraph|safe}}
-                        <div class="caption">
-                            <p>caption?</p>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-                        <div class="col-xs-2 col-md-2"></div>
-    </div>
-        <div class="row">
-                        <div class="col-xs-2 col-md-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="thumbnail">
-                        {{supportWordsGraph|safe}}
-                        <div class="caption">
-                            <p>caption?</p>
-                        </div>
-                    </div>
-                </div>            
-            </div>
-        </div>
-                        <div class="col-xs-2 col-md-2"></div>
-    </div>
-<!--
-    <ul> 
-    {% for com, sub in topComList %}
-      <li>-{{ com.score }} : {{ com.body }}<br>Post Title: {{ sub.title }}</li>
-    {% endfor %}
-    </ul>  
--->
-  </body>
+</body>
 </html>
