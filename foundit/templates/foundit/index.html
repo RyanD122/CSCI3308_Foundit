@@ -13,6 +13,43 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="default.css" rel="stylesheet">
     <style>
+        #search_bar {
+           font-size: 2em;
+           font-family: verdana, arial, helvetica, sans-serif;
+           height: 100px;
+        }
+        input {
+            text-indent: 0.25em;
+            height: 1.35em;
+        /*    font-size: 1em;*/
+        }
+        #search_icon {  
+            background-color: transparent;
+            border: none;
+            color: #333333;
+            margin-left: -50px;
+            top:2px;
+        }
+        .glyphicon {
+        /*    top: 4px !important;*/
+            font-size: 0.75em;
+        }
+        #search_cog {
+            font-size: 1em;
+            top: -2px;
+            padding: 7px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        .dropdown-menu {
+            margin-left: 2em !important;
+        }
+        .open>.dropdown-menu {
+            padding: 10px !important;
+        }
+        .form {
+             border-top: 100px;   
+        }
         .logo{
             width: 3em;
             height: 3em;
@@ -63,14 +100,14 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-11" id="logo_container">
-            <a href="index.html"><img src="foundit_logo.svg" class="logo" alt="logo"></a>
+            <a href="index.html"><img src="{% static "foundit_logo.svg" %}" class="logo" alt="logo"></a>
             <a href="index.html" id="logo_text">Foundit</a>
         </div>
     </div>
     
     <div class="row" id="content">
         <div class="col-md-1"></div>
-        <div class="col-md-5"><img src="reddit.svg" id="reddit_logo" alt="reddit logo"></div>
+        <div class="col-md-5"><img src="{% static "reddit.svg" %}" id="reddit_logo" alt="reddit logo"></div>
         <div class="col-md-6" id="intro_box"><h1>Foundit</h1><br><p>Foundit is a reddit analytics search engine<br>Try r/all</p><br>
         <form action="/loading/" class="form" method="get">
             <div class="form-group" id="search_bar">

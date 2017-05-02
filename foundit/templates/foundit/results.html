@@ -6,13 +6,49 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     {% load staticfiles %}
-    <link href="{% static "default.css" %}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-<!--    <link href="default.css" rel="stylesheet">-->
     <style>
+        /* Searchbar stuff*/
+        #search_bar {
+           font-size: 2em;
+           font-family: verdana, arial, helvetica, sans-serif;
+           height: 100px;
+        }
+        input {
+            text-indent: 0.25em;
+            height: 1.35em;
+        /*    font-size: 1em;*/
+        }
+        #search_icon {  
+            background-color: transparent;
+            border: none;
+            color: #333333;
+            margin-left: -50px;
+            top:2px;
+        }
+        .glyphicon {
+        /*    top: 4px !important;*/
+            font-size: 0.75em;
+        }
+        #search_cog {
+            font-size: 1em;
+            top: -2px;
+            padding: 7px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        .dropdown-menu {
+            margin-left: 2em !important;
+        }
+        .open>.dropdown-menu {
+            padding: 10px !important;
+        }
+        
+        
+        /* Results Page     */
         .logo{
             width: 3em;
             height: 3em;
