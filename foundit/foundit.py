@@ -250,4 +250,4 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	ttime=endttime-starttime
 	print("-----------------------"+"WORKER: "+str(qindex)+" - TIME: "+str(ttime))
 	
-	return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
+	return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed, subreddit)

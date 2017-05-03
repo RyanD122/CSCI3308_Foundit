@@ -81,6 +81,7 @@ def results(request):
 #	avgLengthTop = results[3]
 	avgLengthAll = results[8]
 	commentsAnalyzed = results[9]
+	subreddit = results[10]
 
 #	subreddit=results[9]
 	#supportWordList = allList[9]
@@ -107,8 +108,6 @@ def results(request):
 
 	#data=(topicWordList, supportWordList)
 	#supportWordsGraph = graph.urenderGraph(data)
-
-	subreddit = str(title)
 
 	t = loader.get_template('foundit/results.html')
 	c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, 'topUsersGraph' : topUsersGraph, 'topicWordsGraph' : topicWordsGraph,}) #'supportWordsGraph' : supportWordsGraph})
