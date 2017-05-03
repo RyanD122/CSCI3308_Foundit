@@ -53,6 +53,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	qindex=0
 	results=[]
 	tempc=workercount
+	print("---------------LENGTH: "len(q))
 	while (check!=workercount):
 		while(qindex!=(workercount)):
 			#print("GINDEX: "+str(qindex))
