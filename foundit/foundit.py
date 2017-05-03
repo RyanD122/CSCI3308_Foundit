@@ -167,13 +167,12 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           tagged = nltk.pos_tag(tokens)
           for word, tag in tagged:
             word = word.lower()
-            if (word.isalnum()):
-              print("WORKER: "+str(qindex)+"-----"+str(word))
-              if(tag == 'NNP' or tag == 'NN'):
-                if(word in nounDict):
-                  nounDict[word] += 1
-                else:
-                  nounDict[word] = 1
+            print("WORKER: "+str(qindex)+"-----"+str(word))
+            if(tag == 'NNP' or tag == 'NN'):
+              if(word in nounDict):
+                nounDict[word] += 1
+              else:
+                nounDict[word] = 1
 
         #add to total word count
         totalLengthAll += len(tokens)
