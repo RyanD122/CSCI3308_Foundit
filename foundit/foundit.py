@@ -55,19 +55,18 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	check=0
 	qindex=0
 	results=[]
+	tempc=workercount
 	while (check!=workercount):
-		check=0
 		while(qindex!=(workercount)):
-			if(q.fetch_job(jobq[qindex].id).result):
-				results.append(q.fetch_job(jobq[qindex].id).result)
-				q.remove(q.fetch_job(jobq[qindex].id))
+			if(q.fetch_job(jobq[gindex].id).result):
+				results.append(q.fetch_job(jobq[gindex].id).result)
+				q.remove(q.fetch_job(jobq[gindex].id))
 				check+=1
-				qindex+=1
-				print("WORKER SEARCH #"+str(qindex)+(" DONE!!!")+"TOTAL COMPLETE: "+str(qindex))
+				gindex+=1
+				print("WORKER SEARCH #"+str(gindex)+(" DONE!!!")+"vTOTAL COMPLETE: "+str(check))
 				time.sleep(workercount+2)
 		time.sleep(workercount*2)
 		if(check!=workercount):
-			check=0
 			qindex=0
       #COMBINE ALL DATA ONCE CHECK PASSES
       #ORDER OF RETURN FOR WORKERS
@@ -125,7 +124,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	for submission in reddit.subreddit(subreddit).hot(limit=endpos):
 		if(index>=startpos):
 			pcounter=(float(index-startpos)/float(endpos-startpos))*100
-			print("Searching post: " + str(index)+"	  - 	"+"WORKER: "+str(qindex)+str(pcounter)+"%")
+			print("Searching post: " + str(index)+" - "+"WORKER: "+str(qindex)" - "+str(pcounter)+"%")
 			#add nouns to dictionary
 			tokens = nltk.word_tokenize(submission.title)
 			tagged = nltk.pos_tag(tokens)
@@ -219,6 +218,6 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	print("ANALYSIS DONE!!!!!")
 	endttime=time.time()
 	ttime=endttime-starttime
-	print("-------------------------"+"WORKER: "+str(qindex)+" - TIME: "+str(ttime))
+	print("-----------------------"+"WORKER: "+str(qindex)+" - TIME: "+str(ttime))
 	
 	return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
