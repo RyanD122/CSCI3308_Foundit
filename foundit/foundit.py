@@ -18,16 +18,17 @@ from django.http import JsonResponse
 
 q = Queue(connection=conn)
 
-workercount=5#totalworkercount =workdercount+1, need one to schedule
+#workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 
 #def isascii(s):
-#	return all(ord(c) < 128 for c in s)
+#	return all(ord(c) < 128 for c
 
 #def sortdata(lists):
 
 
-def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
+def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit, wc):
+    workercount=int(wc)
 	print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
 	jobq=[]
 	splits=int(postLimit)/workercount
@@ -56,6 +57,9 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		for job in jobq:	
 			if(not job.result):
 				flag = 0
+			else:
+			    rcount+=1
+			    print("TOTAL WORKERS DONE: "+str(rcount))
 		if(flag):
 			break
 			
@@ -65,10 +69,14 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	for job in jobq:
 		jobidq.append(job.id)
 	return(jobidq)
-	for job in jobq:
-		if(job.result):
-			rcount+=1
-			print(str(job.result[9]))
+	
+	
+	
+	
+#	for job in jobq:
+#		if(job.result):
+#			rcount+=1
+#			print(str(job.result[9]))
 #	check=0
 #	qindex=0
 #	results=[]
