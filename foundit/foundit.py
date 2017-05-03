@@ -14,7 +14,7 @@ from django.http import JsonResponse
 
 q = Queue(connection=conn)
 
-workercount=1#totalworkercount =workdercount+1, need one to schedule
+workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
