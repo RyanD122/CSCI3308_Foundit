@@ -55,9 +55,10 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
             if(q.fetch_job(jobq[qindex].id).result):
                 check+=1
                 qindex+=1
-                print("WORKER SEARCH #"+str(qindex)+(" DONE!!!"))
-            if(check!=workercount):
-                check=0
+                print("WORKER SEARCH #"+str(qindex)+(" DONE!!!")+"TOTAL COMPLETE: "+str(qindex))
+        if(check!=workercount):
+            check=0
+            qindex=0
       #COMBINE ALL DATA ONCE CHECK PASSES
       #ORDER OF RETURN FOR WORKERS
       #0titleWords, 1nounDict, 2userDict, 3topCom, 4topReply, 5oldestPost, 6activePost, 7postsAnalyzed, 8totalLengthAll, 9commentsAnalyzed)
@@ -169,13 +170,13 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
                 tagged = nltk.pos_tag(tokens)
                 for word, tag in tagged:
                     word = word.lower()
-                    if(isascii(word)):
+#                    if(isascii(word)):
                         #print("WORKER: "+str(qindex)+"-----"+(word))
-                        if(tag == 'NNP' or tag == 'NN'):
-                            if(word in nounDict):
-                                nounDict[word] += 1
-                            else:
-                                nounDict[word] = 1
+                    if(tag == 'NNP' or tag == 'NN'):
+                        if(word in nounDict):
+                            nounDict[word] += 1
+                        else:
+                            nounDict[word] = 1
 
             #add to total word count
             totalLengthAll += len(tokens)
@@ -217,3 +218,9 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     ttime=endttime-starttime
     print("-----------------------------------TIME: "+str(ttime))
     return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
+    
+    
+    
+    
+    
+    

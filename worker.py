@@ -13,7 +13,6 @@ import os
 from collections import Counter
 
 
-
 listen = ['high', 'default', 'low']
 
 redis_url = os.getenv('REDIS_URL', 'redis://localhost:6379')
