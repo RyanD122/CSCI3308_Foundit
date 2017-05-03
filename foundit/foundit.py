@@ -67,7 +67,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	qindex=0
 	while(qindex!=(workercount)):
 		results.append(q.fetch_job(jobq[qindex].id).result)
-		time.sleep(3)
+		time.sleep(10)
 		q.remove(q.fetch_job(jobq[qindex].id))
 		qindex+=1
 	print("LOOOOOOOOOOOK AT MEEEEEEEEEEEEEEEE")
@@ -122,10 +122,10 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	index=0
 	for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
 		pcounter=0
+		if(index<startpos):
+			pcounter=(index/endpos)*100
 		if(index>startpos):
 			pcounter=((endpos-index)/diff)*100
-		else:
-			pcounter=((endpos-startpos)/diff)*100
 		if(index>=startpos and index<endpos):
 			print("WORKER: "+str(qindex)+"---searching post: " + str(index)+"		-		"+str(pcounter)+"%")
 			#add nouns to dictionary
