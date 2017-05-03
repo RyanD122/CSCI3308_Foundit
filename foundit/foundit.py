@@ -20,6 +20,10 @@ q = Queue(connection=conn)
 
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
+
+def isascii(s):
+    return all(ord(c) < 128 for c in s)
+
 #def sortdata(lists):
 
 
@@ -170,15 +174,14 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           tokens = nltk.word_tokenize(comment.body)
           tagged = nltk.pos_tag(tokens)
           for word, tag in tagged:
-            word = word.lower()
-            for c in chr(word):
-              
-            print("WORKER: "+str(qindex)+"-----"+str(word))
-            if(tag == 'NNP' or tag == 'NN'):
-              if(word in nounDict):
-                nounDict[word] += 1
-              else:
-                nounDict[word] = 1
+            word = word.lower()      
+            if(isascii(word)):              
+              print("WORKER: "+str(qindex)+"-----"+(word))
+              if(tag == 'NNP' or tag == 'NN'):
+                if(word in nounDict):
+                  nounDict[word] += 1
+                else:
+                  nounDict[word] = 1
 
         #add to total word count
         totalLengthAll += len(tokens)
