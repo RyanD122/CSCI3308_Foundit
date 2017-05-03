@@ -1,6 +1,6 @@
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#import sys
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 import praw
 import nltk
@@ -70,12 +70,12 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     time.sleep(3)
     q.remove(q.fetch_job(jobq[qindex].id))
     qindex+=1
-  print(results[0][9]
+  print(results[0][8]
   #  return(int(1))
 
 
-def getSubmissionAge(submission):
-  return(datetime.utcnow() - datetime.utcfromtimestamp(submission.created_utc))
+#def getSubmissionAge(submission):
+#  return(datetime.utcnow() - datetime.utcfromtimestamp(submission.created_utc))
 
 def adjust(l, limit, indexToCompare, thingToAdd):
   #fill list to limit
@@ -143,9 +143,9 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
       #adjust active post list
       activePost = adjust(activePost, activePostLimit, 2, (submission, postsAnalyzed, comCount))
 
-      #adjust oldest post list
-      age = getSubmissionAge(submission)
-      oldestPost = adjust(oldestPost, oldestPostLimit, 2, (submission, postsAnalyzed, age, comCount))
+#      #adjust oldest post list
+#      age = getSubmissionAge(submission)
+#      oldestPost = adjust(oldestPost, oldestPostLimit, 2, (submission, postsAnalyzed, age, comCount))
 
       #loop through all comments
       for comment in all_comments:
@@ -222,7 +222,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   endttime=time.time()
   ttime=endttime-starttime
   print("-----------------------------------TIME: "+str(ttime))
-  return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
+  return(toptwords, topWords, topUsers, topCom, topReply, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)#REMOVED OLDEST POST
 
 
 
