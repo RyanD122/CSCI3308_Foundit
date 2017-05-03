@@ -106,7 +106,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   nounDict = {}
   titleWords = {}
   userIgnoreList= ['automoderator']
-  #nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
+  nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
   userDict = {}
   topCom = []
   topReply = []
@@ -176,7 +176,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           for word, tag in tagged:
             word = word.lower()      
             if(isascii(word)):              
-              print("WORKER: "+str(qindex)+"-----"+(word))
+              #print("WORKER: "+str(qindex)+"-----"+(word))
               if(tag == 'NNP' or tag == 'NN'):
                 if(word in nounDict):
                   nounDict[word] += 1
