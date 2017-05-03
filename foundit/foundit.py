@@ -31,19 +31,21 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
 	jobq=[]
 	splits=int(postLimit)/workercount
-	index=int(postLimit)
+	index=0
+	timeinc=5
+	totalinc=0
 	# print"Partitions= "+(str(splits))
 	qindex=0
 	while(index>=0):
-		startpos=int(index-splits)
-		endpos=int(index)
+		startpos=int(index)
+		endpos=int(index+splits)
 		if(qindex==(workercount-1)):
-			startpos=0
+			startpos=postLimit
 		print("START: "+str(startpos)+"  END: "+str(endpos))
 		print("QINDEX: "+str(qindex))
 		jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit)*2,int(topReplyLimit)*2,int(topWordLimit)*2,int(topUserLimit)*2,int(oldestPostLimit)*2,int(activePostLimit)*2,int(startpos),int(endpos),int(qindex)+1,timeout=200))
 		
-		time.sleep(7)
+		time.sleep(10+qindex)
 		index=(index-splits)
 		print("INDEX: "+str(index))
 		qindex+=1
