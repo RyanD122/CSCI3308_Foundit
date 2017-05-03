@@ -22,7 +22,7 @@ workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 
 def isascii(s):
-    return all(ord(c) < 128 for c in s)
+  return all(ord(c) < 128 for c in s)
 
 #def sortdata(lists):
 
@@ -71,27 +71,26 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
     q.remove(q.fetch_job(jobq[qindex].id))
     qindex+=1
   print(results[0][9]
-  
-#  return(int(1))
-  
-  
+  #  return(int(1))
+
+
 def getSubmissionAge(submission):
-  return datetime.utcnow() - datetime.utcfromtimestamp(submission.created_utc)
+  return(datetime.utcnow() - datetime.utcfromtimestamp(submission.created_utc))
 
 def adjust(l, limit, indexToCompare, thingToAdd):
-    #fill list to limit
-    if(len(l) < limit):
-      l.append(thingToAdd)
-      l.sort(key=lambda x: x[indexToCompare], reverse=True)
-    #replace lowest value of indexToCompare with thingToAdd
-    else:
-      for item in l:
-        if(thingToAdd[indexToCompare] > item[indexToCompare]):
-          l.pop(len(l) - 1)
-          l.append(thingToAdd)
-          l.sort(key=lambda x: x[indexToCompare], reverse=True)
-          break
-    return l
+  #fill list to limit
+  if(len(l) < limit):
+    l.append(thingToAdd)
+    l.sort(key=lambda x: x[indexToCompare], reverse=True)
+  #replace lowest value of indexToCompare with thingToAdd
+  else:
+    for item in l:
+      if(thingToAdd[indexToCompare] > item[indexToCompare]):
+        l.pop(len(l) - 1)
+        l.append(thingToAdd)
+        l.sort(key=lambda x: x[indexToCompare], reverse=True)
+        break
+  return l
 
 def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,startpos,endpos,qindex):
   starttime = time.time()
