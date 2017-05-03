@@ -46,7 +46,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		print("QINDEX: "+str(qindex))
 		jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit)*2,int(topReplyLimit)*2,int(topWordLimit)*2,int(topUserLimit)*2,int(oldestPostLimit)*2,int(activePostLimit)*2,int(startpos),int(endpos),int(qindex)+1,timeout=200))
 		
-		time.sleep(5+qindex)
+		time.sleep(8+qindex)
 		index=(index+splits)
 		print("INDEX: "+str(index))
 		qindex+=1
@@ -126,9 +126,10 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	#begin analysis
 	#loop through submissions
 	index=0
-	for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
-		if(index>=startpos and index<endpos):
-			pcounter=((index)/endpos)*100
+	pcounter=0
+	for submission in reddit.subreddit(subreddit).hot(limit=endpos):
+		if(index>=startpos):
+			pcounter=(float(index)/float(endpos))*100
 			print("WORKER: "+str(qindex)+"---searching post: " + str(index)+"		-		"+str(pcounter)+"%")
 			#add nouns to dictionary
 			tokens = nltk.word_tokenize(submission.title)
