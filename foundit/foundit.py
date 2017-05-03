@@ -129,7 +129,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	pcounter=0
 	for submission in reddit.subreddit(subreddit).hot(limit=endpos):
 		if(index>=startpos):
-			pcounter=(float(index)/float(endpos))*100
+			pcounter=(float(index-startpos)/float(endpos-startpos))*100
 			print("WORKER: "+str(qindex)+"---searching post: " + str(index)+"		-		"+str(pcounter)+"%")
 			#add nouns to dictionary
 			tokens = nltk.word_tokenize(submission.title)
