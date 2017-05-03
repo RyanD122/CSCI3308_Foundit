@@ -70,8 +70,10 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		time.sleep(3)
 		q.remove(q.fetch_job(jobq[qindex].id))
 		qindex+=1
+	print("LOOOOOOOOOOOK AT MEEEEEEEEEEEEEEEE")
 	print(str(results[0][9]))
 	#return(int(1))
+	print("OUTPUTTING ANALYZED DATA HERE@@@@@@@@@@@@")
 	return(results)
 
 def getSubmissionAge(submission):
@@ -119,7 +121,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	#loop through submissions
 	index=0
 	for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
-		if (index>=startpos and index<endpos):
+		if(index>=startpos and index<endpos):
 			print("WORKER: "+str(qindex)+"-------searching post: " + str(index))
 			#add nouns to dictionary
 			tokens = nltk.word_tokenize(submission.title)
@@ -146,18 +148,17 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 			#loop through all comments
 			for comment in all_comments:
 				#adjust top comments
-				score = comment.score
-				topCom = adjust(topCom, topComLimit, 1, (comment.body, score, submission.title))
-
-				#adjust top replies
-				parent = comment.parent()
-				if(parent != submission):
-					scoreDif = comment.score - parent.score
-					if(scoreDif > 0):
-						topReply = adjust(topReply, topReplyLimit, 2, (comment.body, parent.body, scoreDif, submission.title))
+				if(comment.author != 'automoderator'):
+					score = comment.score
+					topCom = adjust(topCom, topComLimit, 1, (comment.body, score, submission.title))
+					#adjust top replies
+					parent = comment.parent()
+					if(parent != submission):
+						scoreDif = comment.score - parent.score
+						if(scoreDif > 0):
+							topReply = adjust(topReply, topReplyLimit, 2, (comment.body, parent.body, scoreDif, submission.title))
 
 				#add poster to dict
-				if (comment.author != 'automoderator'):
 					author = comment.author
 					if(author in userDict):
 						userDict[author] += 1
@@ -165,7 +166,6 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 						userDict[author] = 1
 
 				#add nouns to dict
-				if (comment.author != 'automoderator'):
 					tokens = nltk.word_tokenize(comment.body)
 					tagged = nltk.pos_tag(tokens)
 					for word, tag in tagged:
@@ -178,15 +178,15 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 							else:
 								nounDict[word] = 1
 
-				#add to total word count
-				totalLengthAll += len(tokens)
-				commentsAnalyzed += 1
+					#add to total word count
+					totalLengthAll += len(tokens)
+					commentsAnalyzed += 1
 
 
-				postsAnalyzed += 1
-				index+=1
-				#analysis finished
-				#LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		postsAnalyzed += 1
+		index+=1
+					#analysis finished
+					#LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	#build top title words
 	toptwords = []
