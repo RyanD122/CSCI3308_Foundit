@@ -118,7 +118,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   index=0
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     if (index>=startpos and index<endpos):      
-      print("WORKER: "+int(qindex)+"-------searching post: " + str(index))
+      print("WORKER: "+str(qindex)+"-------searching post: " + str(index))
 
       #add nouns to dictionary
       tokens = nltk.word_tokenize(submission.title)
@@ -172,7 +172,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           for word, tag in tagged:
             word = word.lower()
             if (isascii(word)):
-              print("WORKER: "+int(qindex)+"-----"+str(word))
+              print("WORKER: "+str(qindex)+"-----"+str(word))
               if(tag == 'NNP' or tag == 'NN'):
                 if(word in nounDict):
                   nounDict[word] += 1
@@ -217,7 +217,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   print("ANALYSIS DONE!!!!!")
   endttime=time.time()
   ttime=endttime-starttime
-  print("----------------------------------------TIME: "+str(ttime))
+  print("-----------------------------------TIME: "+str(ttime))
   return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
 
 
