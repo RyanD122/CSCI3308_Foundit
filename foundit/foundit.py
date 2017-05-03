@@ -16,10 +16,6 @@ q = Queue(connection=conn)
 
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
-def isascii(string):
-    return reduce(operator.and_, 
-    [ord(x) < 256 for x in string],True)
-
 #def sortdata(lists):
 
 
@@ -171,7 +167,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           tagged = nltk.pos_tag(tokens)
           for word, tag in tagged:
             word = word.lower()
-            if (isascii(word)):
+            if (word.isalnum()):
               print("WORKER: "+str(qindex)+"-----"+str(word))
               if(tag == 'NNP' or tag == 'NN'):
                 if(word in nounDict):
