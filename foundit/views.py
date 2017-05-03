@@ -28,6 +28,7 @@ def index(request):
 
 def loading(request):
 	subreddit = request.GET["subreddit"]
+	title = subreddit
 	postLimit = request.GET["postLimit"]
 	topComs = request.GET["topComs"]
 	topReplies = request.GET["topReplies"]
@@ -36,14 +37,17 @@ def loading(request):
 	oldestPosts = request.GET["oldestPosts"]
 	activePosts = request.GET["activePosts"]
 	print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
+<<<<<<< HEAD
 	title=(str(subreddit))
 	print("subreddit: "+title)
 	job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts), int(wc) timeout=200)
+=======
+	job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts), timeout=200)
+>>>>>>> 2c761673c61bf88828a40bc4801268b466cb1c70
 	print("OUT OF SCHEDULER")
 
 	t = loader.get_template('foundit/loading.html')
-	c = Context({ 'jobid': job.id })
-
+	c = Context({ 'jobid': job.id , 'subreddit':subreddit})
 	return HttpResponse(t.render(c))
 
 def checkJob(request):
@@ -103,7 +107,6 @@ def results(request):
 
 	#data=(topicWordList, supportWordList)
 	#supportWordsGraph = graph.urenderGraph(data)
-
 
 	subreddit = str(title)
 

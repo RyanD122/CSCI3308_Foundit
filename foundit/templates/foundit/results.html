@@ -65,6 +65,7 @@
             font-size: 2em;
             line-height: 1em;
             font-weight: bolder;
+            color: dodgerblue;
             
             position: relative;
             float: left;
@@ -75,7 +76,6 @@
         #logo_container{
             width: 14em;
             height: 3em;
-/*            border: 2px dashed #f69c55;*/
             margin: 40px;
         }
         #reddit_logo{
@@ -101,28 +101,15 @@
         .underline_red{
             text-decoration: none;
             border-bottom: 5px solid orangered !important;
-        }
-        
-        .footer {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          /* Set the fixed height of the footer here */
-          height: 60px;
-          background-color: #f5f5f5;
-        }
-        
-        #footer_text {
-            margin: 20px 0;
-        }
+        }        
     </style>
 </head>
 <body>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-11" id="logo_container">
-            <a href="index.html"><img src="foundit_logo.svg" class="logo" alt="logo"></a>
-            <a href="index.html" id="logo_text">Foundit</a>
+            <a href="https://ufoundit.herokuapp.com"><img src="{% static "foundit_logo.svg" %}" class="logo" alt="logo"></a>
+            <a href="https://ufoundit.herokuapp.com" id="logo_text">Foundit</a>
         </div>
     </div>
     
@@ -131,46 +118,40 @@
     </div>
     
     <div class="row">
+        <div class="col-xs-8 col-sm-2 col-md-8 col-md-offset-2">
+        <h3><u class="underline_blue">Top Occurences</u></h3>
+        </div>
+    </div>
+    <div class="container">{{topWordsGraph|safe}}</div>
+    <div class="container">{{topUsersGraph|safe}}</div>
+    <div class="container">{{topicWordsGraph|safe}}</div>
+<!--
+    <div class="row">
         <div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2" id="graphs">
             <h3><u class="underline_blue">Top Occurences</u></h3>
-            <div class="col-xs-2 col-md-4 center-block">{{topWordsGraph|safe}}</div>
-            <div class="col-xs-2 col-md-4 center-block">{{topUsersGraph|safe}}</div>    
-            <div class="col-xs-2 col-md-4 center-block">{{topicWordsGraph|safe}}</div>
+            <div class="col-xs-2 col-md-6 center-block">{{topWordsGraph|safe}}</div>
+            <div class="col-xs-2 col-md-6 center-block">{{topUsersGraph|safe}}</div>    
         </div>
     </div>
     
     <div class="row">
         <div class="col-xs-8 col-sm-8 col-md-8 col-md-offset-2" id="graphs">
-            <div class="col-xs-2 col-md-4 center-block">{{supportWordsGraph|safe}}</div>
-            <div class="col-xs-2 col-md-4 center-block">Graph Placeholder</div>    
-            <div class="col-xs-2 col-md-4 center-block">Graph Placeholder</div>
+            <div class="col-xs-2 col-md-6 center-block">{{supportWordsGraph|safe}}</div>
+            <div class="col-xs-2 col-md-6 center-block">{{topicWordsGraph|safe}}</div>    
         </div>
     </div>
+-->
     
     
     <div class="row">
         <div class="col-xs-8 col-sm-2 col-md-8 col-md-offset-2">
             <h3><u class="underline_red">Top Comments</u></h3>
-            <div class="row">
-                <h3><u class="underline_red">Top Comments</u></h3>
                 {% for combody, score, subtitle in topComList %}
-                <table class="table table-bordered" id="comment_section_top"><tr><th>{{ combody }}</th></tr></table>
-                <table class="table table-bordered">
-                    <tr>
-                        <th class="col-md-1">{{ score }}<span class="glyphicon glyphicon-arrow-up"></span></th>  
-                        <th class="col-md-11">{{ combody }}</th>
-                    </tr>
-                </table>
+                <h4>Post Title: {{ subtitle }}</h4>
+                <p>({{ score }}<span class="glyphicon glyphicon-arrow-up"></span>) {{ combody }}<br><br></p>
                 {% endfor %}
-            </div>
         </div>
     </div>
-    <div class="container text-center"><button type="button" class="btn btn-primary btn-lg">New Search</button></div>
-    
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted text-right" id="footer_text">Luke Hao Nguyen, Kenneth Ford, Ryan Davis, Eugene Ho</p>
-      </div>
-    </footer>
+    <div class="container text-center"><a href="https://ufoundit.herokuapp.com" type="button" class="btn btn-primary btn-lg">New Search</a></div>
 </body>
 </html>
