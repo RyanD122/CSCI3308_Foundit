@@ -56,9 +56,9 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	tempc=workercount
 	while (check!=workercount):
 		while(qindex!=(workercount)):
-		print"FIRST PASS")
-			if(q.fetch_job(jobq[gindex].id).result):
-				results.append(q.fetch_job(jobq[gindex].id).result)
+			print("FIRST PASS")
+			if(q.fetch_job((jobq[gindex]).id).result):
+				results.append(q.fetch_job((jobq[gindex]).id).result)
 				q.remove(q.fetch_job(jobq[gindex].id))
 				check+=1
 				gindex+=1
