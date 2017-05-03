@@ -52,7 +52,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 
 	for job in jobq:
 		if(job.result):
-			print(str(job.result[9)))
+			print(str(job.result[9]))
 #	check=0
 #	qindex=0
 #	results=[]
