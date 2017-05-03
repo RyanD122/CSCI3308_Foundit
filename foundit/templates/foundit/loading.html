@@ -157,18 +157,6 @@
             position: absolute;
         }
 */
-        .footer {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          /* Set the fixed height of the footer here */
-          height: 60px;
-          background-color: #f5f5f5;
-        }
-        
-        #footer_text {
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
@@ -224,12 +212,6 @@
         </div>
     </div>
     
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted text-right" id="footer_text">Luke Hao Nguyen, Kenneth Ford, Ryan Davis, Eugene Ho</p>
-      </div>
-    </footer>
-    
     <script>
       function check_status(){
         $.ajax({
@@ -246,7 +228,7 @@
               setInterval(function(){
                 console.log("not done");
                 check_status();
-              },300000);
+              },30000);
             }
           }
         });

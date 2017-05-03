@@ -103,26 +103,14 @@
             border-bottom: 5px solid orangered !important;
         }
         
-        .footer {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          /* Set the fixed height of the footer here */
-          height: 60px;
-          background-color: #f5f5f5;
-        }
-        
-        #footer_text {
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-11" id="logo_container">
-            <a href="index.html"><img src="{% static "reddit.svg" %}" class="logo" alt="logo"></a>
-            <a href="index.html" id="logo_text">Foundit</a>
+            <a href="https://ufoundit.herokuapp.com"><img src="{% static "reddit.svg" %}" class="logo" alt="logo"></a>
+            <a href="https://ufoundit.herokuapp.com" id="logo_text">Foundit</a>
         </div>
     </div>
     
@@ -172,6 +160,6 @@
             </div>
         </div>
     </div>
-    <div class="container text-center"><button type="button" class="btn btn-primary btn-lg">New Search</button></div>
+    <div class="container text-center"><a href="https://ufoundit.herokuapp.com" type="button" class="btn btn-primary btn-lg">New Search</a></div>
 </body>
 </html>
