@@ -117,7 +117,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
 	#begin analysis
 	#loop through submissions
-	index=0
+	index=startpos
 	for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
 		if (index>=startpos and index<endpos):
 			print("WORKER: "+str(qindex)+"-------searching post: " + str(index))
