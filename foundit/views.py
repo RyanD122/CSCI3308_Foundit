@@ -102,7 +102,7 @@ def results(request):
 	#supportWordsGraph = graph.urenderGraph(data)
 
 
-	#subreddit = "placeholder, need to make foundit.py return subreddit"
+	subreddit = "placeholder, need to make foundit.py return subreddit"
 
 	t = loader.get_template('foundit/results.html')
 	c = Context({ 'subreddit': subreddit, 'topComList' : topComList, 'topWordsGraph' : topWordsGraph, 'topUsersGraph' : topUsersGraph, 'topicWordsGraph' : topicWordsGraph,}) #'supportWordsGraph' : supportWordsGraph})
