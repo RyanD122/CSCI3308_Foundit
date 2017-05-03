@@ -26,6 +26,7 @@ def index(request):
 
 def loading(request):
 	subreddit = request.GET["subreddit"]
+	title = subreddit
 	postLimit = request.GET["postLimit"]
 	topComs = request.GET["topComs"]
 	topReplies = request.GET["topReplies"]
@@ -100,7 +101,6 @@ def results(request):
 	#data=(topicWordList, supportWordList)
 	#supportWordsGraph = graph.urenderGraph(data)
 
-	title=(str(subreddit))
 	subreddit = str(title)
 
 	t = loader.get_template('foundit/results.html')
