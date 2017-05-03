@@ -54,14 +54,18 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 			index=postLimit+1
 	check=0
 	qindex=0
+	results=[]
 	while (check!=workercount):
 		check=0
 		while(qindex!=(workercount)):
 			if(q.fetch_job(jobq[qindex].id).result):
+				results.append(q.fetch_job(jobq[qindex].id).result)
+				q.remove(q.fetch_job(jobq[qindex].id))
 				check+=1
 				qindex+=1
 				print("WORKER SEARCH #"+str(qindex)+(" DONE!!!")+"TOTAL COMPLETE: "+str(qindex))
-		time.sleep(15)
+				time.sleep(workercount+2)
+		time.sleep(workercount*2)
 		if(check!=workercount):
 			check=0
 			qindex=0
@@ -69,16 +73,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
       #ORDER OF RETURN FOR WORKERS
       #0titleWords, 1nounDict, 2userDict, 3topCom, 4topReply, 5oldestPost, 6activePost, 7postsAnalyzed, 8totalLengthAll, 9commentsAnalyzed)
 	print("#########################ALL WORKERS DONE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-	results=[]
-	qindex=0
-	while(qindex!=(workercount)):
-		results.append(q.fetch_job(jobq[qindex].id).result)
-		time.sleep(5)
-		q.remove(q.fetch_job(jobq[qindex].id))
-		qindex+=1
-	print("LOOOOOOOOOOOK AT MEEEEEEEEEEEEEEEE")
 	print(str(results[0][9]))
-	#return(int(1))
 	print("OUTPUTTING ANALYZED DATA HERE@@@@@@@@@@@@")
 	return(results)
 
@@ -130,7 +125,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	for submission in reddit.subreddit(subreddit).hot(limit=endpos):
 		if(index>=startpos):
 			pcounter=(float(index-startpos)/float(endpos-startpos))*100
-			print("WORKER: "+str(qindex)+"---searching post: " + str(index)+"		-		"+str(pcounter)+"%")
+			print("Searching post: " + str(index)+"	  - 	"+"WORKER: "+str(qindex)+str(pcounter)+"%")
 			#add nouns to dictionary
 			tokens = nltk.word_tokenize(submission.title)
 			tagged = nltk.pos_tag(tokens)
@@ -224,6 +219,6 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 	print("ANALYSIS DONE!!!!!")
 	endttime=time.time()
 	ttime=endttime-starttime
-	print("-----------------------------------TIME: "+str(ttime))
+	print("-------------------------"+"WORKER: "+str(qindex)+" - TIME: "+str(ttime))
 	
 	return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
