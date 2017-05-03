@@ -21,8 +21,8 @@ q = Queue(connection=conn)
 
 
 def index(request):
-    print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@@@@@")
-    return render(request, 'foundit/index.html')
+	print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@@@@@")
+	return render(request, 'foundit/index.html')
   
 def loading(request):
     subreddit = request.GET["subreddit"]
@@ -36,10 +36,10 @@ def loading(request):
     print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
     print(str(subreddit))
     job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts), timeout=500)
-print("OUT OF SCHEDULER")
+	print("OUT OF SCHEDULER")
 
-    t = loader.get_template('foundit/loading.html')
-    c = Context({ 'jobid': job.id })
+	t = loader.get_template('foundit/loading.html')
+	c = Context({ 'jobid': job.id })
 
     return HttpResponse(t.render(c))
 
