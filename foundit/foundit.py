@@ -47,7 +47,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit)*2,int(topReplyLimit)*2,int(topWordLimit)*2,int(topUserLimit)*2,int(oldestPostLimit)*2,int(activePostLimit)*2,int(startpos),int(endpos),int(qindex)+1,timeout=200))
 		
 		time.sleep(5+qindex)
-		index=(index-splits)
+		index=(index+splits)
 		print("INDEX: "+str(index))
 		qindex+=1
 		if(qindex==workercount-1):
