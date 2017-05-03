@@ -67,11 +67,11 @@ def results(request):
     topUserList = results[5]
     oldestPostList = results[6]
     activePostList = results[7]
-    
+
     topicWordList = results[8]
     subreddit=results[9]
     #supportWordList = allList[9]
-    
+
     #compile graph for topWords
     topWordCounts = [x[1] for x in topWordList]
     topWords = [x[0] for x in topWordList]
@@ -83,18 +83,18 @@ def results(request):
     topUsers = [x[0] for x in topUserList]
     topUsersData = (topUserCounts, "Top Users", "Activity", topUsers)
     topUsersGraph = graph.renderGraph(topUsersData)
-    
+
     #LUKES TEST GRAPHS
-    
+
     #Topic Words Graph
     topicWordCounts = [x[1] for x in topicWordList]
     topicWords = [x[0] for x in topicWordList]
     topicWordsData = (topicWordCounts, "Topic Words", "Occurances", topicWords)
     topicWordsGraph = graph.renderGraph(topicWordsData)  
-    
+
     #data=(topicWordList, supportWordList)
     #supportWordsGraph = graph.urenderGraph(data)
-    
+
 
     #subreddit = "placeholder, need to make foundit.py return subreddit"
 
