@@ -72,10 +72,10 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
         qindex+=1
     print(results[0][9]
     #return(int(1))
+    return()
 
-
-#def getSubmissionAge(submission):
-#    return(datetime.utcnow()-datetime.utcfromtimestamp(submission.created_utc))
+def getSubmissionAge(submission):
+    return(datetime.utcnow()-datetime.utcfromtimestamp(submission.created_utc))
 
 def adjust(l, limit, indexToCompare, thingToAdd):
     #fill list to limit
