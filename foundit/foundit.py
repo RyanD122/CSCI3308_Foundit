@@ -1,3 +1,7 @@
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 import praw
 import nltk
 nltk.download('averaged_perceptron_tagger')
@@ -167,6 +171,8 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           tagged = nltk.pos_tag(tokens)
           for word, tag in tagged:
             word = word.lower()
+            for c in chr(word):
+              
             print("WORKER: "+str(qindex)+"-----"+str(word))
             if(tag == 'NNP' or tag == 'NN'):
               if(word in nounDict):
