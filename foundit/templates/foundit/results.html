@@ -138,12 +138,12 @@
         <div class="col-xs-8 col-sm-2 col-md-8 col-md-offset-2">
             <div class="row">
                 <h3><u class="underline_red">Top Comments</u></h3>
-                {% for com, score, sub in topComList %}
-                <table class="table table-bordered" id="comment_section_top"><tr><th>{{ sub.title }}</th></tr></table>
+                {% for combody, score, subtitle in topComList %}
+                <table class="table table-bordered" id="comment_section_top"><tr><th>{{ subtitle }}</th></tr></table>
                 <table class="table table-bordered">
                     <tr>
-                        <th class="col-md-1">{{ com.score }}<span class="glyphicon glyphicon-arrow-up"></span></th>  
-                        <th class="col-md-11">{{ com.body }}</th>
+                        <th class="col-md-1">{{ score }}<span class="glyphicon glyphicon-arrow-up"></span></th>  
+                        <th class="col-md-11">{{ combody }}</th>
                     </tr>
                 </table>
                 {% endfor %}

@@ -18,7 +18,7 @@ from collections import Counter
 #subreddit=""
 q = Queue(connection=conn)
 #workercount=5#totalworkercount =workdercount+1, need one to schedule
-
+title=""
 
 def index(request):
 	print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@@@@@")
@@ -34,7 +34,7 @@ def loading(request):
 	oldestPosts = request.GET["oldestPosts"]
 	activePosts = request.GET["activePosts"]
 	print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
-	print(str(subreddit))
+	title=(str(subreddit))
 	job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts), timeout=200)
 	print("OUT OF SCHEDULER")
 
