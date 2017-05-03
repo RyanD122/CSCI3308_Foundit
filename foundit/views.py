@@ -56,7 +56,12 @@ def testResults(request):
 
 def results(request):  
 	jobid = request.GET['jobid']
-	results = q.fetch_job(jobid).result
+	WorkerJobids = q.fetch_job(jobid).result
+	WorkerResults = []
+	for jid in WorkerJobids:
+		WorkerResults.append(q.fetch_job(jid).result)
+		
+	results = WorkerResults[0]
 
 	topComList = results[0]
 	topRepliesList = results[1]

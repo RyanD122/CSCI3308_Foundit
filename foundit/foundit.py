@@ -49,9 +49,22 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		index=(index+splits)
 		print("INDEX: "+str(index))
 		qindex+=1
-
+	rcount=0
+	
+	while(1):
+		flag=1
+		for job in jobq:	
+			if(not job.result):
+				flag = 0
+		if(flag):
+			break
+			
+			
+	return()
+	
 	for job in jobq:
 		if(job.result):
+			rcount+=1
 			print(str(job.result[9]))
 #	check=0
 #	qindex=0
