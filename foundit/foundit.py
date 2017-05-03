@@ -16,6 +16,12 @@ q = Queue(connection=conn)
 
 workercount=5#totalworkercount =workdercount+1, need one to schedule
 
+def isascii(string):
+    return reduce(operator.and_, 
+    [ord(x) < 256 for x in string],True)
+def sortdata(lists):
+
+
 def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit):
   print("$$$$$$$$$$$$$$$$$$IN SCHEDULER$$$$$$$$$$$$$$$$$$$$$$$$$$")
  
@@ -31,7 +37,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
       startpos=0
     print("START: "+str(startpos)+"  END: "+str(endpos))
     print("QINDEX: "+str(qindex))
-    jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit),int(topReplyLimit),int(topWordLimit),int(topUserLimit),int(oldestPostLimit),int(activePostLimit),int(startpos),int(endpos),timeout=300))
+    jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit)*2,int(topReplyLimit)*2,int(topWordLimit)*2,int(topUserLimit)*2,int(oldestPostLimit)*2,int(activePostLimit)*2,int(startpos),int(endpos),int(qindex)+1,timeout=300))
     index=(index-splits)
     print("INDEX: "+str(index))
     qindex+=1
@@ -51,13 +57,15 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
   #COMBINE ALL DATA ONCE CHECK PASSES
   #ORDER OF RETURN FOR WORKERS
   #0titleWords, 1nounDict, 2userDict, 3topCom, 4topReply, 5oldestPost, 6activePost, 7postsAnalyzed, 8totalLengthAll, 9commentsAnalyzed)
-  print("#########################ALL WORKERS DONE@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+  print("#########################ALL WORKERS DONE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
   results=[]
   qindex=0
   while(qindex!=(workercount)):
     results.append(q.fetch_job(jobq[qindex].id).result)
-    print("RESULTS----------------------------"+str(results[qindex][9]))
+    time.sleep(3)
+    jobq[qindex].remove(jobq[qindex].id)
     qindex+=1
+  
 #  return(int(1))
   
   
@@ -79,7 +87,7 @@ def adjust(l, limit, indexToCompare, thingToAdd):
           break
     return l
 
-def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,startpos,endpos):
+def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit,startpos,endpos,qindex):
   starttime = time.time()
   print("SEARCHING FROM: "+str(startpos)+" - "+str(endpos))
 
@@ -93,7 +101,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   nounDict = {}
   titleWords = {}
   userIgnoreList= ['automoderator']
-  nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
+  #nounIgnoreList = ['http', 'https','incivility','bot','shill','troll','hate','speech','subreddit','moderators','wiki_please_be_civil','violation','reminder']
   userDict = {}
   topCom = []
   topReply = []
@@ -109,7 +117,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
   index=0
   for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
     if (index>=startpos and index<endpos):      
-      print("searching post: " + str(index))
+      print("WORKER: "+int(qindex)+"-------searching post: " + str(index))
 
       #add nouns to dictionary
       tokens = nltk.word_tokenize(submission.title)
@@ -162,11 +170,13 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
           tagged = nltk.pos_tag(tokens)
           for word, tag in tagged:
             word = word.lower()
-            if(tag == 'NNP' or tag == 'NN'):
-              if(word in nounDict):
-                nounDict[word] += 1
-              else:
-                nounDict[word] = 1
+            if (isascii(word)):
+              print("WORKER: "+int(qindex)+"-----"+str(word))
+              if(tag == 'NNP' or tag == 'NN'):
+                if(word in nounDict):
+                  nounDict[word] += 1
+                else:
+                  nounDict[word] = 1
 
         #add to total word count
         totalLengthAll += len(tokens)
@@ -177,11 +187,37 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     index+=1
   #analysis finished
   #LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+    
+  #build top title words
+  toptwords = []
+  for word, freq in titleWords.items():
+    if not word in nounIgnoreList and len(word) > 1:
+      toptwords = adjust(toptwords, topWordLimit, 1, (word, freq))    
+
+  print("top title words done")
+
+  #build top words
+  topWords = []
+  for word, freq in nounDict.items():
+    if not word in nounIgnoreList and len(word) > 1:
+        topWords = adjust(topWords, topWordLimit, 1, (word, freq))
+
+  print("topwords done")
+
+  #build top users
+  topUsers = []
+  for user, freq in userDict.items():
+    userStr = str(user)
+    if userStr != "None":
+      topUsers = adjust(topUsers, topUserLimit, 1, (userStr, freq))
+
+  print("top users done")
+
+  print("ANALYSIS DONE!!!!!")
   endttime=time.time()
   ttime=endttime-starttime
-  print(str(ttime))
-  print("analysis done")
-  return(titleWords, nounDict, userDict, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
+  print("----------------------------------------TIME: "+str(ttime))
+  return(toptwords, topWords, topUsers, topCom, topReply, oldestPost, activePost, postsAnalyzed, totalLengthAll, commentsAnalyzed)
 
 
 

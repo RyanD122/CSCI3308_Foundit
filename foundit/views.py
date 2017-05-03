@@ -17,11 +17,11 @@ from collections import Counter
 
 #subreddit=""
 q = Queue(connection=conn)
-workercount=5#totalworkercount =workdercount+1, need one to schedule
+#workercount=5#totalworkercount =workdercount+1, need one to schedule
 
 
 def index(request):
-  print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@")
+  print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@@@@@")
   return render(request, 'foundit/index.html')
 
 
@@ -38,7 +38,7 @@ def loading(request):
   print("%%%%%%%%%%%STARTING SCHEDULING TEST%%%%%%%%%%%%%%%%")
   print(str(subreddit))
   job = q.enqueue(foundit.schedule,str(subreddit),int(postLimit),int(topComs),int(topReplies),int(topWords),int(topUsers),int(oldestPosts),int(activePosts), timeout=500)
-  print("###########OSJDOIASJDOSIAJDOASIJDOASIJDOSAJDOSAJDOISAJO#@(#@!#(@&!(")
+  print("OUT OF SCHEDULER")
 
   t = loader.get_template('foundit/loading.html')
   c = Context({ 'jobid': job.id })
