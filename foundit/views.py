@@ -39,8 +39,7 @@ def loading(request):
 	print("OUT OF SCHEDULER")
 
 	t = loader.get_template('foundit/loading.html')
-	c = Context({ 'jobid': job.id })
-
+	c = Context({ 'jobid': job.id , 'subreddit':subreddit})
 	return HttpResponse(t.render(c))
 
 def checkJob(request):
