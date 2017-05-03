@@ -23,10 +23,8 @@ q = Queue(connection=conn)
 def index(request):
   print("@@@@@@@@@@@@@START OF EVERYTHING@@@@@@@@@@@@")
   return render(request, 'foundit/index.html')
-
-
+  
 def loading(request):
-
   subreddit = request.GET["subreddit"]
   postLimit = request.GET["postLimit"]
   topComs = request.GET["topComs"]
