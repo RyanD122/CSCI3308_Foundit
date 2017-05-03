@@ -63,17 +63,19 @@ def results(request):
 		
 	results = WorkerResults[0]
 
-	topComList = results[0]
-	topRepliesList = results[1]
-	topWordList = results[2]
-	avgLengthTop = results[3]
-	avgLengthAll = results[4]
-	topUserList = results[5]
-	oldestPostList = results[6]
-	activePostList = results[7]
+	topicWordList = results[0]
+	topWordList = results[1]
+	topUserList = results[2]
+	topComList = results[3]
+	topRepliesList = results[4]
+	oldestPostList = results[5]
+	activePostList = results[6]
+	postAnalyzed = results[7]
+#	avgLengthTop = results[3]
+	avgLengthAll = results[8]
+	commentsAnalyzed = results[9]
 
-	topicWordList = results[8]
-	subreddit=results[9]
+#	subreddit=results[9]
 	#supportWordList = allList[9]
 
 	#compile graph for topWords
