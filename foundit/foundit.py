@@ -120,16 +120,16 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
     for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
         if (index>=startpos and index<endpos):
             print("WORKER: "+str(qindex)+"-------searching post: " + str(index))
-                #add nouns to dictionary
-                tokens = nltk.word_tokenize(submission.title)
-                tagged = nltk.pos_tag(tokens)
-                for word, tag in tagged:
-                    tword = word.lower()
-                    if(tag == 'NNP' or tag == 'NN'):
-                        if tword in titleWords:
-                            titleWords[tword] += 1
-                        else:
-                            titleWords[tword] = 1
+            #add nouns to dictionary
+            tokens = nltk.word_tokenize(submission.title)
+            tagged = nltk.pos_tag(tokens)
+            for word, tag in tagged:
+                tword = word.lower()
+                if(tag == 'NNP' or tag == 'NN'):
+                    if tword in titleWords:
+                        titleWords[tword] += 1
+                    else:
+                        titleWords[tword] = 1
         #get all comments including replies
         submission.comments.replace_more(limit=0)
         all_comments = submission.comments.list()
