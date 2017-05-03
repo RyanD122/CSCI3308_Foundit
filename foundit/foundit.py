@@ -49,28 +49,32 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		index=(index+splits)
 		print("INDEX: "+str(index))
 		qindex+=1
-	check=0
-	qindex=0
-	results=[]
-	tempc=workercount
-	print("---------------LENGTH: "+str(len(q)))
-	while (check!=workercount):
-		while(qindex!=(workercount)):
-			#print("GINDEX: "+str(qindex))
-#			temp=q.fetch_job(jobq[qindex]).get_id.result
-			temp=q.fetch_job(jobq[qindex]).id.result
-			if(temp):
-				results.append(temp)
-				q.remove(q.fetch_job(jobq[qindex]).id)
-				check+=1
-#				gindex+=1
-				print("WORKER SEARCH #"+str(qindex)+(" DONE!!!")+"vTOTAL COMPLETE: "+str(check))
-				time.sleep(workercount+3)
-			qindex+=1
-		time.sleep(workercount*2)
-		print("WAITING...")
-		if(check!=workercount):
-			qindex=0
+
+	for job in jobq:
+		if(job.result):
+			print(str(job.result[9)))
+#	check=0
+#	qindex=0
+#	results=[]
+#	tempc=workercount
+#	print("---------------LENGTH: "+str(len(q)))
+#	while (check!=workercount):
+#		while(qindex!=(workercount)):
+#			#print("GINDEX: "+str(qindex))
+##			temp=q.fetch_job(jobq[qindex]).get_id.result
+#			temp=q.fetch_job(jobq[qindex]).id.result
+#			if(temp):
+#				results.append(temp)
+#				q.remove(q.fetch_job(jobq[qindex]).id)
+#				check+=1
+##				gindex+=1
+#				print("WORKER SEARCH #"+str(qindex)+(" DONE!!!")+"vTOTAL COMPLETE: "+str(check))
+#				time.sleep(workercount+3)
+#			qindex+=1
+#		time.sleep(workercount*2)
+#		print("WAITING...")
+#		if(check!=workercount):
+#			qindex=0
       #COMBINE ALL DATA ONCE CHECK PASSES
       #ORDER OF RETURN FOR WORKERS
       #0titleWords, 1nounDict, 2userDict, 3topCom, 4topReply, 5oldestPost, 6activePost, 7postsAnalyzed, 8totalLengthAll, 9commentsAnalyzed)
