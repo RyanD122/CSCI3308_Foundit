@@ -79,7 +79,6 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
       #ORDER OF RETURN FOR WORKERS
       #0titleWords, 1nounDict, 2userDict, 3topCom, 4topReply, 5oldestPost, 6activePost, 7postsAnalyzed, 8totalLengthAll, 9commentsAnalyzed)
 	print("#########################ALL WORKERS DONE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-	print(str(results[0][9]))
 	print("OUTPUTTING ANALYZED DATA HERE@@@@@@@@@@@@")
 	return(results)
 
