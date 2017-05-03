@@ -56,12 +56,12 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	while (check!=workercount):
 		while(qindex!=(workercount)):
 			#print("GINDEX: "+str(qindex))
-			temp=q.fetch_job(jobq[qindex]).get_id.result
-			if(temp):
-				results.append(temp)
+#			temp=q.fetch_job(jobq[qindex]).get_id.result
+			if(q.fetch_job(jobq[qindex]).id.result):
+				results.append(q.fetch_job(jobq[qindex]).id.result)
 				q.remove(q.fetch_job(jobq[qindex]).id)
 				check+=1
-				gindex+=1
+#				gindex+=1
 				print("WORKER SEARCH #"+str(qindex)+(" DONE!!!")+"vTOTAL COMPLETE: "+str(check))
 				time.sleep(workercount+3)
 			qindex+=1
