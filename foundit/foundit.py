@@ -60,7 +60,11 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 			break
 			
 			
-	return()
+
+	jobidq = []
+	for job in jobq:
+		jobidq.append(job.id)
+	return(jobidq)
 	
 	for job in jobq:
 		if(job.result):
