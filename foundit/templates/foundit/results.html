@@ -75,7 +75,6 @@
         #logo_container{
             width: 14em;
             height: 3em;
-/*            border: 2px dashed #f69c55;*/
             margin: 40px;
         }
         #reddit_logo{
@@ -109,7 +108,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-11" id="logo_container">
-            <a href="https://ufoundit.herokuapp.com"><img src="{% static "reddit.svg" %}" class="logo" alt="logo"></a>
+            <a href="https://ufoundit.herokuapp.com"><img src="{% static "foundit_logo.svg" %}" class="logo" alt="logo"></a>
             <a href="https://ufoundit.herokuapp.com" id="logo_text">Foundit</a>
         </div>
     </div>
@@ -149,13 +148,8 @@
             <h3><u class="underline_red">Top Comments</u></h3>
             <div class="row">
                 {% for combody, score, subtitle in topComList %}
-                <table class="table table-bordered" id="comment_section_top"><tr><th>{{ subtitle }}</th></tr></table>
-                <table class="table table-bordered">
-                    <tr>
-                        <th class="col-md-1">{{ score }}<span class="glyphicon glyphicon-arrow-up"></span></th>  
-                        <th class="col-md-11">{{ combody }}</th>
-                    </tr>
-                </table>
+                {{ subtitle }}<br>
+                <p>({{ score }}<span class="glyphicon glyphicon-arrow-up"></span>){{ combody }}<br></p>
                 {% endfor %}
             </div>
         </div>
