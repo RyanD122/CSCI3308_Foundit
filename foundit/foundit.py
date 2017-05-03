@@ -42,10 +42,9 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 		if(qindex==(workercount)):
 			startpos=postLimit-diff
 			endpos=postLimit
-		print("START: "+str(startpos)+"  END: "+str(endpos))
+		#print("START: "+str(startpos)+"  END: "+str(endpos))
 		print("QINDEX: "+str(qindex))
 		jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit)*2,int(topReplyLimit)*2,int(topWordLimit)*2,int(topUserLimit)*2,int(oldestPostLimit)*2,int(activePostLimit)*2,int(startpos),int(endpos),int(qindex)+1,timeout=200))
-		
 		time.sleep(7+qindex)
 		index=(index+splits)
 		print("INDEX: "+str(index))
@@ -56,16 +55,18 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	tempc=workercount
 	while (check!=workercount):
 		while(qindex!=(workercount)):
-			print("FIRST PASS")
-			temp=q.fetch_job(jobq[gindex]).id.result
+			print("GINDEX: "+str(gindex))
+			temp=q.fetch_job(jobq[gindex]).get_id.result
 			if(temp):
-				results.append(q.fetch_job(jobq[gindex]).id.result)
+				results.append(temp)
 				q.remove(q.fetch_job(jobq[gindex]).id)
 				check+=1
 				gindex+=1
 				print("WORKER SEARCH #"+str(gindex)+(" DONE!!!")+"vTOTAL COMPLETE: "+str(check))
 				time.sleep(workercount+3)
+			gindex+=1
 		time.sleep(workercount*2)
+		print("WAITING...")
 		if(check!=workercount):
 			qindex=0
       #COMBINE ALL DATA ONCE CHECK PASSES
