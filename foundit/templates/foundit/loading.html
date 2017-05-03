@@ -157,13 +157,24 @@
             position: absolute;
         }
 */
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          /* Set the fixed height of the footer here */
+          height: 60px;
+          background-color: #f5f5f5;
+        }
+        #footer_text {
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-11" id="logo_container">
-            <a href="index.html"><img src="foundit_logo.svg" class="logo" alt="logo"></a>
+            <a href="index.html"><img src="{% static "foundit_logo.svg" %}" class="logo" alt="logo"></a>
             <a href="index.html" id="logo_text">Foundit</a>
         </div>
     </div>
@@ -211,6 +222,13 @@
             </div>
         </div>
     </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-right" id="footer_text">Luke Hao Nguyen, Kenneth Ford, Ryan Davis, Eugene Ho</p>
+      </div>
+    </footer>
+    
     <script>
       function check_status(){
         $.ajax({
@@ -224,10 +242,10 @@
               window.location.href = "/results/"+"?jobid="+content;
             }
             else {
-              var i = 0;
-              while(i < 5000000000){i++}
-              console.log("not done");
-              check_status();
+              setInterval(function(){
+                console.log("not done");
+                check_status();
+              },3000);
             }
           }
         });

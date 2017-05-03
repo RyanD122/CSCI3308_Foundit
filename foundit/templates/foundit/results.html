@@ -102,11 +102,25 @@
             text-decoration: none;
             border-bottom: 5px solid orangered !important;
         }
+        
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          /* Set the fixed height of the footer here */
+          height: 60px;
+          background-color: #f5f5f5;
+        }
+        
+        #footer_text {
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <div class="row">
-        <div class="col-md-11 col-md-offset-1" id="logo_container">
+        <div class="col-md-1"></div>
+        <div class="col-md-11" id="logo_container">
             <a href="index.html"><img src="foundit_logo.svg" class="logo" alt="logo"></a>
             <a href="index.html" id="logo_text">Foundit</a>
         </div>
@@ -136,8 +150,8 @@
     
     <div class="row">
         <div class="col-xs-8 col-sm-2 col-md-8 col-md-offset-2">
+            <h3><u class="underline_red">Top Comments</u></h3>
             <div class="row">
-                <h3><u class="underline_red">Top Comments</u></h3>
                 {% for com, score, sub in topComList %}
                 <table class="table table-bordered" id="comment_section_top"><tr><th>{{ sub.title }}</th></tr></table>
                 <table class="table table-bordered">
@@ -150,5 +164,12 @@
             </div>
         </div>
     </div>
+    <div class="container text-center"><button type="button" class="btn btn-primary btn-lg">New Search</button></div>
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-right" id="footer_text">Luke Hao Nguyen, Kenneth Ford, Ryan Davis, Eugene Ho</p>
+      </div>
+    </footer>
 </body>
 </html>

@@ -5,34 +5,36 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    {% load staticfiles %}
-    <link href="{% static "default.css" %}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="default.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    {% load staticfiles %}
     <style>
         #search_bar {
-           font-size: 2em;
-           font-family: verdana, arial, helvetica, sans-serif;
-           height: 100px;
+            font-size: 2em;
+            font-family: verdana, arial, helvetica, sans-serif;
+            height: 100px;
         }
         input {
             text-indent: 0.25em;
             height: 1.35em;
-        /*    font-size: 1em;*/
+            color: grey;
         }
         #search_icon {  
             background-color: transparent;
             border: none;
-            color: #333333;
             margin-left: -50px;
             top:2px;
         }
         .glyphicon {
         /*    top: 4px !important;*/
             font-size: 0.75em;
+            color: ghostwhite;
+        }
+        .glyphicon-search{
+            color: grey;
         }
         #search_cog {
             font-size: 1em;
@@ -40,9 +42,13 @@
             padding: 7px;
             padding-top: 0px;
             padding-bottom: 0px;
+            background: none;
+            border: 0;
+            color: black;
         }
         .dropdown-menu {
             margin-left: 2em !important;
+            color: black;
         }
         .open>.dropdown-menu {
             padding: 10px !important;
@@ -66,6 +72,7 @@
             font-size: 2em;
             line-height: 1em;
             font-weight: bolder;
+            color: dodgerblue;
             
             position: relative;
             float: left;
@@ -82,17 +89,47 @@
         #reddit_logo{
             width: 400;
             height: 400px;
+            padding-top: 50px;
+            z-index: 9999;
         }
         .body{
             background-color: orangered!;
         }
         #intro_box{
             margin-top: 100px;
+            z-index: 9999;
+            color: ghostwhite;
         }
-        #content{
-            padding-top: 50px;
-            padding-bottom: 50px;
-            background-color: beige;
+        #particles-js{
+            background: orangered;
+            height: 500px;
+        }
+        canvas{
+            position: relative;
+            top: -375px;
+            z-index: 0;
+        }
+        #head_1{
+            font-size: 5em;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1em;
+            font-weight: bolder;
+        }
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          /* Set the fixed height of the footer here */
+          height: 60px;
+          background-color: #f5f5f5;
+        }
+        #footer_text {
+            margin: 20px 0;
+        }
+        @media(min-width:992){
+            #reddit_logo{
+                display: none;
+            }
         }
     </style>
 </head>
@@ -105,10 +142,10 @@
         </div>
     </div>
     
-    <div class="row" id="content">
+    <div class="row" id="particles-js">
         <div class="col-md-1"></div>
         <div class="col-md-5"><img src="{% static "reddit.svg" %}" id="reddit_logo" alt="reddit logo"></div>
-        <div class="col-md-6" id="intro_box"><h1>Foundit</h1><br><p>Foundit is a reddit analytics search engine<br>Enter a subreddit to find out its most popular subjects</p><br>
+        <div class="col-md-6" id="intro_box"><div id="head_1">Foundit</div><br><p>Foundit is a reddit analytics search engine<br>Enter a subreddit to find out its most popular subjects. Not sure? Try r/all</p><br>
         <form action="/loading/" class="form" method="get">
             <div class="form-group" id="search_bar">
             <label for="subreddit" id="r">r/</label>
@@ -137,5 +174,125 @@
         <div class="col-md-4">box2</div>
         <div class="col-md-4">box3</div>
     </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-right" id="footer_text">Luke Hao Nguyen, Kenneth Ford, Ryan Davis, Eugene Ho</p>
+      </div>
+    </footer>
 </body>
+<script>
+    particlesJS(
+    {
+      "particles": {
+        "number": {
+          "value": 70,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 97.44926547616143,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    }
+    );
+</script>
 </html>
