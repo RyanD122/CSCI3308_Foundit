@@ -117,7 +117,7 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 
 	#begin analysis
 	#loop through submissions
-	index=startpos
+	index=0
 	for submission in reddit.subreddit(subreddit).hot(limit=postLimit):
 		if (index>=startpos and index<endpos):
 			print("WORKER: "+str(qindex)+"-------searching post: " + str(index))
@@ -131,62 +131,62 @@ def search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUs
 						titleWords[tword] += 1
 					else:
 						titleWords[tword] = 1
-		#get all comments including replies
-		submission.comments.replace_more(limit=0)
-		all_comments = submission.comments.list()
-		comCount = len(all_comments)
+			#get all comments including replies
+			submission.comments.replace_more(limit=0)
+			all_comments = submission.comments.list()
+			comCount = len(all_comments)
 
-		#adjust active post list
-		activePost = adjust(activePost, activePostLimit, 2, (submission, postsAnalyzed, comCount))
+			#adjust active post list
+			activePost = adjust(activePost, activePostLimit, 2, (submission, postsAnalyzed, comCount))
 
-		#adjust oldest post list
-		age = getSubmissionAge(submission)
-		oldestPost = adjust(oldestPost, oldestPostLimit, 2, (submission, postsAnalyzed, age, comCount))
+			#adjust oldest post list
+			age = getSubmissionAge(submission)
+			oldestPost = adjust(oldestPost, oldestPostLimit, 2, (submission, postsAnalyzed, age, comCount))
 
-		#loop through all comments
-		for comment in all_comments:
-			#adjust top comments
-			score = comment.score
-			topCom = adjust(topCom, topComLimit, 1, (comment.body, score, submission.title))
+			#loop through all comments
+			for comment in all_comments:
+				#adjust top comments
+				score = comment.score
+				topCom = adjust(topCom, topComLimit, 1, (comment.body, score, submission.title))
 
-			#adjust top replies
-			parent = comment.parent()
-			if(parent != submission):
-				scoreDif = comment.score - parent.score
-				if(scoreDif > 0):
-					topReply = adjust(topReply, topReplyLimit, 2, (comment.body, parent.body, scoreDif, submission.title))
+				#adjust top replies
+				parent = comment.parent()
+				if(parent != submission):
+					scoreDif = comment.score - parent.score
+					if(scoreDif > 0):
+						topReply = adjust(topReply, topReplyLimit, 2, (comment.body, parent.body, scoreDif, submission.title))
 
-			#add poster to dict
-			if (comment.author != 'automoderator'):
-				author = comment.author
-				if(author in userDict):
-					userDict[author] += 1
-				else:
-					userDict[author] = 1
+				#add poster to dict
+				if (comment.author != 'automoderator'):
+					author = comment.author
+					if(author in userDict):
+						userDict[author] += 1
+					else:
+						userDict[author] = 1
 
-			#add nouns to dict
-			if (comment.author != 'automoderator'):
-				tokens = nltk.word_tokenize(comment.body)
-				tagged = nltk.pos_tag(tokens)
-				for word, tag in tagged:
-					word = word.lower()
-					#if(isascii(word)):
-					#print("WORKER: "+str(qindex)+"-----"+(word))
-					if(tag == 'NNP' or tag == 'NN'):
-						if(word in nounDict):
-							nounDict[word] += 1
-						else:
-							nounDict[word] = 1
+				#add nouns to dict
+				if (comment.author != 'automoderator'):
+					tokens = nltk.word_tokenize(comment.body)
+					tagged = nltk.pos_tag(tokens)
+					for word, tag in tagged:
+						word = word.lower()
+						#if(isascii(word)):
+						#print("WORKER: "+str(qindex)+"-----"+(word))
+						if(tag == 'NNP' or tag == 'NN'):
+							if(word in nounDict):
+								nounDict[word] += 1
+							else:
+								nounDict[word] = 1
 
-			#add to total word count
-			totalLengthAll += len(tokens)
-			commentsAnalyzed += 1
+				#add to total word count
+				totalLengthAll += len(tokens)
+				commentsAnalyzed += 1
 
 
-			postsAnalyzed += 1
-			index+=1
-			#analysis finished
-			#LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				postsAnalyzed += 1
+				index+=1
+				#analysis finished
+				#LUKES CODE RETURN WORKER DATA HERE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	#build top title words
 	toptwords = []
