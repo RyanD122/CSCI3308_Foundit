@@ -39,19 +39,17 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 	while(index<postLimit):
 		startpos=int(index)
 		endpos=int(index+splits)
-		if(qindex==(workercount-1)):
+		if(qindex==(workercount)):
 			startpos=postLimit-diff
 			endpos=postLimit
 		print("START: "+str(startpos)+"  END: "+str(endpos))
 		print("QINDEX: "+str(qindex))
 		jobq.append(q.enqueue(search, str(subreddit),int(postLimit),int(topComLimit)*2,int(topReplyLimit)*2,int(topWordLimit)*2,int(topUserLimit)*2,int(oldestPostLimit)*2,int(activePostLimit)*2,int(startpos),int(endpos),int(qindex)+1,timeout=200))
 		
-		time.sleep(8+qindex)
+		time.sleep(6+qindex)
 		index=(index+splits)
 		print("INDEX: "+str(index))
 		qindex+=1
-		if(qindex==workercount-1):
-			index=postLimit+1
 	check=0
 	qindex=0
 	results=[]
@@ -64,7 +62,7 @@ def schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, top
 				check+=1
 				gindex+=1
 				print("WORKER SEARCH #"+str(gindex)+(" DONE!!!")+"vTOTAL COMPLETE: "+str(check))
-				time.sleep(workercount+2)
+				time.sleep(workercount+3)
 		time.sleep(workercount*2)
 		if(check!=workercount):
 			qindex=0
