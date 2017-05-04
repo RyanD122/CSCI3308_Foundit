@@ -5,7 +5,7 @@ Introduction to Foundit, a CU CSCI 3308 Team Project.
 Name | Github ID
 --- | ---
 Eugene Ho |	 hoeugene
-Ryan Davis |	 LogicianJones
+Ryan Davis |	 LogicianJones and ryand1122
 Kenneth Ford |	 kefo7771
 Luke Hao Nguyen | lung9198
 
@@ -15,6 +15,12 @@ Foundit
 ## Description
 Foundit is a Reddit analytics tool. Users will be able to see topline stats on Reddit subreddits and users. Stats
 may include: users with the highest number of karma points, most popular subreddits, most popular threads, subreddit popularity trended over time, most popular memes, etc. We will use data visualization to display the stats on a custom website.
+
+## Build and Run Locally
+1. Install [Heroku](https://www.heroku.com/)
+2. Install project requirements with the terminal command "pip install -r requirements.txt" 
+3. Install [Redis](https://redis.io) and run it with the terminal command "redis-server"
+4. Run it locally with terminal command "heroku local web"
 
 ## Vision Statement
 Identifying what is popular on Reddit. 
