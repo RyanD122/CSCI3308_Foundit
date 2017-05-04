@@ -1,0 +1,88 @@
+\hypertarget{namespacefoundit_1_1foundit}{}\section{foundit.\+foundit Namespace Reference}
+\label{namespacefoundit_1_1foundit}\index{foundit.\+foundit@{foundit.\+foundit}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefoundit_1_1foundit_a417cf87b2677c1439ee12bab5e23124e}{schedule} (subreddit, post\+Limit, top\+Com\+Limit, top\+Reply\+Limit, top\+Word\+Limit, top\+User\+Limit, oldest\+Post\+Limit, active\+Post\+Limit, wc)
+\item 
+def \hyperlink{namespacefoundit_1_1foundit_a8904e5a32351d54fbbc0971b30424e6c}{get\+Submission\+Age} (submission)
+\begin{DoxyCompactList}\small\item\em temp=q.\+fetch\+\_\+job(jobq\mbox{[}qindex\mbox{]}).get\+\_\+id.\+result temp=q.\+fetch\+\_\+job(jobq\mbox{[}qindex\mbox{]}).id.\+result if(temp)\+: results.\+append(temp) q.\+remove(q.\+fetch\+\_\+job(jobq\mbox{[}qindex\mbox{]}).id) check+=1 gindex+=1 print(\char`\"{}\+W\+O\+R\+K\+E\+R S\+E\+A\+R\+C\+H \#\char`\"{}+str(qindex)+(\char`\"{} D\+O\+N\+E!!!\char`\"{})+\char`\"{}v\+T\+O\+T\+A\+L C\+O\+M\+P\+L\+E\+T\+E\+: \char`\"{}+str(check)) time.\+sleep(workercount+3) qindex+=1 time.\+sleep(workercount$\ast$2) print(\char`\"{}\+W\+A\+I\+T\+I\+N\+G...\char`\"{}) if(check!=workercount)\+: qindex=0 C\+O\+M\+B\+I\+NE A\+LL D\+A\+TA O\+N\+CE C\+H\+E\+CK P\+A\+S\+S\+ES O\+R\+D\+ER OF R\+E\+T\+U\+RN F\+OR W\+O\+R\+K\+E\+RS 0title\+Words, 1noun\+Dict, 2user\+Dict, 3top\+Com, 4top\+Reply, 5oldest\+Post, 6active\+Post, 7posts\+Analyzed, 8total\+Length\+All, 9comments\+Analyzed) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefoundit_1_1foundit_ae5d1e300e19274d4bb4c0db668d13714}{adjust} (l, limit, index\+To\+Compare, thing\+To\+Add)
+\item 
+def \hyperlink{namespacefoundit_1_1foundit_a0a97ddadcb8a2cc47d44c8810dc8af05}{search} (subreddit, post\+Limit, top\+Com\+Limit, top\+Reply\+Limit, top\+Word\+Limit, top\+User\+Limit, oldest\+Post\+Limit, active\+Post\+Limit, startpos, endpos, qindex)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacefoundit_1_1foundit_ae9cda1f3b56d2dd4499216536e44b722}{q} = Queue(connection=conn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{foundit\+::foundit@{foundit\+::foundit}!adjust@{adjust}}
+\index{adjust@{adjust}!foundit\+::foundit@{foundit\+::foundit}}
+\subsubsection[{\texorpdfstring{adjust(l, limit, index\+To\+Compare, thing\+To\+Add)}{adjust(l, limit, indexToCompare, thingToAdd)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+foundit.\+adjust (
+\begin{DoxyParamCaption}
+\item[{}]{l, }
+\item[{}]{limit, }
+\item[{}]{index\+To\+Compare, }
+\item[{}]{thing\+To\+Add}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1foundit_ae5d1e300e19274d4bb4c0db668d13714}{}\label{namespacefoundit_1_1foundit_ae5d1e300e19274d4bb4c0db668d13714}
+\begin{DoxyVerb}The adjust function is responsible for the handling of the word graph. It first fills a list of words to compare which the lowest value is popped off in exchange for another word to add. 
+\end{DoxyVerb}
+ \index{foundit\+::foundit@{foundit\+::foundit}!get\+Submission\+Age@{get\+Submission\+Age}}
+\index{get\+Submission\+Age@{get\+Submission\+Age}!foundit\+::foundit@{foundit\+::foundit}}
+\subsubsection[{\texorpdfstring{get\+Submission\+Age(submission)}{getSubmissionAge(submission)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+foundit.\+get\+Submission\+Age (
+\begin{DoxyParamCaption}
+\item[{}]{submission}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1foundit_a8904e5a32351d54fbbc0971b30424e6c}{}\label{namespacefoundit_1_1foundit_a8904e5a32351d54fbbc0971b30424e6c}
+
+
+temp=q.\+fetch\+\_\+job(jobq\mbox{[}qindex\mbox{]}).get\+\_\+id.\+result temp=q.\+fetch\+\_\+job(jobq\mbox{[}qindex\mbox{]}).id.\+result if(temp)\+: results.\+append(temp) q.\+remove(q.\+fetch\+\_\+job(jobq\mbox{[}qindex\mbox{]}).id) check+=1 gindex+=1 print(\char`\"{}\+W\+O\+R\+K\+E\+R S\+E\+A\+R\+C\+H \#\char`\"{}+str(qindex)+(\char`\"{} D\+O\+N\+E!!!\char`\"{})+\char`\"{}v\+T\+O\+T\+A\+L C\+O\+M\+P\+L\+E\+T\+E\+: \char`\"{}+str(check)) time.\+sleep(workercount+3) qindex+=1 time.\+sleep(workercount$\ast$2) print(\char`\"{}\+W\+A\+I\+T\+I\+N\+G...\char`\"{}) if(check!=workercount)\+: qindex=0 C\+O\+M\+B\+I\+NE A\+LL D\+A\+TA O\+N\+CE C\+H\+E\+CK P\+A\+S\+S\+ES O\+R\+D\+ER OF R\+E\+T\+U\+RN F\+OR W\+O\+R\+K\+E\+RS 0title\+Words, 1noun\+Dict, 2user\+Dict, 3top\+Com, 4top\+Reply, 5oldest\+Post, 6active\+Post, 7posts\+Analyzed, 8total\+Length\+All, 9comments\+Analyzed) 
+
+\begin{DoxyVerb}This function gets the age of the current submission based on the comparision between the submission time and the current time. 
+\end{DoxyVerb}
+ \index{foundit\+::foundit@{foundit\+::foundit}!schedule@{schedule}}
+\index{schedule@{schedule}!foundit\+::foundit@{foundit\+::foundit}}
+\subsubsection[{\texorpdfstring{schedule(subreddit, post\+Limit, top\+Com\+Limit, top\+Reply\+Limit, top\+Word\+Limit, top\+User\+Limit, oldest\+Post\+Limit, active\+Post\+Limit, wc)}{schedule(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit, wc)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+foundit.\+schedule (
+\begin{DoxyParamCaption}
+\item[{}]{subreddit, }
+\item[{}]{post\+Limit, }
+\item[{}]{top\+Com\+Limit, }
+\item[{}]{top\+Reply\+Limit, }
+\item[{}]{top\+Word\+Limit, }
+\item[{}]{top\+User\+Limit, }
+\item[{}]{oldest\+Post\+Limit, }
+\item[{}]{active\+Post\+Limit, }
+\item[{}]{wc}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1foundit_a417cf87b2677c1439ee12bab5e23124e}{}\label{namespacefoundit_1_1foundit_a417cf87b2677c1439ee12bab5e23124e}
+\begin{DoxyVerb}The schedule function is responsible for scheduling worker jobs. These workers will divide the total work time amongst themselves to decrease the time of the search and compiling of Foundit.
+\end{DoxyVerb}
+ \index{foundit\+::foundit@{foundit\+::foundit}!search@{search}}
+\index{search@{search}!foundit\+::foundit@{foundit\+::foundit}}
+\subsubsection[{\texorpdfstring{search(subreddit, post\+Limit, top\+Com\+Limit, top\+Reply\+Limit, top\+Word\+Limit, top\+User\+Limit, oldest\+Post\+Limit, active\+Post\+Limit, startpos, endpos, qindex)}{search(subreddit, postLimit, topComLimit, topReplyLimit, topWordLimit, topUserLimit, oldestPostLimit, activePostLimit, startpos, endpos, qindex)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+foundit.\+search (
+\begin{DoxyParamCaption}
+\item[{}]{subreddit, }
+\item[{}]{post\+Limit, }
+\item[{}]{top\+Com\+Limit, }
+\item[{}]{top\+Reply\+Limit, }
+\item[{}]{top\+Word\+Limit, }
+\item[{}]{top\+User\+Limit, }
+\item[{}]{oldest\+Post\+Limit, }
+\item[{}]{active\+Post\+Limit, }
+\item[{}]{startpos, }
+\item[{}]{endpos, }
+\item[{}]{qindex}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1foundit_a0a97ddadcb8a2cc47d44c8810dc8af05}{}\label{namespacefoundit_1_1foundit_a0a97ddadcb8a2cc47d44c8810dc8af05}
+\begin{DoxyVerb}The search function is responsible for gathering and parsing the reddit data for further use. It also uses the language tool NLTK to create a working dictionary for the found words to be passed through. This also alleviates the need to worry about common words such as "the" or "a".  The function then returns parsed reddit data ready for further use.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{foundit\+::foundit@{foundit\+::foundit}!q@{q}}
+\index{q@{q}!foundit\+::foundit@{foundit\+::foundit}}
+\subsubsection[{\texorpdfstring{q}{q}}]{\setlength{\rightskip}{0pt plus 5cm}foundit.\+foundit.\+q = Queue(connection=conn)}\hypertarget{namespacefoundit_1_1foundit_ae9cda1f3b56d2dd4499216536e44b722}{}\label{namespacefoundit_1_1foundit_ae9cda1f3b56d2dd4499216536e44b722}

@@ -1,0 +1,87 @@
+\hypertarget{namespacefoundit_1_1views}{}\section{foundit.\+views Namespace Reference}
+\label{namespacefoundit_1_1views}\index{foundit.\+views@{foundit.\+views}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefoundit_1_1views_a7dd28e8760cb6ba397d734043c840841}{index} (request)
+\item 
+def \hyperlink{namespacefoundit_1_1views_a1cea187af3aaa9ac41218cd985a3f24b}{loading} (request)
+\item 
+def \hyperlink{namespacefoundit_1_1views_a91bc63c48fad0582cbcff41458970486}{check\+Job} (request)
+\item 
+def \hyperlink{namespacefoundit_1_1views_a07ba7672a02678833190150670718cae}{test\+Results} (request)
+\item 
+def \hyperlink{namespacefoundit_1_1views_aaacc45f037dbadfc5ecd92f0a1ffa4e6}{results} (request)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacefoundit_1_1views_a933f4b14aa78ea94e74f8f93970e4b12}{q} = Queue(connection=conn)
+\item 
+string \hyperlink{namespacefoundit_1_1views_a326af97fa9bba95a26dcbb7c1a1f0f04}{title} = \char`\"{}\char`\"{}
+\item 
+int \hyperlink{namespacefoundit_1_1views_adcdd2d7a86d9c9a1d91112a22adab904}{workercount} = 5
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{foundit\+::views@{foundit\+::views}!check\+Job@{check\+Job}}
+\index{check\+Job@{check\+Job}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{check\+Job(request)}{checkJob(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+views.\+check\+Job (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1views_a91bc63c48fad0582cbcff41458970486}{}\label{namespacefoundit_1_1views_a91bc63c48fad0582cbcff41458970486}
+\begin{DoxyVerb}This function requests the jobid of a reddit instance that was established in loading. From this point, it returns an html object of either the jobid or the existing job with that id.     
+\end{DoxyVerb}
+ \index{foundit\+::views@{foundit\+::views}!index@{index}}
+\index{index@{index}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{index(request)}{index(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+views.\+index (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1views_a7dd28e8760cb6ba397d734043c840841}{}\label{namespacefoundit_1_1views_a7dd28e8760cb6ba397d734043c840841}
+\begin{DoxyVerb}The index function establishes connection to the index of website.
+\end{DoxyVerb}
+ \index{foundit\+::views@{foundit\+::views}!loading@{loading}}
+\index{loading@{loading}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{loading(request)}{loading(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+views.\+loading (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1views_a1cea187af3aaa9ac41218cd985a3f24b}{}\label{namespacefoundit_1_1views_a1cea187af3aaa9ac41218cd985a3f24b}
+\begin{DoxyVerb}The loading function is responsible for requesting a reddit instance and gathering the various data from it. From that point, it adds these values to a list and saves this as a job. Then the function establishes a context for the instance which is made from the current job id and subreddit values. Finally, this function returns the rendering of the context.
+\end{DoxyVerb}
+ \index{foundit\+::views@{foundit\+::views}!results@{results}}
+\index{results@{results}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{results(request)}{results(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+views.\+results (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1views_aaacc45f037dbadfc5ecd92f0a1ffa4e6}{}\label{namespacefoundit_1_1views_aaacc45f037dbadfc5ecd92f0a1ffa4e6}
+\begin{DoxyVerb}This function is responsible for parsing the data from reddit into appropriate variables.
+Additionally, it passes this data into graphing functions for its later use in providing result-based graphs on the website.
+Results also returns the context variable which contains the necessary data for later construction of the website. 
+This function provides the heavy lifting of Foundit, as it provides the data used for the later analtyics. 
+\end{DoxyVerb}
+ \index{foundit\+::views@{foundit\+::views}!test\+Results@{test\+Results}}
+\index{test\+Results@{test\+Results}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{test\+Results(request)}{testResults(request)}}]{\setlength{\rightskip}{0pt plus 5cm}def foundit.\+views.\+test\+Results (
+\begin{DoxyParamCaption}
+\item[{}]{request}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefoundit_1_1views_a07ba7672a02678833190150670718cae}{}\label{namespacefoundit_1_1views_a07ba7672a02678833190150670718cae}
+\begin{DoxyVerb}This function's purpose is to return an html response of results. This was a test function?
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\index{foundit\+::views@{foundit\+::views}!q@{q}}
+\index{q@{q}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{q}{q}}]{\setlength{\rightskip}{0pt plus 5cm}foundit.\+views.\+q = Queue(connection=conn)}\hypertarget{namespacefoundit_1_1views_a933f4b14aa78ea94e74f8f93970e4b12}{}\label{namespacefoundit_1_1views_a933f4b14aa78ea94e74f8f93970e4b12}
+\index{foundit\+::views@{foundit\+::views}!title@{title}}
+\index{title@{title}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{title}{title}}]{\setlength{\rightskip}{0pt plus 5cm}string foundit.\+views.\+title = \char`\"{}\char`\"{}}\hypertarget{namespacefoundit_1_1views_a326af97fa9bba95a26dcbb7c1a1f0f04}{}\label{namespacefoundit_1_1views_a326af97fa9bba95a26dcbb7c1a1f0f04}
+\index{foundit\+::views@{foundit\+::views}!workercount@{workercount}}
+\index{workercount@{workercount}!foundit\+::views@{foundit\+::views}}
+\subsubsection[{\texorpdfstring{workercount}{workercount}}]{\setlength{\rightskip}{0pt plus 5cm}int foundit.\+views.\+workercount = 5}\hypertarget{namespacefoundit_1_1views_adcdd2d7a86d9c9a1d91112a22adab904}{}\label{namespacefoundit_1_1views_adcdd2d7a86d9c9a1d91112a22adab904}
