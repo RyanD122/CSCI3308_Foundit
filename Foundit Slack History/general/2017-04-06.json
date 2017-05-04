@@ -1,0 +1,158 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "jk",
+        "ts": "1491466633.935600"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "check out the testing file and let me know if you still want to meet",
+        "ts": "1491490635.299863"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "apparently the screenshots i took need to be in that txt file, i dont know how to do that",
+        "ts": "1491490657.309447"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "That all looks great! I'm not sure how to add screenshots either, let me do a quick Google search on it.",
+        "ts": "1491494083.729320"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Alright, I got it. Let me know which screenshots go where.",
+        "ts": "1491495422.263768"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "pics below the explanations, above the user accepted tests",
+        "ts": "1491495492.289178"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thanks!",
+        "ts": "1491495500.292267"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Arrived early and got a table right at Papa Johns",
+        "ts": "1491495675.357596"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Just to double check, it was the two screenshots, right?",
+        "ts": "1491495724.375969"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ye",
+        "ts": "1491495776.395386"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Cool, that's all good. Any idea how to format the text at all? Right now it is a big paragraph instead of a list. I can't seem to figure it out.",
+        "ts": "1491496283.585004"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "hmmmm",
+        "ts": "1491496411.632197"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "it was somewhat formatted when i uploaded it",
+        "ts": "1491496421.635965"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "did you guys up feeding in context() into the HTTP Response thing at the end of views.py",
+        "ts": "1491496498.664510"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I think so. The line of code is : return HttpResponse(t.render(c))",
+        "ts": "1491497154.902857"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "c being Context made up of subreddit, topComList, topWordList, and graph string.",
+        "ts": "1491497177.911245"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hey look the tests look really good! :ok_hand:but we do need a \"link to the tool used to automate testing.\" Did you just use the testing stuff from that one lab?",
+        "ts": "1491498660.453103"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": ".",
+        "ts": "1491498925.547436"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "shit yea",
+        "ts": "1491498946.555185"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "its a tool called coveraged",
+        "ts": "1491499000.574741"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay cool we'll add it",
+        "ts": "1491499001.574865"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "tell me if anythings up",
+        "ts": "1491499790.860969"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "im bouta fall asleep",
+        "ts": "1491499795.862614"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay so the entire heroku directory is too big to upload so I'm just going to upload the foundit app folder. There also may be a way to clone the heroku git repository itself somehow, but I'm too hungry to think about that right now",
+        "ts": "1491521295.398589"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Cool. FYI you could use Github desktop or use the command line to upload the folder",
+        "ts": "1491521368.410262"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I tried that the first time resulting in the empty directory",
+        "ts": "1491521391.413718"
+    }
+]

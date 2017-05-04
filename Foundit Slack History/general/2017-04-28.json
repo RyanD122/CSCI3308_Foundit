@@ -1,0 +1,369 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Eugene, last minute sprint",
+        "ts": "1493373802.069656"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "<http:\/\/effulgence.io\/Musiverse\/>",
+        "attachments": [
+            {
+                "title": "Musiverse",
+                "title_link": "http:\/\/effulgence.io\/Musiverse\/",
+                "text": "Musiverse is an audio reactive musical toy made by Prayash Thapa (<http:\/\/effulgence.io|effulgence.io>).",
+                "fallback": "Musiverse",
+                "from_url": "http:\/\/effulgence.io\/Musiverse\/",
+                "service_icon": "http:\/\/effulgence.io\/favicon.ico",
+                "service_name": "effulgence.io",
+                "id": 1
+            }
+        ],
+        "ts": "1493373803.069978"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "the sprints to end all sprints",
+        "ts": "1493373808.071143"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "<https:\/\/github.com\/prayasht\/Musiverse>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "prayasht\/Musiverse",
+                "title_link": "https:\/\/github.com\/prayasht\/Musiverse",
+                "text": "Musiverse - - 3D Audioreactive Musical Toy \/\/ WebGL + WebAudio",
+                "fallback": "GitHub: prayasht\/Musiverse",
+                "from_url": "https:\/\/github.com\/prayasht\/Musiverse",
+                "thumb_url": "https:\/\/avatars0.githubusercontent.com\/u\/3971101?v=3&s=400",
+                "thumb_width": 250,
+                "thumb_height": 250,
+                "service_icon": "https:\/\/a.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png",
+                "id": 1
+            }
+        ],
+        "ts": "1493373830.076123"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R> an important thing I should mention. Because it's a ram issue right now, we're not gonna store the comments. In an ironic twist it would be better to reloop for sub words because I found and changed the timeout for workers",
+        "thread_ts": "1493403534.204990",
+        "reply_count": 1,
+        "replies": [
+            {
+                "user": "U462P0B1R",
+                "ts": "1493406140.119674"
+            }
+        ],
+        "unread_count": 1,
+        "ts": "1493403534.204990"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I will check that out. But for today could we decide our presentation date? Luke and Ken's recitation is Thursday 2-4. Mine is Friday 9-11. I heard from my TA that the schedule should be up tonight ",
+        "ts": "1493404160.424931"
+    },
+    {
+        "text": "ryand: Hmmm what do you mean?",
+        "thread_ts": "1493403534.204990",
+        "type": "message",
+        "subtype": "thread_broadcast",
+        "user": "U462P0B1R",
+        "root": {
+            "type": "message",
+            "user": "U48GZAN0P",
+            "text": "<@U462P0B1R> an important thing I should mention. Because it's a ram issue right now, we're not gonna store the comments. In an ironic twist it would be better to reloop for sub words because I found and changed the timeout for workers",
+            "thread_ts": "1493403534.204990",
+            "reply_count": 1,
+            "replies": [
+                {
+                    "user": "U462P0B1R",
+                    "ts": "1493406140.119674"
+                }
+            ],
+            "unread_count": 1,
+            "ts": "1493403534.204990"
+        },
+        "ts": "1493406140.119674"
+    },
+    {
+        "timestamp": "1493406140119674",
+        "is_multiteam": false,
+        "slog_is_shared": "0",
+        "slog_is_mpdm": "0",
+        "slog_is_slackbot_dm": false,
+        "slog_is_self_dm": false,
+        "is_thread_broadcast": true,
+        "plain_text": "ryand: Hmmm what do you mean?",
+        "new_broadcast": true,
+        "attachments": [
+            {
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493403534204990",
+                "fallback": "[April 28th, 2017 11:18 AM] ryand: <@U462P0B1R> an important thing I should mention. Because it's a ram issue right now, we're not gonna store the comments. In an ironic twist it would be better to reloop for sub words because I found and changed the timeout for workers",
+                "ts": "1493403534.204990",
+                "author_subname": "ryand",
+                "channel_id": "C46MHBNUW",
+                "channel_name": "general",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "<@U462P0B1R> an important thing I should mention. Because it's a ram issue right now, we're not gonna store the comments. In an ironic twist it would be better to reloop for sub words because I found and changed the timeout for workers",
+                "author_link": "https:\/\/founditteam.slack.com\/team\/ryand",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/807828b776a3403805f3635cf9a595bf.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0007-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "footer": "1 reply"
+            },
+            {
+                "fallback": "ryand: Hmmm what do you mean?",
+                "author_name": "Luke Nguyen",
+                "author_subname": "luken",
+                "text": "ryand: Hmmm what do you mean?",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "author_link": "https:\/\/founditteam.slack.com\/team\/luken",
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493406140119674?thread_ts=1493403534204990&cid=C46MHBNUW",
+                "ts": "1493406140.119674",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/36b1d55d8443ed2612e0a218e0e2dfe4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-48.png",
+                "id": 2
+            }
+        ],
+        "text": "",
+        "type": "message",
+        "subtype": "reply_broadcast",
+        "user": "U462P0B1R",
+        "ts": "1493406140.119722"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<!everyone> looks like the slots are for may 3 and 5th. It's up on noodle now. Slots are disappearing let's pick one fast. Wednesday works any time between 1 and 6 for me, Friday I can only do the ones between 9am and 10am",
+        "ts": "1493411577.794291"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R> the part of the script you wrote, I said originally it was timing out the worker so we needed to rethink it. I found and changed the timeout for workers so a really long analysis is better than a memory intensive one now",
+        "ts": "1493411631.810079"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Should we do Friday so we have an extra day? There are 2 slots left after 10 (which I think Ken prefers)",
+        "ts": "1493411759.847801"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I would be able to meet Wednesday from 10 until 2 and 4:15 onward. For Friday I can meet 10 until 2.",
+        "ts": "1493411818.865098"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I'd have to skip a class on Friday to do 10, but I guess that's okay",
+        "ts": "1493411848.873976"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "It's the last class of the semester, probably won't matter much",
+        "ts": "1493411861.877564"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "If we reeeeeally need to, I could skip my Discrete review session. It goes from 9 to 10 in the morning.",
+        "ts": "1493411878.882656"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Oooor we could do wednesday",
+        "ts": "1493411902.889516"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "???",
+        "ts": "1493411979.910765"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Yeh if Friday is bad we can just do Wednesday. I have to do an expo Wednesday and would prefer 4pm",
+        "ts": "1493411985.912359"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I'd rather not skip the class on friday",
+        "ts": "1493411989.913659"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "4pm works for me",
+        "ts": "1493412005.918139"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay well now we just have to wait for luke",
+        "ts": "1493412084.941317"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Agreed. Let's do Wednesday then. My only issue is I have interview grading for Computer Systems until 4:06 on Wednesday. There seem to be plenty of options after that though!",
+        "ts": "1493412085.941435"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "4:36?",
+        "ts": "1493412111.948789"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Yeh that one",
+        "ts": "1493412117.950745"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "That works!",
+        "ts": "1493412121.951598"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Let's book it now, if Luke can't make that time we'll have to find another but let's nab it while we can",
+        "ts": "1493412139.956923"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay I booked it, may 3rd 4:36-4:46 it is",
+        "ts": "1493412163.963448"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea cant do friday",
+        "ts": "1493412864.159673"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "unless its before 10",
+        "ts": "1493412871.161676"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thats good",
+        "ts": "1493412900.169857"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "u push the heroku code?",
+        "ts": "1493412983.192804"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "So Wednesday at 4:36 works for you <@U462P0B1R> ?",
+        "ts": "1493413024.203646"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea",
+        "ts": "1493413029.205034"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Cool",
+        "ts": "1493413033.205829"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "dont want to do a later date?",
+        "ts": "1493413037.207140"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "get last minute touches or anything?",
+        "ts": "1493413042.208507"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Like Friday?",
+        "ts": "1493413048.210184"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Wednesday and Friday are the only options",
+        "ts": "1493413056.212318"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "wed",
+        "ts": "1493413113.228132"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I can do it at 7 Wednesday",
+        "ts": "1493413203.252994"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay so it's not our fault. I didn't think our puny little script was taking up halve a gig. It's actually redis-to-go, the server handling the workers. The nano (free) plan only offers 5mb of memory &gt;_&lt;",
+        "ts": "1493430538.591813"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I'll try to look for alternatives I guess",
+        "ts": "1493430559.593081"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "heroku redis, which isn't as hand holdy as redistogo, gives 25mb of memory. 5 times as much may help",
+        "ts": "1493430608.596149"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "all fixed, noun dict and user dict don't go over memory any more. I'm gonna test to see how far 25mbs can get us on the search",
+        "ts": "1493432303.690865"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay I got it working! Foundit can handle pretty much anything you'd reasonably want to search, just tested 100 posts, 20 on all the fields and it worked fine :slightly_smiling_face:",
+        "ts": "1493442048.136140"
+    }
+]

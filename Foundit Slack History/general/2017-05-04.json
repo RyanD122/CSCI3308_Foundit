@@ -1,0 +1,126 @@
+[
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "<!everyone> I started a google doc for the submission due tonight at 6",
+        "ts": "1493918331.908187"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U47AFN6NT|eugeneho> shared a file: <https:\/\/founditteam.slack.com\/files\/eugeneho\/F58SMJHNY\/final_submission|Final Submission>",
+        "file": {
+            "id": "F58SMJHNY",
+            "created": 1493918348,
+            "timestamp": 1493918348,
+            "name": "Final Submission",
+            "title": "Final Submission",
+            "mimetype": "application\/vnd.google-apps.document",
+            "filetype": "gdoc",
+            "pretty_type": "GDocs Document",
+            "user": "U47AFN6NT",
+            "editable": false,
+            "size": 1908,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "gdrive",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/docs.google.com\/document\/d\/1TFcMqHNdoUT2WpWh9slpvD1XK0H3WXA3cqZ1JxmUQUM\/edit?usp=sharing",
+            "thumb_64": "https:\/\/slack.com\/img\/files\/gdoc_64.v.png",
+            "thumb_360": "https:\/\/slack.com\/img\/files\/gdoc_360.v.png",
+            "thumb_360_w": 360,
+            "thumb_360_h": 167,
+            "permalink": "https:\/\/founditteam.slack.com\/files\/eugeneho\/F58SMJHNY\/final_submission",
+            "channels": [
+                "C46MHBNUW"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U47AFN6NT",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "eugeneho",
+        "bot_id": null,
+        "ts": "1493918348.914270"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I filled the document best I can if everyone can get the autodoc and github stuff in there. <@U48GZAN0P> I added build and run instructions to the github readme, it is pending as a pull request",
+        "ts": "1493921114.948694"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I just finished the auto doc to the best of my understanding of it. I just need to do some quick editing on it and I will throw it up on GitHub. I'll look into the final submission document as well.",
+        "ts": "1493921219.987561"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Were you guys still wanting to meet today at some point? It'll be kinda close cut but I can meet up at 5pm somewhere",
+        "ts": "1493923055.672426"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "And <@U47AFN6NT>  I see the pull request, not sure how to \"accept it\" I'll google into it",
+        "ts": "1493923089.685389"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay it's all good",
+        "ts": "1493923325.773085"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "After looking over what we have, I don't think another group meeting is really necessary. I have just about finished up the final submission doc with just about everything they were looking for. Let me know what you guys think.",
+        "ts": "1493927200.127079"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I'm fine with no meeting",
+        "ts": "1493927217.132859"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Do you guys think we need to add a way for them to view the slack channel? That way we can cover our bases with the project tracker.",
+        "ts": "1493927635.272247"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Looks like we can export the chat, <https:\/\/get.slack.help\/hc\/en-us\/articles\/201658943-Export-your-team-s-Slack-history>",
+        "attachments": [
+            {
+                "service_name": "Slack Help Center",
+                "title": "Export your team's Slack history",
+                "title_link": "https:\/\/get.slack.help\/hc\/en-us\/articles\/201658943-Export-your-team-s-Slack-history",
+                "text": "Your team's messages and files can be exported from the Export Data page at <http:\/\/my.slack.com\/services\/export|my.slack.com\/services\/export>. There are two options: Standard Exports and Compliance Exports. See Guide to Slack data exp...",
+                "fallback": "Slack Help Center: Export your team's Slack history",
+                "from_url": "https:\/\/get.slack.help\/hc\/en-us\/articles\/201658943-Export-your-team-s-Slack-history",
+                "thumb_url": "http:\/\/p4.zdassets.com\/hc\/settings_assets\/138842\/200037786\/cZUP0vS8eauoQ4leyecrHQ-help-center-unfurl-image.png",
+                "thumb_width": 192,
+                "thumb_height": 192,
+                "service_icon": "http:\/\/p4.zdassets.com\/hc\/settings_assets\/138842\/200037786\/3ZL0Tb4tiVnLE9JBRA3Fxw-favicon.png",
+                "id": 1
+            }
+        ],
+        "ts": "1493927784.324244"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I think we could just in case, but out Trello looks fine to me",
+        "ts": "1493927813.334160"
+    }
+]

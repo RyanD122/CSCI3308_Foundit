@@ -1,0 +1,14 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ight",
+        "ts": "1492966452.082779"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Yea so if herokus router doesnt receive a signal back after the start of our scrapping\/data collection within 30 seconds, it will timeout, tryna fix that",
+        "ts": "1492969292.250933"
+    }
+]

@@ -1,0 +1,385 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Well it needs to count, there may be a better way to do it then busy waiting, I'll look into it",
+        "ts": "1493826338.469285"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Ya there's something called setInterval that may do that. <!everyone> when did we decide we were meeting? During software lecture time?",
+        "ts": "1493826457.516482"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Btw the loading page hangs",
+        "ts": "1493826582.566671"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I think 11 was decided, yeah. Btw, I looked into doxygen for the auto documenting part and it seems pretty straight forward. I can handle that once we get our final working code decided.",
+        "ts": "1493826794.651476"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Sweet :+1: thanks Ken",
+        "ts": "1493827438.916583"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "norlinz",
+        "ts": "1493829724.766902"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Where at in Norlin are we meeting?",
+        "ts": "1493830354.998558"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "common",
+        "ts": "1493830369.004607"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Where the fuck is that",
+        "ts": "1493830691.124467"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I'll be there by round 11:15. That's where Laughing Goat is",
+        "ts": "1493830702.130048"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Again, where the is that",
+        "ts": "1493830738.143468"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "bottom part of library",
+        "ts": "1493830745.145960"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "by the coffe shop place",
+        "ts": "1493830753.149021"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Where are you guys?",
+        "ts": "1493832310.723192"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I can meet you at the doors to the doors to the library near the commons. We ended up moving to a bigger table.",
+        "ts": "1493832400.756428"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Okay",
+        "ts": "1493832422.765301"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U47AFN6NT|eugeneho> uploaded a file: <https:\/\/founditteam.slack.com\/files\/eugeneho\/F584TUFNF\/foundit_logo.svg|foundit_logo.svg>",
+        "file": {
+            "id": "F584TUFNF",
+            "created": 1493833328,
+            "timestamp": 1493833328,
+            "name": "foundit_logo.svg",
+            "title": "foundit_logo.svg",
+            "mimetype": "image\/svg+xml",
+            "filetype": "svg",
+            "pretty_type": "SVG",
+            "user": "U47AFN6NT",
+            "editable": false,
+            "size": 787,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T45AY7TND-F584TUFNF\/foundit_logo.svg?t=xoxe-141372265761-178889011427-179762610070-0e418b7bf1",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T45AY7TND-F584TUFNF\/download\/foundit_logo.svg?t=xoxe-141372265761-178889011427-179762610070-0e418b7bf1",
+            "permalink": "https:\/\/founditteam.slack.com\/files\/eugeneho\/F584TUFNF\/foundit_logo.svg",
+            "permalink_public": "https:\/\/slack-files.com\/T45AY7TND-F584TUFNF-0f5a2801b0",
+            "channels": [
+                "C46MHBNUW"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U47AFN6NT",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "eugeneho",
+        "bot_id": null,
+        "ts": "1493833334.103557"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<https:\/\/github.com\/LogicianJones\/CSCI3308_Foundit\/invitations>",
+        "ts": "1493834326.486285"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "You have an upcoming appointment on May 3, 2017 from 4:36 PM to 4:46 PM\nwith Yawen Zhang.\n\nLocation: ECCS 112C",
+        "ts": "1493834730.647663"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "final stretch",
+        "ts": "1493843979.035673"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "v2",
+        "ts": "1493843980.035891"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Good fucking shit on the html <@U47AFN6NT>",
+        "ts": "1493844272.138415"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "its spicy af",
+        "ts": "1493844282.142035"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Wait you pushing new code?",
+        "ts": "1493844451.199811"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "not yet",
+        "ts": "1493844485.211881"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "u working on it?",
+        "ts": "1493844487.212790"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ill let you know if i push",
+        "ts": "1493844491.214098"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "stay on stack",
+        "ts": "1493844495.215413"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "slack",
+        "ts": "1493844496.215891"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "No I think the rest of us are done with it",
+        "ts": "1493844889.352001"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "okies",
+        "ts": "1493844932.367368"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so on results it just says \/r",
+        "ts": "1493845588.593508"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "r\/",
+        "ts": "1493845590.594156"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "without the subreddit name",
+        "ts": "1493845602.597929"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Oh I'll fix that in a second",
+        "ts": "1493845632.607852"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "<@U462P0B1R> can we just roll back and call it for now?",
+        "ts": "1493848689.485596"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea go for it",
+        "ts": "1493848865.532510"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i didnt really change anything i dont think",
+        "ts": "1493848872.534446"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Hmm the site doesn't even load now",
+        "ts": "1493848884.537576"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "You should do the rollback",
+        "ts": "1493848895.540506"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "did it",
+        "ts": "1493849007.567923"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Did you do a hit reset as well? I think if I push there might be a merge conflict. Or maybe we should just leave it (the results subreddit)",
+        "ts": "1493849265.631231"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "*hard reset ",
+        "ts": "1493849277.634150"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "nah",
+        "ts": "1493849829.759605"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "didnt really change anything",
+        "ts": "1493849835.760812"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "if you can fix it go ahead",
+        "ts": "1493849841.762186"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we can roll back to where it is now if t doesnt work",
+        "ts": "1493849849.763872"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Scale workers back to 6 please",
+        "ts": "1493851000.004308"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay git repos are merged",
+        "ts": "1493858247.162486"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "if you want to make changes to the site, im really not sure which one you should commit to",
+        "ts": "1493858262.164043"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "XD :+1:",
+        "ts": "1493858272.165474"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Awesome, thanks Ryan.",
+        "ts": "1493858292.167840"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": ":+1::+1::ok_hand:\\]",
+        "ts": "1493858304.169208"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Oh man, is that the white power sign?!",
+        "ts": "1493858351.174978"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Peel evaluation : Ryan is a white supremacist ",
+        "ts": "1493858480.191076"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "So we can update the heroku w.o problems?",
+        "ts": "1493859799.346816"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Thanks for carrying the project by the way",
+        "ts": "1493859808.347878"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I would definitely not touch any of the code until after grading",
+        "ts": "1493859824.349668"
+    }
+]

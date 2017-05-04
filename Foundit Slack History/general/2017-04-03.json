@@ -1,0 +1,44 @@
+[
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Hey guys, I just wanted to give you a heads up that I have to duck out of our meeting at 4:00pm due to a last minute schedule change to sign an apartment lease. I was wondering if there is any interest in making a second meeting this week so we can finish the test cases for Foundit. I am good for any time after 3 for Tuesday and Wednesday, and could meet for a bit on Thursday for any necessary last minute changes.",
+        "ts": "1491236394.827812"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I managed to get to the UMC a little early. I have a table near Papa John's again.",
+        "ts": "1491254065.826039"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Are you guys still at the umc?",
+        "ts": "1491259705.139119"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Yes",
+        "ts": "1491259717.141055"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "They were out of Beijing beef, gotta wait for them to make more &gt;_&gt;",
+        "ts": "1491261041.376729"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hey <@U462P0B1R> can we get a progress report on the tests by Wednesday? I think we're gonna try to get a meeting together Thursday morning to review to cases and stuff. Are you available from 11 am to 12 on Thursday? If not w\/e",
+        "ts": "1491264505.925812"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Also we got the graph to work so I'm gonna push it to heroku today or tomorrow",
+        "ts": "1491264522.928250"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "text": "disabled an integration in this channel: <https:\/\/founditteam.slack.com\/services\/B45V0G49H|Trello>",
+        "bot_id": "B45V0G49H",
+        "type": "message",
+        "subtype": "bot_disable",
+        "user": "USLACKBOT",
+        "ts": "1488127984.000002"
+    }
+]

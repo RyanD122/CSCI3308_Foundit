@@ -1,0 +1,50 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Are we seriously getting taught how to use emoji's properly :joy:",
+        "ts": "1491844516.497263"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": ":+1:",
+        "ts": "1491851991.105708"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so meeting today or nah?",
+        "ts": "1491852449.250502"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Yes",
+        "ts": "1491855672.283165"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I won't be able to make it. I'm recovering from a hospital trip last night.",
+        "ts": "1491855807.326270"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Okay. You stay alive Ken",
+        "ts": "1491856204.453162"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Haha thanks. Should be back at it tomorrow",
+        "ts": "1491856251.468606"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hey <!everyone> , heroku's all set up with a public account now so anyone can pull the code for the site. Here's how to pull the new repository:\n\nlog into heroku with \"heroku login\"\nput in the following info\n\nusername: <mailto:founditbot@gmail.com|founditbot@gmail.com>\npass: keysplease16\n\nthen use \"heroku git:clone ufoundit\"\nand you should be good to go!\n\nurl for the site rn is \"<http:\/\/ufoundit.herokuapp.com\/foundit|ufoundit.herokuapp.com\/foundit>\" (the \/foundit is temporary)",
+        "ts": "1491874216.977020"
+    }
+]

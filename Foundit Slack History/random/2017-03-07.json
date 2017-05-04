@@ -1,0 +1,44 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Just ran the script on the \"nsfw\" subreddit",
+        "ts": "1488930144.000002"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "average comment length: 5 words",
+        "ts": "1488930152.000003"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "top words: holy, wow, pic, share, name, please",
+        "ts": "1488930176.000004"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "hahah",
+        "ts": "1488930177.000005"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "for context, ran the same thing on \"politics\"",
+        "ts": "1488930292.000006"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "average length: 85 words",
+        "ts": "1488930301.000007"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "top words: trump, obama, subreddit, time",
+        "ts": "1488930311.000008"
+    }
+]

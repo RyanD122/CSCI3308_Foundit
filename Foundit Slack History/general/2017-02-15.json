@@ -1,0 +1,60 @@
+[
+    {
+        "user": "U463U2L3W",
+        "text": "<@U463U2L3W|kristin> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487189369.001698"
+    },
+    {
+        "user": "U46MJ0NQ6",
+        "inviter": "U463U2L3W",
+        "text": "<@U46MJ0NQ6|trello> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487189698.000002"
+    },
+    {
+        "text": "added an integration to this channel: <https:\/\/founditteam.slack.com\/services\/B45V0G49H|Trello>",
+        "bot_id": "B45V0G49H",
+        "type": "message",
+        "subtype": "bot_add",
+        "user": "U463U2L3W",
+        "ts": "1487189803.000003"
+    },
+    {
+        "text": "removed an integration from this channel: <https:\/\/founditteam.slack.com\/services\/B45V0G49H|Trello>",
+        "bot_id": "B45V0G49H",
+        "type": "message",
+        "subtype": "bot_remove",
+        "user": "U463U2L3W",
+        "ts": "1487190050.000004"
+    },
+    {
+        "user": "U46NL2KL7",
+        "text": "<@U46NL2KL7|kefo7771> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487192064.000002"
+    },
+    {
+        "user": "U462P0B1R",
+        "text": "<@U462P0B1R|luken> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487202191.000002"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "WUSSUP TEAM",
+        "ts": "1487202248.000003"
+    },
+    {
+        "user": "U45GENHRN",
+        "text": "<@U45GENHRN|ryda> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487227457.000002"
+    }
+]

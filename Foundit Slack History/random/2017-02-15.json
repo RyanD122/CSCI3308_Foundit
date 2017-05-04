@@ -1,0 +1,30 @@
+[
+    {
+        "user": "U463U2L3W",
+        "text": "<@U463U2L3W|kristin> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487189369.000002"
+    },
+    {
+        "user": "U46NL2KL7",
+        "text": "<@U46NL2KL7|kefo7771> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487192064.000002"
+    },
+    {
+        "user": "U462P0B1R",
+        "text": "<@U462P0B1R|luken> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487202191.000002"
+    },
+    {
+        "user": "U45GENHRN",
+        "text": "<@U45GENHRN|ryda> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487227457.000002"
+    }
+]

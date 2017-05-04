@@ -1,0 +1,278 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "just got out of lab",
+        "ts": "1493330032.177270"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we meeting?",
+        "ts": "1493330035.177955"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "o at 5",
+        "ts": "1493330066.185613"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "where at?",
+        "ts": "1493330068.186214"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Would the UMC work with everyone?",
+        "ts": "1493332227.673872"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Yes",
+        "ts": "1493332385.706073"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Yah got to get my oatmeal pies",
+        "ts": "1493333803.979818"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I have a table by Papa John's again.",
+        "ts": "1493333895.997358"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Last chance to get the sponsor",
+        "ts": "1493333930.004305"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "5 mins was taking a shit..",
+        "ts": "1493334125.042971"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay so ya the local version on my desktop still works, so I'm going to preserve this copy locally (screw github) and very carefully try to get it to where it was earlier",
+        "ts": "1493340747.066590"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U46NL2KL7> <@U47AFN6NT> you guys may need to push your changes again, I'll let you know how it goes over here",
+        "ts": "1493340773.070005"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Alright, sounds good. Let me know if or when I need to push.",
+        "ts": "1493340809.074572"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "will do thumbsup",
+        "ts": "1493340820.075962"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "oh wait no :+1: there we go",
+        "ts": "1493340832.077621"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay <!everyone> , the website's working locally right now with just the changes I've made. I think the thing that caused the initial break may have been what <@U47AFN6NT> pushed, not pointing fingers, but the code worked before I pulled today at the meeting, and I'm pretty sure the only person who had pushed was Gene. I'm nervous about pulling the git right now, so I'm going to invoke -f on git and overwrite the repo with what I have here. If this causes too much issue we can roll back still, but right now I am not in the mood to deal with conflicts in the code",
+        "ts": "1493341828.216395"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hope that's gucci with everyone",
+        "ts": "1493341848.218791"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "there must have been some kind of conflict with the worker code and the html or something i dunno",
+        "ts": "1493341908.226978"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Yeah it is likely me with the losing pop up that uses javascript",
+        "ts": "1493341931.229890"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "maybe, i thought I knew waht was going on with everything before today so im in the dark could be",
+        "ts": "1493341959.233699"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay just pushed it works online right now go ahead and give it a test if you guys want",
+        "ts": "1493342005.239932"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Wait actually don't think its my code. It was crashing before I pushed, I pushed Luke's crash comment",
+        "ts": "1493342026.242672"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "*after Luke's comment",
+        "ts": "1493342041.244680"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "w\/e it is, it's not on the repo right now",
+        "ts": "1493342057.246725"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "so when you guys go to add that stuff back, make sure to reclone the repo, make sure it works locally before pushing, and then after pushing make sure it works",
+        "ts": "1493342084.250285"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "wait hold the press, I just tried to queue 10 posts and it's not loading so maybe theres something else going on here",
+        "ts": "1493342141.257589"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "ya definitely something else going on",
+        "ts": "1493342282.276787"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "welp back to the grind stone",
+        "ts": "1493342287.277532"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Grind master",
+        "ts": "1493342309.280614"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Nvm lol...",
+        "ts": "1493342318.281652"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay it still works with 1 post though, so it's not the worker getting tied up or anything (i think)",
+        "ts": "1493342337.284284"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "so good or bad news, not sure, but the javascript doesn't get a response only in all with posts over 4. 1 all, 2 all, 3 all, 4 all, 1 4chan, 50 4chan all worked perfectly.\nbut all 5, all 6, etc all hang up",
+        "ts": "1493343296.410787"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "mostly my issue, but just letting you guys know where I'm at",
+        "ts": "1493343340.416497"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "lol wtf that seems so random",
+        "ts": "1493343525.440450"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "def a time out issue, r\/gaming 50 hangs",
+        "ts": "1493343549.443170"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "welp... guess we still have a ceiling &gt;_&lt;",
+        "ts": "1493343564.445031"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay I fixed it, it was actually RQ that was causing the issue. RQ the queue service that handles the threads and function queueing. It has an artificial timeout of 180 seconds, but you can change it as a found. Just ran a job of all with 100 posts, took way more than 180 seconds but it didn't crash like it was doing before. I'lll push it to the website and make sure it works there and let you guys know",
+        "ts": "1493345337.678029"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay another update, past the timeout issue which was causing errors, it looks like redis is crashing when I try to run it online still though.\nThe error message associated with it says \"coomand not allowed when used memory &gt; 'maxmemory'\"\nI'll look into seeing if theres a way to raise it, but if not we may have to seriously reconsider the analysis algorithm",
+        "ts": "1493346714.844351"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "ya no way to change it, looks like we're using more ram than heroku offers",
+        "ts": "1493347591.947600"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I'm gonna make some changes to the algorithm to see if any help, I have a feeling it's the word dictionary that's getting too big so I'm going to make it so that after every submission it dumps to a top word list and then compares the top words at the end to make a full top word list",
+        "ts": "1493347657.955434"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "actually I'm gonna have to do it tomorrow, luke still hasn't sent me the stuff for our test tomorrow so I'm gonna have to do some studying XD",
+        "ts": "1493347738.965342"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Yea, dumping words under a certain low value is a good idea",
+        "ts": "1493359155.195107"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Searching for low counts will add to the processing time though",
+        "ts": "1493359170.196723"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "I'll explore the idea too",
+        "ts": "1493359179.197651"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Good thought s",
+        "ts": "1493359185.198478"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "I'll hit u up with the questions bruh dw",
+        "ts": "1493359195.199554"
+    }
+]

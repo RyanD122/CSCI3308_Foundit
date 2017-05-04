@@ -1,0 +1,42 @@
+[
+    {
+        "user": "U48GZAN0P",
+        "text": "<@U48GZAN0P|ryand> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487607371.000002"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "<https:\/\/motherboard.vice.com\/en_us\/article\/buy-low-sell-high-in-the-meme-economy-with-memebroker>",
+        "attachments": [
+            {
+                "service_name": "Motherboard",
+                "title": "Buy Low, Sell High In the Meme Economy With ‘MemeBroker’ - Motherboard",
+                "title_link": "https:\/\/motherboard.vice.com\/en_us\/article\/buy-low-sell-high-in-the-meme-economy-with-memebroker",
+                "text": "A new app makes you the wolf of Meme Street.",
+                "fallback": "Motherboard: Buy Low, Sell High In the Meme Economy With ‘MemeBroker’ - Motherboard",
+                "thumb_url": "https:\/\/video-images.vice.com\/articles\/58a76477f8f50379b93ea8d9\/lede\/1487365242061-memebroker2.jpeg?crop=1xw:0.9251644736842105xh;center,center&resize=1200:*",
+                "from_url": "https:\/\/motherboard.vice.com\/en_us\/article\/buy-low-sell-high-in-the-meme-economy-with-memebroker",
+                "thumb_width": 1200,
+                "thumb_height": 674,
+                "service_icon": "https:\/\/motherboard.vice.com\/favicon.ico",
+                "id": 1
+            }
+        ],
+        "ts": "1487622148.000002"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Sorry I might be a little late to UMC",
+        "ts": "1487627051.000002"
+    },
+    {
+        "type": "message",
+        "user": "U463U2L3W",
+        "text": "Me too. Sorry!",
+        "ts": "1487629444.000002"
+    }
+]

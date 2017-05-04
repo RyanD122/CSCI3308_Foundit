@@ -1,0 +1,68 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "hey i get an error when i try to search, something about the jobid",
+        "ts": "1493242984.779693"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Hmm maybe we could say something each time we push? I just pushed some minor aesthetic changes, should not change backend code",
+        "ts": "1493244675.217753"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thats the point of commit messages lol",
+        "ts": "1493244971.284160"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Well I guess at least say it when it's crashing",
+        "ts": "1493244995.289814"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "can you get results to show?",
+        "ts": "1493244998.290363"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Nope",
+        "ts": "1493245036.298531"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Ya that's on me, currently the search bar isn't using any of the background job shtuff, I'll fix it when I have a chunk of time",
+        "ts": "1493253947.849674"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Also <!everyone> needs to make it to the meeting tomorrow. I talked with my TA in lab today and supposedly they are going to use our original github repo exclusively for grading. I explained the issue to her and she recommended we retroactively add every individual thing we've done to our original repo. Kind of a pickle",
+        "ts": "1493254030.860700"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U47AFN6NT> I totally said something the entire time I was pushing things. I practically narrated it",
+        "ts": "1493254063.865284"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "cant we just show them our heroku logs?",
+        "ts": "1493254301.897637"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "We have a shared account for heroku, it won't differentiate who did what",
+        "ts": "1493258469.464552"
+    }
+]

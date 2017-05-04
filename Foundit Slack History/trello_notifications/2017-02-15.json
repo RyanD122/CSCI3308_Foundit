@@ -1,0 +1,17 @@
+[
+    {
+        "user": "U463U2L3W",
+        "text": "<@U463U2L3W|kristin> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487189928.000002"
+    },
+    {
+        "text": "added an integration to this channel: <https:\/\/founditteam.slack.com\/services\/B45V0G49H|Trello>",
+        "bot_id": "B45V0G49H",
+        "type": "message",
+        "subtype": "bot_add",
+        "user": "U463U2L3W",
+        "ts": "1487190050.000003"
+    }
+]

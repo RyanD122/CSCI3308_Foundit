@@ -1,0 +1,38 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Yo hit me up on slack or FB if you guys are going tomorrow",
+        "ts": "1492849829.853470"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Ight guys",
+        "ts": "1492923307.328356"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "got my graphs on the site, the hit on speed isnt too bad i dont think even with the second loop around",
+        "ts": "1492923330.329043"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "it looks kinda funky tho, let me know if u want me to push it",
+        "ts": "1492923339.329311"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "You should push it. We can do rollbacks if it breaks. I can place it in the site properly if you haven't ",
+        "ts": "1492924533.368365"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "But do note which version works",
+        "ts": "1492924784.375825"
+    }
+]

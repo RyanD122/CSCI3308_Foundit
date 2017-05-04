@@ -1,0 +1,33 @@
+[
+    {
+        "type": "message",
+        "user": "U463U2L3W",
+        "text": "Don't forget to add your Github ID to the README doc. Also, still no project plan... Thx!",
+        "ts": "1487259109.000002"
+    },
+    {
+        "user": "U47AFN6NT",
+        "text": "<@U47AFN6NT|eugeneho> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1487278514.000002"
+    },
+    {
+        "type": "message",
+        "user": "U463U2L3W",
+        "text": "I submitted the repo URL on Moodle. Don't know if everyone needs to or just one person. <@U47AFN6NT>  please add your github ID to the README. FYI: repo link: <https:\/\/github.com\/RobinsonK\/CSCI3308_Foundit>",
+        "attachments": [
+            {
+                "title": "GitHub - RobinsonK\/CSCI3308_Foundit: Group project for CSCI 3308",
+                "title_link": "https:\/\/github.com\/RobinsonK\/CSCI3308_Foundit",
+                "text": "CSCI3308_Foundit - Group project for CSCI 3308",
+                "fallback": "GitHub - RobinsonK\/CSCI3308_Foundit: Group project for CSCI 3308",
+                "from_url": "https:\/\/github.com\/RobinsonK\/CSCI3308_Foundit",
+                "service_icon": "https:\/\/assets-cdn.github.com\/favicon.ico",
+                "service_name": "github.com",
+                "id": 1
+            }
+        ],
+        "ts": "1487290609.000002"
+    }
+]

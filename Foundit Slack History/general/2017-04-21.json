@@ -1,0 +1,32 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "heroku site is down",
+        "ts": "1492820246.501983"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "you guys update it or something?",
+        "ts": "1492820262.503327"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "that or its timing out again, this was using 10 for all inputs",
+        "ts": "1492820351.510545"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea it was the timeout, its pretty inconsistent in that regard",
+        "ts": "1492820398.514301"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Got a shoddy version of the overlapping graphs",
+        "ts": "1492823606.739680"
+    }
+]

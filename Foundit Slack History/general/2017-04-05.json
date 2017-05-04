@@ -1,0 +1,170 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R> can we get a progress report on the test cases?",
+        "ts": "1491412158.744738"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Here are the things I have Think we need to test against",
+        "ts": "1491429749.680794"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Subreddit:\n-Does the subreddit exist?\n-Does the input have special characters?\n-Subreddits can exist, but if there are no posts, than we get an error\n-Subreddit can have a post but no comments, will cause error\n-Subreddit can exist, but if it is banned\/blocked\/forbidden, will cause error",
+        "ts": "1491429996.739986"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Top Comments:\n-Is input an int? Is the first character of input a 0?\n-something like 04 will cause an error\n-input int needs to be greater than 0 for the foundit script to work\n-TopCommentLimit can be greater than the actual amount of comments\n-input NEEDS to be only ints, check for this",
+        "ts": "1491430167.779364"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Top Words:\n-Basically the same as Top Comment tests",
+        "ts": "1491430182.782777"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "top comment and top word inputs both need to be greater than 0",
+        "ts": "1491430209.789091"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "In busy all tonight and tomorrow so you guys are kinda on your own for this one",
+        "ts": "1491430232.794447"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "im just informing dw",
+        "ts": "1491430240.796133"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "I can test against the inputs, but I cant test against the html and django aspects",
+        "ts": "1491430308.811885"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Is there anything we even need to test for that framework stuff?",
+        "ts": "1491430321.814851"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "I think testing against the inputs would be enough",
+        "ts": "1491430331.816864"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "the heroku sit crashes if the number of posts to search is too high it seems.",
+        "ts": "1491432827.318919"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Crazy idea, but like what if you guys were able to debug the tests without me? The tests aren't due till 6pm tomorrow",
+        "ts": "1491436511.951256"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Another idea, a bit more devious, but what if we just artificially made it look like the code passed the tests since we only need to submit the test output and not the code itself",
+        "ts": "1491439123.338349"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Are we still on to meet tomorrow at 11?",
+        "ts": "1491439821.432571"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "No one's checking slack :triumph:",
+        "ts": "1491440208.482668"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "I think everyone can have said we can make it but Luke",
+        "ts": "1491440296.494249"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay cool",
+        "ts": "1491441596.671668"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Sorry I haven't seen these, I was working on Homework 4. I would still be able to be able to meet at 11 tomorrow.",
+        "ts": "1491442235.756407"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Ya I'm actually not gonna have time to do homework 4, fml",
+        "ts": "1491442658.811233"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R> can you make sure the tests you wrote are on github before 11 tomorrow so we can make the output for it?",
+        "ts": "1491442738.821428"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "And once that's done, the user acceptance plans should be pretty straightforward. If you let me know what the tests and outputs are , I can start typing those up tonight.",
+        "ts": "1491443000.854928"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "^ thanks Ken :pray: ",
+        "ts": "1491443036.859510"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea im working on it all night",
+        "ts": "1491445544.169392"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ill let you know",
+        "ts": "1491445574.172530"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Hey <@U48GZAN0P> I can add you to my assignment 4 as a partner, I'm almost done",
+        "ts": "1491450378.689301"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I appreciate the offer! I found time to do the assignment and I bet some of this stuff will be on the final. I'm at 5\/8 so I'll probably finish.",
+        "ts": "1491450572.708349"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Thanks though! If I didn't get my last thing done early I would totally take you up on that! That's clever and kind",
+        "ts": "1491450604.711518"
+    }
+]

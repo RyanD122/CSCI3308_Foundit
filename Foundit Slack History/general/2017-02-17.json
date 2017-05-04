@@ -1,0 +1,34 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "<https:\/\/www.youtube.com\/watch?v=YjLsFnQejP8&amp;feature=youtu.be>",
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/",
+                "title": "Reddit is Being Manipulated by Professional Shills Every Day",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=YjLsFnQejP8&amp;feature=youtu.be",
+                "author_name": "Point",
+                "author_link": "https:\/\/www.youtube.com\/user\/datreviewshow",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/YjLsFnQejP8\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "fallback": "YouTube Video: Reddit is Being Manipulated by Professional Shills Every Day",
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/YjLsFnQejP8?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "from_url": "https:\/\/www.youtube.com\/watch?v=YjLsFnQejP8&amp;feature=youtu.be",
+                "service_icon": "https:\/\/a.slack-edge.com\/2089\/img\/unfurl_icons\/youtube.png",
+                "id": 1
+            }
+        ],
+        "ts": "1487379217.000002"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "interesting video that I think is relevant",
+        "ts": "1487379225.000004"
+    }
+]

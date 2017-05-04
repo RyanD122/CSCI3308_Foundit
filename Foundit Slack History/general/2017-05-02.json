@@ -1,0 +1,162 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "then 81",
+        "ts": "1493718211.511842"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Holy crap, 3:43 am",
+        "ts": "1493755001.169028"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Did you guys get it figured out?",
+        "ts": "1493755013.173732"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Hah I got got the workers working",
+        "ts": "1493755705.416046"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Just need to combine the data now",
+        "ts": "1493755716.419426"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "The speed is pretty sick",
+        "ts": "1493755733.425193"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "For the presentation, we can scale it to like 20 workers and have that shit be instantaneous",
+        "ts": "1493755759.434032"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "wow that's pretty cool",
+        "ts": "1493760739.049000"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "is it working rn?",
+        "ts": "1493760743.050201"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "to answer my own question, it is not. just tried a search and it hung on loading",
+        "ts": "1493760948.106209"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "nah",
+        "ts": "1493761085.143394"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i have the lists seperated right now",
+        "ts": "1493761106.149251"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "loadig\/results inst getting a return yet",
+        "ts": "1493761116.151666"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "prob finish that tonight\/ish",
+        "ts": "1493761123.153811"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "maybe add in sup words after",
+        "ts": "1493761136.157608"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "well presentation is tomorrow",
+        "ts": "1493761137.157673"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "so lets hope you do",
+        "ts": "1493761139.158243"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea",
+        "ts": "1493761142.159047"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "dw",
+        "ts": "1493761142.159204"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "rolling back to find my code",
+        "ts": "1493774077.377658"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "made a branch called luke",
+        "ts": "1493776693.648669"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "and i was stuck inside of it for like 30 minutes lmao",
+        "ts": "1493776701.649450"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i ended up deleting it...felt like i killed myself virtually",
+        "ts": "1493776713.650613"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "lmao <@U47AFN6NT> it looks nice",
+        "ts": "1493788628.741089"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Thanks, still working on the home page actually",
+        "ts": "1493790821.936095"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "<@U48GZAN0P> I know you're kinda done with the project but you know if the JavaScript under loading.html needs the while loop that goes to 5000000000? It just freezes up the UI(which is fine if it won't work)",
+        "edited": {
+            "user": "U47AFN6NT",
+            "ts": "1493790867.000000"
+        },
+        "ts": "1493790828.936866"
+    }
+]

@@ -1,0 +1,218 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Yo Luke if you remember from last meeting, I said I was going to do that",
+        "ts": "1493055268.336114"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Speaking of which, are we still good for a 3:30 meeting today?",
+        "ts": "1493055323.355690"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "And I have been. I've managed to push the script to a background task. Right now I just need to write\/learn some JavaScript to be checking for the task completion every couple seconds",
+        "ts": "1493055351.365800"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I may have to miss the meeting today. I've got a lot of work to do today, and I don't really have much to show until I get that JavaScript working. But I have a couple tutorials I'm going to go through to get that going tomorrow",
+        "ts": "1493055455.402235"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Depending on how many people show up for the meeting, would <!everyone>  be up to reschedule for later in the week?",
+        "ts": "1493062942.013474"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Later in the week would be better for me anyway. Wednesday and Friday I am available after 3 and Thursday I am available after 4.",
+        "ts": "1493063069.053774"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Wednesday free till 4:30. Thursday after 4:45. Friday after 12",
+        "ts": "1493063154.081331"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea later in the week is good",
+        "ts": "1493064679.591020"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i think we may have to restructure the code to avoid timeouts. at least for really long searches",
+        "ts": "1493064719.603746"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "like refresh our website multiple times thru the search or something",
+        "ts": "1493064740.610507"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i can play around with that",
+        "ts": "1493064741.610738"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Nah Luke stop I already said I'm on top of that",
+        "ts": "1493064949.677733"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I've been researching it the last week and putting the best way is to put the search algorithm into a background task (done) and have a loading page use JavaScript to ask if the task is done to redirect to the results (in progress)",
+        "ts": "1493064999.693901"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "It's :100: % possible, so it just depends on when I can learn the javascript",
+        "ts": "1493065061.714257"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R> please don't change anything to do it another way, it'll will just end up either wasting my time or wasting your time",
+        "ts": "1493065131.736289"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Is Thursday at 5pm good with <!everyone> ?",
+        "ts": "1493065217.764377"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "That works for me.",
+        "ts": "1493065234.770030"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "That's fine",
+        "ts": "1493065236.770647"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": ":+1::+1::+1:",
+        "ts": "1493065241.772429"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "FYI If you're implementing JavaScript in the HTML file you have to place and load it via the static file folder. Took me a while to find out what's wrong",
+        "ts": "1493065260.778877"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "What do you mean by the static file folder <@U47AFN6NT> ?",
+        "ts": "1493065290.788807"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Also does anyone already know JavaScript?",
+        "ts": "1493065442.837930"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Specifically Ajax?",
+        "ts": "1493065457.842728"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I don't, sorry.",
+        "ts": "1493065478.849473"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "That's fine, I've got a code snippet that supposedly does what I need from stack overflow, but what I need to learn is getting it to work with our project",
+        "ts": "1493065515.861298"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "But I'm workin' on it ^^'",
+        "ts": "1493065536.868472"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Might not affect you much, but you could do javascript inline or through a .js file (or library). Inline works fine with the html file but if you want to load like a file Heroku has a short guide on it",
+        "ts": "1493065562.876847"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hmm I'll look into it. From what I've seen the process goes like this: 1) Define function for loading page in view that returns true if task is done. 2) have JavaScript do some ajax stuff to call that function every couple seconds 3) redirect if function returns true, passing the \"job id\" of the background task to the next page in the URL to retrieve the results",
+        "ts": "1493065787.950670"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Obviously the \"some Ajax stuff\" part is what I haven't learned yet haha",
+        "ts": "1493065832.965540"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Ryan, have you looked into splitting up the main foundt script into multiple background workers instead of just using 1?",
+        "ts": "1493069120.982062"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "By making the foundit script run in background, it will be able to do the job while avoiding timeouts like you say.\n\nBut can reduce that time if we have more workers right?",
+        "ts": "1493069239.014582"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Maybe, that's an interesting idea. Also please use the <@U462P0B1R> thing so it pings me without me having to check. doing something like that would mean that multiple instances of the Reddit connection would need to be made, as well as redundant iteration of the same data. I think it's better for one task to do everything and have sections of the algorithm not done when not requested. It's an interesting idea I hadn't thought of though and I'll keep it in mind moving forward",
+        "ts": "1493072240.741545"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Also I may not pass my OS class but I do know for a fact that task switching overhead is something to think about if we use more than 1 background tast",
+        "ts": "1493072479.788159"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yep it uses mutual exclusion too i think hahaha",
+        "ts": "1493074794.211266"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "there would be some redundant data and overhead, but if we had 100 posts to look at for example, we can offset half the posts to one worker, the other half to the other. With more workers this becomes faster.",
+        "ts": "1493074851.222642"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "im not sure how workers and dynos work tho so all just assumptions",
+        "ts": "1493074877.227424"
+    }
+]

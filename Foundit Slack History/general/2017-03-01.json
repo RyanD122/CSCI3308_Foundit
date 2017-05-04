@@ -1,0 +1,32 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Can <@U462P0B1R> post the room for the meeting today?",
+        "ts": "1488394656.000002"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ECEE 189 at 5:10",
+        "ts": "1488406375.000002"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "please confirm you got this",
+        "ts": "1488406941.000003"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I got it",
+        "ts": "1488406959.000004"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Ermmm I'm at ECEE 189, where are you guys?",
+        "ts": "1488413451.000002"
+    }
+]

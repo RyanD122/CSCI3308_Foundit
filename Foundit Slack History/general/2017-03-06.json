@@ -1,0 +1,38 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hey guys, I won't be able to make the 3:30 meeting today. I don't have too much to show, but I've been playing around with nltk (natural language tool kit) and I think it'll be real easy to use. I'm still working on the details of the script, but I'll post what I have to GitHub tomorrow or Wednesday.",
+        "ts": "1488820313.000002"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Are we still meeting then? If so same old UMC?",
+        "ts": "1488826317.000002"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I would still be up for a meeting if we think we need it. 3:30 would still work for me.",
+        "ts": "1488831753.000002"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "And by the way, it looks like our first project assignment is graded on Moodle and we did pretty well! Good job guys!",
+        "ts": "1488831826.000003"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Okay see you guys at 3:30",
+        "ts": "1488833143.000002"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "At table near stage",
+        "ts": "1488839552.000002"
+    }
+]

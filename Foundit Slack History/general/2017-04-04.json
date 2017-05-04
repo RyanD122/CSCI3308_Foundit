@@ -1,0 +1,20 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Heroku site is live! Check it out at <https:\/\/quiet-crag-86935.herokuapp.com\/foundit\/>",
+        "ts": "1491362544.717687"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Also something occurred to me. Because we need to submit the results for the test cases, we probably have to be passing those tests. The current python script \/ Django site has no precautions for incorrect subreddits (pretty much the only thing that can go wrong). I'll need to add it at some point.",
+        "ts": "1491362662.729628"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "This is more of a note to self ^",
+        "ts": "1491362691.732645"
+    }
+]

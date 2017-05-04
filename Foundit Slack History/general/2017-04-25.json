@@ -1,0 +1,1029 @@
+[
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Not sure what's been pushed most recently, I've kinda been in a bubble the last week working on a test heroku app. The current website times out even when asking to analyze 0 posts",
+        "ts": "1493155890.338762"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Sounds like a bug in the search script",
+        "ts": "1493155912.345044"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Hmm I'm not getting the timeout running it locally",
+        "ts": "1493156036.379191"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I'm watching the logs right now btw",
+        "ts": "1493156161.412677"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Printing every time a comment is analyzed probably has something to do with the time out",
+        "ts": "1493156185.418873"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Did anyone push recently? Last I pulled was Apr 17",
+        "ts": "1493156221.428399"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I haven't pushed since last week",
+        "ts": "1493156236.432036"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Didn't Luke say he pushed something?",
+        "ts": "1493156244.434572"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "The heroku log shows he last pushed 2 days ago",
+        "ts": "1493156321.454819"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "well that's probably it",
+        "ts": "1493156327.456372"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i mean when I get the background task thing working it won't matter but still",
+        "ts": "1493156342.460200"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i don't want to wait 10 min to analyze 0 posts",
+        "ts": "1493156353.462725"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "wtf happened XD",
+        "ts": "1493156361.465232"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "There are also pushes 4 days ago, if you pushed that one we can do rollback",
+        "ts": "1493156370.467455"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "that one was me",
+        "ts": "1493156385.471340"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "but I didn't change anything serious",
+        "ts": "1493156397.474400"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "I just changed some of the urls to make it not need the \/foundit\/",
+        "ts": "1493156403.476192"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R>",
+        "ts": "1493156417.479803"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "it'd be dope if people made sure the website still works after they push things",
+        "ts": "1493156456.490274"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i really hope I don't have to end up fixing this",
+        "ts": "1493156506.503760"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "well why don't we rollback to your version for now?",
+        "ts": "1493156589.525478"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "why the heck did someone add \"incivility\", \"shill\", \"troll\", \"hate\", and \"speech\" to the wordIgnoreList?",
+        "thread_ts": "1493156903.608173",
+        "reply_count": 1,
+        "replies": [
+            {
+                "user": "U462P0B1R",
+                "ts": "1493159185.139369"
+            }
+        ],
+        "unread_count": 1,
+        "ts": "1493156903.608173"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R>",
+        "ts": "1493156924.613498"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i wonder how long it'll take him to respond &gt;_&lt;",
+        "ts": "1493156937.616822"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "holy fucking shit no wonder it's timing out. Luke's code has got it looping through (every submission) * (every noun found on the first search) ontop of the initial search",
+        "ts": "1493157382.730974"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "that still doesn't explain why it's timing out with 0 for postlimit",
+        "thread_ts": "1493157446.746636",
+        "reply_count": 1,
+        "replies": [
+            {
+                "user": "U462P0B1R",
+                "ts": "1493159226.147610"
+            }
+        ],
+        "unread_count": 1,
+        "ts": "1493157446.746636"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "nevermind it only does (every submission) * (topwordlimit), but that's still way more than needs to happen i think",
+        "thread_ts": "1493157767.827449",
+        "reply_count": 1,
+        "replies": [
+            {
+                "user": "U462P0B1R",
+                "ts": "1493159353.173838"
+            }
+        ],
+        "unread_count": 1,
+        "ts": "1493157767.827449"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "what's going on right now it (every submission) + (every submission) * (topworldlimit)",
+        "ts": "1493157803.836280"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "where before it was just (every submission)",
+        "ts": "1493157818.839946"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "*** replace \"every submission\" with \"every word\" actually ***",
+        "ts": "1493157958.873066"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "was prob me",
+        "ts": "1493158294.948810"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yup",
+        "ts": "1493158306.951406"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thats why i was REALLY worried about timeout lmao",
+        "ts": "1493158315.953628"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we can remove the added feature",
+        "ts": "1493158338.958669"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i got the live code to work with SMALL subs",
+        "ts": "1493158346.960821"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "and small parameters",
+        "ts": "1493158364.964707"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "but searching fat subs like politivs will make it crash more often than not",
+        "ts": "1493158374.966905"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "\"why the heck did someone add \"incivility\", \"shill\", \"troll\", \"hate\", and \"speech\" to the wordIgnoreList?\"\n\nThe top comment on all politic threads had the automod giving its auto response with these words, when anaylyzing \/r\/politics it would mess with the actual results was why i added it, but yea it also adds computation time to the other subs unfortunately",
+        "ts": "1493158472.988818"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "I can limit the search depth of my added code, but I think the added graphs gives it more vibrancy",
+        "ts": "1493158500.994994"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i might try pushing some changes later today but you can roll back to where it didnt have my code yet",
+        "ts": "1493158555.007379"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "preapril 23 i think",
+        "ts": "1493158571.010622"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Here try this, this is kind of what it looks like though if parameters are small(including subreddit size)",
+        "ts": "1493158625.022329"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "<http:\/\/ufoundit.herokuapp.com\/results\/?subreddit=paragon&amp;postLimit=10&amp;topComs=5&amp;topWords=5&amp;topUsers=5&amp;topReplies=5&amp;oldestPosts=5&amp;activePosts=5>",
+        "ts": "1493158626.022643"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "sorry for text wall",
+        "ts": "1493158634.024013"
+    },
+    {
+        "text": "automod would post the same words on every politics thread so it was diluting results, this adds a bit of overhead to searches though.",
+        "thread_ts": "1493156903.608173",
+        "type": "message",
+        "subtype": "thread_broadcast",
+        "user": "U462P0B1R",
+        "root": {
+            "type": "message",
+            "user": "U48GZAN0P",
+            "text": "why the heck did someone add \"incivility\", \"shill\", \"troll\", \"hate\", and \"speech\" to the wordIgnoreList?",
+            "thread_ts": "1493156903.608173",
+            "reply_count": 1,
+            "replies": [
+                {
+                    "user": "U462P0B1R",
+                    "ts": "1493159185.139369"
+                }
+            ],
+            "unread_count": 1,
+            "ts": "1493156903.608173"
+        },
+        "ts": "1493159185.139369"
+    },
+    {
+        "timestamp": "1493159185139369",
+        "is_multiteam": false,
+        "slog_is_shared": "0",
+        "slog_is_mpdm": "0",
+        "slog_is_slackbot_dm": false,
+        "slog_is_self_dm": false,
+        "is_thread_broadcast": true,
+        "plain_text": "automod would post the same words on every politics thread so it was diluting results, this adds a bit of overhead to searches though.",
+        "new_broadcast": true,
+        "attachments": [
+            {
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493156903608173",
+                "fallback": "[April 25th, 2017 2:48 PM] ryand: why the heck did someone add \"incivility\", \"shill\", \"troll\", \"hate\", and \"speech\" to the wordIgnoreList?",
+                "ts": "1493156903.608173",
+                "author_subname": "ryand",
+                "channel_id": "C46MHBNUW",
+                "channel_name": "general",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "why the heck did someone add \"incivility\", \"shill\", \"troll\", \"hate\", and \"speech\" to the wordIgnoreList?",
+                "author_link": "https:\/\/founditteam.slack.com\/team\/ryand",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/807828b776a3403805f3635cf9a595bf.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0007-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "footer": "1 reply"
+            },
+            {
+                "fallback": "automod would post the same words on every politics thread so it was diluting results, this adds a bit of overhead to searches though.",
+                "author_name": "Luke Nguyen",
+                "author_subname": "luken",
+                "text": "automod would post the same words on every politics thread so it was diluting results, this adds a bit of overhead to searches though.",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "author_link": "https:\/\/founditteam.slack.com\/team\/luken",
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493159185139369?thread_ts=1493156903608173&cid=C46MHBNUW",
+                "ts": "1493159185.139369",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/36b1d55d8443ed2612e0a218e0e2dfe4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-48.png",
+                "id": 2
+            }
+        ],
+        "text": "",
+        "type": "message",
+        "subtype": "reply_broadcast",
+        "user": "U462P0B1R",
+        "ts": "1493159185.139386"
+    },
+    {
+        "text": "No clue why it times out with 0 postlimits",
+        "thread_ts": "1493157446.746636",
+        "type": "message",
+        "subtype": "thread_broadcast",
+        "user": "U462P0B1R",
+        "root": {
+            "type": "message",
+            "user": "U48GZAN0P",
+            "text": "that still doesn't explain why it's timing out with 0 for postlimit",
+            "thread_ts": "1493157446.746636",
+            "reply_count": 1,
+            "replies": [
+                {
+                    "user": "U462P0B1R",
+                    "ts": "1493159226.147610"
+                }
+            ],
+            "unread_count": 1,
+            "ts": "1493157446.746636"
+        },
+        "ts": "1493159226.147610"
+    },
+    {
+        "timestamp": "1493159226147610",
+        "is_multiteam": false,
+        "slog_is_shared": "0",
+        "slog_is_mpdm": "0",
+        "slog_is_slackbot_dm": false,
+        "slog_is_self_dm": false,
+        "is_thread_broadcast": true,
+        "plain_text": "No clue why it times out with 0 postlimits",
+        "new_broadcast": true,
+        "attachments": [
+            {
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493157446746636",
+                "fallback": "[April 25th, 2017 2:57 PM] ryand: that still doesn't explain why it's timing out with 0 for postlimit",
+                "ts": "1493157446.746636",
+                "author_subname": "ryand",
+                "channel_id": "C46MHBNUW",
+                "channel_name": "general",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "that still doesn't explain why it's timing out with 0 for postlimit",
+                "author_link": "https:\/\/founditteam.slack.com\/team\/ryand",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/807828b776a3403805f3635cf9a595bf.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0007-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "footer": "1 reply"
+            },
+            {
+                "fallback": "No clue why it times out with 0 postlimits",
+                "author_name": "Luke Nguyen",
+                "author_subname": "luken",
+                "text": "No clue why it times out with 0 postlimits",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "author_link": "https:\/\/founditteam.slack.com\/team\/luken",
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493159226147610?thread_ts=1493157446746636&cid=C46MHBNUW",
+                "ts": "1493159226.147610",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/36b1d55d8443ed2612e0a218e0e2dfe4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-48.png",
+                "id": 2
+            }
+        ],
+        "text": "",
+        "type": "message",
+        "subtype": "reply_broadcast",
+        "user": "U462P0B1R",
+        "ts": "1493159226.147675"
+    },
+    {
+        "text": "Yea i needed to reloop thru the posts to get the 'supporting words', \n\nOn the second loops, it checks every post title, but if no key words matches, it doesnt go thru comments. so its not exactly an entire reloop",
+        "thread_ts": "1493157767.827449",
+        "type": "message",
+        "subtype": "thread_broadcast",
+        "user": "U462P0B1R",
+        "root": {
+            "type": "message",
+            "user": "U48GZAN0P",
+            "text": "nevermind it only does (every submission) * (topwordlimit), but that's still way more than needs to happen i think",
+            "thread_ts": "1493157767.827449",
+            "reply_count": 1,
+            "replies": [
+                {
+                    "user": "U462P0B1R",
+                    "ts": "1493159353.173838"
+                }
+            ],
+            "unread_count": 1,
+            "ts": "1493157767.827449"
+        },
+        "ts": "1493159353.173838"
+    },
+    {
+        "timestamp": "1493159353173838",
+        "is_multiteam": false,
+        "slog_is_shared": "0",
+        "slog_is_mpdm": "0",
+        "slog_is_slackbot_dm": false,
+        "slog_is_self_dm": false,
+        "is_thread_broadcast": true,
+        "plain_text": "Yea i needed to reloop thru the posts to get the 'supporting words', \n\nOn the second loops, it checks every post title, but if no key words matches, it doesnt go thru comments. so its not exactly an entire reloop",
+        "new_broadcast": true,
+        "attachments": [
+            {
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493157767827449",
+                "fallback": "[April 25th, 2017 3:02 PM] ryand: nevermind it only does (every submission) * (topwordlimit), but that's still way more than needs to happen i think",
+                "ts": "1493157767.827449",
+                "author_subname": "ryand",
+                "channel_id": "C46MHBNUW",
+                "channel_name": "general",
+                "is_msg_unfurl": true,
+                "is_thread_root_unfurl": true,
+                "text": "nevermind it only does (every submission) * (topwordlimit), but that's still way more than needs to happen i think",
+                "author_link": "https:\/\/founditteam.slack.com\/team\/ryand",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/807828b776a3403805f3635cf9a595bf.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0007-48.png",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1,
+                "footer": "1 reply"
+            },
+            {
+                "fallback": "Yea i needed to reloop thru the posts to get the 'supporting words', \n\nOn the second loops, it checks every post title, but if no key words matches, it doesnt go thru comments. so its not exactly an entire reloop",
+                "author_name": "Luke Nguyen",
+                "author_subname": "luken",
+                "text": "Yea i needed to reloop thru the posts to get the 'supporting words', \n\nOn the second loops, it checks every post title, but if no key words matches, it doesnt go thru comments. so its not exactly an entire reloop",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "author_link": "https:\/\/founditteam.slack.com\/team\/luken",
+                "from_url": "https:\/\/founditteam.slack.com\/archives\/C46MHBNUW\/p1493159353173838?thread_ts=1493157767827449&cid=C46MHBNUW",
+                "ts": "1493159353.173838",
+                "author_icon": "https:\/\/secure.gravatar.com\/avatar\/36b1d55d8443ed2612e0a218e0e2dfe4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-48.png",
+                "id": 2
+            }
+        ],
+        "text": "",
+        "type": "message",
+        "subtype": "reply_broadcast",
+        "user": "U462P0B1R",
+        "ts": "1493159353.173856"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R>",
+        "ts": "1493160091.323527"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i took a look at your code and I think i see a way to drastically reduce the time it takes to do what you're doing. It involves saving comment objects with the top words in the first loop through so that you don't need to reloop through all of reddit to find the comments again",
+        "ts": "1493160150.334783"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "like the first loop happens to build the original counts to find the hot words to research for",
+        "ts": "1493160181.340557"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "but if you save all the comments that had that top word in it, when you sort the list to find the top words, the comments using them are already right there",
+        "ts": "1493160206.345486"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "hmmmmm",
+        "ts": "1493160264.356585"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "this posses a threat of using more memory than we are allowed to use, but it would decrease processesing time drastically",
+        "ts": "1493160272.357879"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea, how do you know what the top words are before you finish the first loop?",
+        "ts": "1493160288.360823"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "you don't",
+        "ts": "1493160296.362226"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thats what i was thinking about",
+        "ts": "1493160298.362634"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "but you save all the comments (or atleast their ids)",
+        "ts": "1493160306.363926"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "btw i upgraded our dyno to hobby",
+        "ts": "1493160319.366426"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "7$ a month to boost this last sretch",
+        "ts": "1493160333.369028"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "why?",
+        "ts": "1493160333.369033"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "its till only one dyno, not even sure if we get any benefits lmao",
+        "ts": "1493160338.370051"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "more speed possibily",
+        "ts": "1493160342.370867"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "w\/e its 7$ max",
+        "ts": "1493160348.371911"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "not too bad",
+        "ts": "1493160349.372138"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i don't think we should consider that",
+        "ts": "1493160350.372406"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "its based off server uptime",
+        "ts": "1493160359.373996"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so it wont be much",
+        "ts": "1493160364.375077"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "if no one is using the site i dont get charged dont worry about it",
+        "ts": "1493160374.376821"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "class just ended, i'll continue this discussion wehn I get home",
+        "ts": "1493160376.377448"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ight",
+        "ts": "1493160380.378180"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay so WHY are we paying for heroku now?",
+        "ts": "1493161708.629033"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "That's a pretty big group decision you've made for us <@U462P0B1R> ",
+        "ts": "1493161741.634790"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "In the last week of the project no less",
+        "ts": "1493161749.636196"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "@",
+        "ts": "1493161765.639423"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "\"not even sure if we get any benefits\"\nAs the person paying for this service, this seems like something you should definitely have looked up",
+        "ts": "1493161901.663664"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "not pointing fingers or nothing, I just really don't think doing that benefits us at all",
+        "ts": "1493162165.708763"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "well its my money, i was gunna work on this after school ended so its w\/e",
+        "ts": "1493166995.456208"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "literally a box of cigs for the month dont worry haha",
+        "ts": "1493167005.457451"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i wont ask for compensation or anything, did it out of personal interest as to what it could provide",
+        "ts": "1493167039.461967"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ill look into storing comment IDs and post IDs with words, im interested in seeing performance gains",
+        "ts": "1493167121.472583"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Ya, you can even just save the comment id's as strings and look them back up (lookup on praw how to do it) it'll help for sure",
+        "ts": "1493168120.604875"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "hobby dyno gives us 1 web dyno, and 9 other types of dynos, so we can really improve the performance",
+        "ts": "1493168134.606754"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i just dont know how to fucking use these dynos",
+        "ts": "1493168143.608007"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hmm interesting",
+        "ts": "1493168145.608167"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thats why i wanted to split up the foundit code",
+        "ts": "1493168151.609102"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so we have all 9 'workers' scraping",
+        "ts": "1493168161.610306"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Well I'm like 90% done with getting the background tasks working. Till I finish I'm going to continue assuming we only have 1 worker dyno",
+        "ts": "1493168172.611689"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "reddits api allows a limited amount of requests per IP",
+        "ts": "1493168185.613602"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ok",
+        "ts": "1493168186.613736"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "but the 9 dynos have their own IPs i think",
+        "ts": "1493168196.614942"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so we can theoretically reach 9x search speed",
+        "ts": "1493168204.616048"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "get the background worker working",
+        "ts": "1493168216.617633"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay you could probably save the \"Reddit\" instance in the script and relocate by id using that",
+        "ts": "1493168216.617647"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yah",
+        "ts": "1493168221.618256"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "figure that shit out",
+        "ts": "1493168226.619028"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Ya I had a eureka moment on it a second ago haha",
+        "ts": "1493168239.620811"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "my heroku knowledge is poop lmao",
+        "ts": "1493168241.621138"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "hahaha",
+        "ts": "1493168243.621433"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "do u have to make new code for the worker or something?",
+        "ts": "1493168251.622618"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Nah the workers code will be the same. Most of the changed code is in the HTML for the JavaScript and views.py queueing the background job",
+        "ts": "1493168285.627067"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "lmao javascript",
+        "ts": "1493168314.630992"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i gotcha",
+        "ts": "1493168316.631231"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so i also looked into http caching",
+        "ts": "1493168328.632803"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "wed have to import more shit i think but it could work...later",
+        "ts": "1493168342.634594"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "but yea try to get the worker goin",
+        "ts": "1493168356.636336"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "then we can try to scale that 9x",
+        "ts": "1493168360.637008"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "shit would be cool if it works like we think it could haha",
+        "ts": "1493168375.639061"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Yep just got it working 99%, now I just have to get the redis server and worker script running on the remote server",
+        "ts": "1493169435.780669"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay it should be all Gucci, am gonna start testing with foundit now",
+        "ts": "1493170079.863376"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "nice! good job, let me know what you find, and tell me when you found it.",
+        "ts": "1493171496.046562"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<@U462P0B1R> what am I looking for?",
+        "thread_ts": "1493172223.141215",
+        "reply_count": 3,
+        "replies": [
+            {
+                "user": "U462P0B1R",
+                "ts": "1493177958.812653"
+            },
+            {
+                "user": "U48GZAN0P",
+                "ts": "1493177979.814988"
+            },
+            {
+                "user": "U462P0B1R",
+                "ts": "1493177982.815359"
+            }
+        ],
+        "unread_count": 3,
+        "ts": "1493172223.141215"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<!everyone> I found out why it's timing out so constantly.... someone put \"if(postlimit &lt; 10): postlimit = 10\" in the results page\nwhy would anyone do this???",
+        "thread_ts": "1493173656.321910",
+        "reply_count": 1,
+        "replies": [
+            {
+                "user": "U462P0B1R",
+                "ts": "1493177916.808180"
+            }
+        ],
+        "unread_count": 1,
+        "ts": "1493173656.321910"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "i mean good thing I found it",
+        "ts": "1493173660.322432"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "hey <@U462P0B1R> , the current version of the foundit script was timing out the worker itself (could have been a bug, cause it took reeaallyy long), so I kinda just purged what you added. I would have block commented them but python doesn't have block comments : \/... I'll just comment out what I find in regards to the supportWordList everywhere else, but just a heads up. Don't pull any time soon without saving your code somewhere",
+        "ts": "1493175591.550994"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "<!everyone> I actually ended up purging most of the code in views.py, so before I push I'm going to save a copy myself just in case",
+        "ts": "1493177535.767274"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "haha sorry that was me, my reaoning was that anything less than 10 would give subpar results. Not a big enough sample size...",
+        "thread_ts": "1493173656.321910",
+        "parent_user_id": "U48GZAN0P",
+        "ts": "1493177916.808180"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "cmon you didnt catch the play on words?\n\n...\nfound it\nfoundit.............\n:expressionless:",
+        "thread_ts": "1493172223.141215",
+        "parent_user_id": "U48GZAN0P",
+        "ts": "1493177958.812653"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "oh good one",
+        "thread_ts": "1493172223.141215",
+        "parent_user_id": "U48GZAN0P",
+        "ts": "1493177979.814988"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "lmao",
+        "thread_ts": "1493172223.141215",
+        "parent_user_id": "U48GZAN0P",
+        "ts": "1493177982.815359"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i got a copy of the repo on mine",
+        "ts": "1493177994.816578"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "dw",
+        "ts": "1493177994.816615"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "okay good cause I totally forgot to copy it even though i literally just said i would",
+        "ts": "1493178353.855279"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "It only just occurred to me we should have spelled it \"Founddit\"",
+        "ts": "1493180261.064804"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "alright it all works. I'm going to bed",
+        "ts": "1493180390.078231",
+        "reactions": [
+            {
+                "name": "innocent",
+                "users": [
+                    "U462P0B1R"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "thanks haha",
+        "ts": "1493180811.122681"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "I mean, we can still change it lmao, its one line in html",
+        "ts": "1493180825.124039"
+    }
+]

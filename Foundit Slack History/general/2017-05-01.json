@@ -1,0 +1,74 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "shits busted yo",
+        "ts": "1493654124.069333"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I have a table in the usual spot",
+        "ts": "1493674084.093482"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "<@U47AFN6NT>  I put a work in process version of the powerpoint on Git Hub if you want to change it at all.",
+        "ts": "1493678738.097837"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "We also need to add JavaScript to the tools btw",
+        "ts": "1493680094.335513"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "lmao.",
+        "ts": "1493684171.956056"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i think i got it working",
+        "ts": "1493684174.956448"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ok",
+        "ts": "1493684733.031251"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "weve im going to scale back, before i fuck myself with superloading these dynos",
+        "ts": "1493684758.034348"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "&lt;-demigod...at least",
+        "ts": "1493689165.584853"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Hmm I haven't pull in a while and after just pulling I'm unable to run it locally and get a syntax error. What URL should type in to get to the site locally?",
+        "ts": "1493697012.403468"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "Never mind. Just commented out some code in foundit.py and it runs",
+        "ts": "1493698598.560010"
+    },
+    {
+        "type": "message",
+        "user": "U47AFN6NT",
+        "text": "We sure v82 is a working one? I did a reset and I'm getting a jobid error. And <@U462P0B1R> you sure it works? The site's not working on my end...",
+        "ts": "1493705303.205451"
+    }
+]

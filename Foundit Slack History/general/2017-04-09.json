@@ -1,0 +1,440 @@
+[
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so whats the plan now? we got a working site, are we just going to add features now?",
+        "ts": "1491773874.527010"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": " Ya I guess so. I did some work this weekend refining the search algorithm to make it easier to use and faster. I'll upload it and try to add it to the heroku rep sometime today",
+        "ts": "1491773939.530462"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "However, we still have to debug wonky input",
+        "ts": "1491773989.532902"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "that shouldnt be a priority i dont think",
+        "ts": "1491774997.583387"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "since what we are trying to achieve to demonstrate our app",
+        "ts": "1491775017.584368"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Oh I shouldn't?",
+        "ts": "1491775018.584390"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "nah i doubt more than 10 people will use it",
+        "ts": "1491775028.584876"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "outside our group",
+        "ts": "1491775035.585175"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "and mostly, they will be entering valid inputs",
+        "ts": "1491775043.585686"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay then Luke what is the priority",
+        "ts": "1491775052.586168"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "the time and effort should be spent in adding stuff",
+        "ts": "1491775054.586246"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Hahahah",
+        "ts": "1491775063.586685"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we need to add more features to the site",
+        "ts": "1491775064.586761"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "HahahaHAHA",
+        "ts": "1491775069.586988"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "? lol",
+        "ts": "1491775074.587215"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay, well go right ahead and add something",
+        "ts": "1491775092.588118"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ive been playing with a topic identifier",
+        "ts": "1491775096.588302"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea",
+        "ts": "1491775099.588528"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "been splitting the submission titles to strings",
+        "ts": "1491775110.589090"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "getting key words, then trying to find within each post what the actual topic is",
+        "ts": "1491775120.589554"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "by matching title words to comment top words",
+        "ts": "1491775129.590068"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so for something like politics",
+        "ts": "1491775136.590412"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "trump in title",
+        "ts": "1491775148.591068"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "and trump in comments a lot",
+        "ts": "1491775148.591072"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we can conclude that trump is ONE of the topics at hand",
+        "ts": "1491775153.591295"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Well if you can bring something that actually works we'll add it but push that onto other people",
+        "ts": "1491775153.591340"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea been working on it",
+        "ts": "1491775162.591842"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Don't push*",
+        "ts": "1491775166.592076"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "ill let you know when i make more progress",
+        "ts": "1491775169.592270"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "what?",
+        "ts": "1491775177.592636"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i mean if you want to debug, go for it",
+        "ts": "1491775192.593476"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "but for the most part, it wont bring much value to what we already have",
+        "ts": "1491775210.595049"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Kek okay w\/e man. I've already done my fair share",
+        "ts": "1491775230.596469"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea not complaining",
+        "ts": "1491775247.597498"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "im just saying we dont need to debug",
+        "ts": "1491775253.597855"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "bc when we demonstrate our project, we will be inputting correct inputs anyways",
+        "ts": "1491775273.599129"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "what would be better is to add stuff instead",
+        "ts": "1491775283.599872"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "get what im saying?",
+        "ts": "1491775291.600331"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "I think we should focus more on finishing what we have than working on the unknown. We still need to format the HTML, print out other search data, and add some other graphs to make anything other than top words more visually interesting. This is still a pretty sizable piece to work on given we really only have a couple weeks which will be interlaced with finals, other projects, and midterms. I think the ship sailed several weeks ago on adding new features to this thing. Bulletproof &gt; ambitious but broken.",
+        "ts": "1491775786.627119"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": ":triumph::+1:",
+        "ts": "1491775885.632338"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "yea but all those things you mentions are new features relative to now.",
+        "ts": "1491775986.637106"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we dont need to debug and perfect the inputs is all i was sayig",
+        "ts": "1491776003.637893"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "\"print out other search data, and add some other graphs to make anything other than top words more visually interesting. \"\n\nThese are new features",
+        "ts": "1491776104.642826"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "what other search data are you referring? What other graphs?",
+        "ts": "1491776126.643893"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "These are things we have to come up with",
+        "ts": "1491776134.644285"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Lol what is this a debate? Stop quoting things people just said",
+        "ts": "1491776138.644474"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "you guys are saying dont add new features, but then say we need to add new features",
+        "ts": "1491776153.645205"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Honestly Luke what you're saying right now is doing nothing but demonstrating just how disconnected you are with this project",
+        "ts": "1491776183.646877"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "not really, i asked you if all we are doing now is adding features, and you even agreed yea we are",
+        "ts": "1491776212.648222"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "then you said we need to debug the inputs which i said wasnt a priority",
+        "ts": "1491776221.648673"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "Okay I'm uninstalling slack for the rest of the day",
+        "ts": "1491776237.649451"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "so whats the plan now? we got a working site, are we just going to add features now?\n\nYa I guess so. I did some work this weekend refining the search algorithm to make it easier to use and faster. I'll upload it and try to add it to the heroku rep sometime today",
+        "ts": "1491776249.649979"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "like what im saying inst even unreasonable",
+        "ts": "1491776263.650676"
+    },
+    {
+        "type": "message",
+        "user": "U48GZAN0P",
+        "text": "If anyone needs to reach me email me",
+        "ts": "1491776271.651065"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "its exactly what ken said",
+        "ts": "1491776277.651396"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "or am i mistaken somewhere?",
+        "ts": "1491776345.654974"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "how is outputting new search data and graphs not new features?",
+        "ts": "1491776358.655606"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "what else do you have to output in terms of graphs if we are not pulling in new data?",
+        "ts": "1491776562.665873"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "you have already outputted the comments, and graphed the top words",
+        "ts": "1491776575.666504"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "there is not much else we can do with what we have is what i am saying",
+        "ts": "1491776586.667073"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "It seems I wasn't super clear, my bad. I don't consider these new features as what we have so far is a fairly barebones web application. If you check the code of Foundit so far, you can see that we are (or have the capability of) gathering data on top comments, karma, etc. and are not currently outputting all of this. All I meant was that we need to work on just organizing this and showing it to the user. This code has been since the early days of the script, but we have been focused on actually connecting PRAW+graphs+Django+Heroku+etc. As of last week we actually got the thing running as initially planned. We just need to do some fine tuning. Looking back I may have misread your comment which I apologize for.",
+        "ts": "1491776591.667303"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "you going to graph the top users?",
+        "ts": "1491776592.667363"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "Graph for karma vs top users, karma amnt between different subreddits, etc.",
+        "ts": "1491776621.668945"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "you guys updated the foundit code?",
+        "ts": "1491776640.669816"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "we had karma for top users but not karma between subreddits as far as im concerned",
+        "ts": "1491776660.670882"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "see, the karma between subreddits is something cool that i think we could add that is new,",
+        "ts": "1491776781.676996"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "but what i was saying before, was that we did not have much else to add to the site if we were not pulling in or analyzing different data",
+        "ts": "1491776802.677993"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "last weeks focus yea was connecting django-heroku which you guys did a good job in",
+        "ts": "1491776820.678874"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "but now we actually have to add substance to the site like you say, and we cant do that without gathering new data",
+        "ts": "1491776838.679837"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "does that make any sense?",
+        "ts": "1491776842.680123"
+    },
+    {
+        "type": "message",
+        "user": "U46NL2KL7",
+        "text": "We have the data, we just need to add a couple lines of code to start linking it to other aspects of Foundit. I think it is in views.py? Anyway,  I have to go work on some other homework, so I'm sure we can talk about it at this week's meeting.",
+        "ts": "1491776963.686195"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "Sorry thats kind of what i meant by gathering new data. We need to do new analysis on it or there isnt much else to add to the site",
+        "ts": "1491777268.701752"
+    },
+    {
+        "type": "message",
+        "user": "U462P0B1R",
+        "text": "i assumed you guys were talking about just outputting the things we already had like top users and oldest posts etc",
+        "ts": "1491777305.703638"
+    }
+]

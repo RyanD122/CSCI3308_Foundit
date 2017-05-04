@@ -1,0 +1,76 @@
+[
+    {
+        "id": "C46MHBNUW",
+        "name": "general",
+        "created": "1487189369",
+        "creator": "U463U2L3W",
+        "is_archived": false,
+        "is_general": true,
+        "members": [
+            "U45GENHRN",
+            "U462P0B1R",
+            "U463U2L3W",
+            "U46MJ0NQ6",
+            "U46NL2KL7",
+            "U47AFN6NT",
+            "U48GZAN0P"
+        ],
+        "topic": {
+            "value": "Company-wide announcements and work-based matters",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "This channel is for team-wide communication and announcements. All team members are in this channel.",
+            "creator": "",
+            "last_set": "0"
+        }
+    },
+    {
+        "id": "C45A4Q6AU",
+        "name": "random",
+        "created": "1487189369",
+        "creator": "U463U2L3W",
+        "is_archived": false,
+        "is_general": false,
+        "members": [
+            "U45GENHRN",
+            "U462P0B1R",
+            "U463U2L3W",
+            "U46NL2KL7",
+            "U47AFN6NT",
+            "U48GZAN0P"
+        ],
+        "topic": {
+            "value": "Non-work banter and water cooler conversation",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "A place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber you'd prefer to keep out of more focused work-related channels.",
+            "creator": "",
+            "last_set": "0"
+        }
+    },
+    {
+        "id": "C463ZC4DA",
+        "name": "trello_notifications",
+        "created": "1487189928",
+        "creator": "U463U2L3W",
+        "is_archived": false,
+        "is_general": false,
+        "members": [
+            "U463U2L3W"
+        ],
+        "topic": {
+            "value": "",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "",
+            "creator": "",
+            "last_set": "0"
+        }
+    }
+]
